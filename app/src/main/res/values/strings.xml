@@ -1,0 +1,34 @@
+<resources>
+    <string name="app_name">vale</string>
+    <string name="app_mate">Matemáticas</string>
+
+    <string name="slide_1_titulo">Matemáticas, Física y más</string>
+    <string name="slide_1_desc"> Las principale </string>
+
+    <string name="slide_2_titulo">Personajes Relevantes y aportaciones</string>
+    <string name="slide_2_desc"> Aquellos cientificos, matematicos , filosofos e inventores de algunas herramientas que hoy en dia conocemos.</string>
+
+    <string name="slide_3_titulo">Interfaz amigable y intuitiva</string>
+    <string name="slide_3_desc">Aqui dfqwerwquna pinshe prueba aver como sale esta madre espero y si funcione alv </string>
+
+    <string name="slide_4_titulo">Todas las formulas en un aplicación</string>
+    <string name="slide_4_desc">kyc gei</string>
+
+    <string name="my_preference">"com.abc.com.Mypref"</string>
+    <string name="my_preference_key">"com.abc.com.MyprefKey"</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="menu_principal">Menú Principal</string>
+
+
+    <string name="descripcion">Principales ciencias que estudian las propiedades de la materia y establecen las leyes
+que explican los fenómenos naturales. </string>
+    <string name="encabezado">Herramientas que permiten conocer más a fondo las diversas ciencias estudiadas. </string>
+
+    <string name="quimica">Ciencia que estudia la composición y las propiedades de la materia y de las transformaciones que esta experimenta sin que se alteren los elementos que la forman.</string>
+    <string name="convertidor_descripcion"> La conversión de unidades es la transformación del valor numérico de una magnitud física y expresado en otra unidad de medida de la misma naturaleza.</string>
+
+    <string name="texto">La matemática es la ciencia deductiva que se dedica al estudio de las propiedades de los entes abstractos y de sus relaciones. Esto quiere decir que las matemáticas trabajan con números, símbolos, figuras geométricas, etc.</string>
+    <string name="calculo">Se ocupa del estudio de los incrementos en las variables, pendientes de curvas, valores máximo y mínimo de funciones y de la determinación de longitudes, áreas y volúmenes. Se usa sobre todo en ciencias como las ingenierías.</string>
+    <string name="fisica">La física se encarga de analizar las características de la energía, el tiempo y la materia, así como también los vínculos que se establecen entre ellos.</string>
+</resources>

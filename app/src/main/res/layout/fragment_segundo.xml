@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+
+    android:layout_height="match_parent"
+    tools:context=".GridView_segundoFragment.SegundoFragment">
+
+    <RelativeLayout
+
+        android:layout_width="wrap_content"
+        android:id="@+id/texto"
+        android:layout_height="100dp">
+
+
+        <android.support.v7.widget.CardView
+            android:layout_centerInParent="true"
+            android:backgroundTint="#d7d7d7"
+            android:layout_margin="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_margin="10dp"
+
+                android:autoSizeTextType="uniform"
+                android:layout_gravity="center_horizontal"
+                android:text="@string/convertidor_descripcion"
+                android:layout_height="match_parent" />
+
+        </android.support.v7.widget.CardView>
+    </RelativeLayout>
+
+
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/texto"
+        android:layout_height="match_parent">
+        <GridView
+            android:id="@+id/item"
+            android:layout_marginRight="10dp"
+            android:layout_marginLeft="10dp"
+
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:numColumns="3"
+            android:clickable="true"
+            android:focusable="true"
+            android:horizontalSpacing="10dp"
+            android:gravity="center"
+            android:verticalSpacing="10dp"
+            android:stretchMode="columnWidth"
+            />
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

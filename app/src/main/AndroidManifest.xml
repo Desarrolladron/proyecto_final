@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.kevin.vale">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".Activitis.MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".Activitis.WelcomeAcivity" />
+        <activity android:name=".Activitis.Menu_principal" />
+        <activity android:name=".Ventanas_menú.MateActivity" />
+        <activity android:name=".Ventanas_menú.Quimica_Activity" />
+        <activity android:name=".Ventanas_menú.Calculo_Activity" />
+        <activity android:name=".Ventanas_menú.Fisica_Activity" />
+        <activity android:name=".GridView_segundoFragment.Longitud_activity" />
+        <activity android:name=".GridView_segundoFragment.Volumen_activity" />
+        <activity android:name=".ListView_primerFragment.Menu_Matematicas" />
+        <activity android:name=".Materias_mate.algebra" />
+        <activity android:name=".Materias_mate.aritmetica" />
+        <activity android:name=".Materias_Fisica.Electricidad_Mag" />
+        <activity android:name=".Materias_mate.algebra_lineal" />
+        <activity android:name=".Materias_mate.Probabilidad_estadistica" />
+        <activity android:name=".GridView_segundoFragment.Masa" />
+        <activity android:name=".GridView_segundoFragment.Area" />
+        <activity android:name=".GridView_segundoFragment.Velocidad" />
+        <activity android:name=".TercerFragmento.tablaPeriodica" />
+        <activity android:name=".TercerFragmento.toxicidad" />
+        <activity android:name=".GridView_segundoFragment.presion" />
+        <activity android:name=".GridView_segundoFragment.Frecuencia" />
+        <activity android:name=".GridView_segundoFragment.Temperatura" />
+        <activity android:name=".GridView_segundoFragment.Energia" />
+        <activity android:name=".GridView_segundoFragment.Tiempo" />
+        <activity android:name=".GridView_segundoFragment.combustible" />
+        <activity android:name=".TercerFragmento.constantes" />
+        <activity android:name=".GridView_segundoFragment.potencia" />
+        <activity android:name=".Materias_mate.geometria" />
+        <activity android:name=".GridView_segundoFragment.Resistencia"></activity>
+    </application>
+
+</manifest>

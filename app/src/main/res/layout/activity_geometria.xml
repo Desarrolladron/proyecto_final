@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Materias_mate.geometria">
+
+
+    <android.support.v7.widget.Toolbar
+        android:layout_width="match_parent"
+        android:background="@color/colorPrimary"
+        android:id="@+id/my_toolbar"
+        app:title="Geometria"
+        app:titleTextColor="@android:color/white"
+        android:layout_height="?actionBarSize">
+
+    </android.support.v7.widget.Toolbar>
+
+    <LinearLayout
+        android:layout_below="@+id/my_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/linea"
+        android:orientation="vertical"
+        ></LinearLayout>
+
+    <ExpandableListView
+        android:layout_below="@id/my_toolbar"
+        android:id="@+id/lista_expandible4"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+    </ExpandableListView>
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_gravity="left"
+        android:layout_marginBottom="26dp"
+        android:layout_marginEnd="31dp"
+        app:fabSize="normal"
+        android:src="@drawable/ic_home_black_24dp"
+       />
+</RelativeLayout>

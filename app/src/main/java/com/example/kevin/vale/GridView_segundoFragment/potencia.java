@@ -69,8 +69,9 @@ public class potencia extends AppCompatActivity {
 
 
 
-        String[] opciones = {"Grado centesimal","Grado sexagesimal","Mil angular","Minuto de arco","Radián",
-                "Segundo sexagesimal"};
+        String[] opciones = {getString(R.string.ang_gracen),getString(R.string.ang_grasex),getString(R.string.ang_mil),
+                getString(R.string.ang_minutoArco),getString(R.string.ang_Radian),
+                getString(R.string.ang_segundoSexa)};
 
 
 
@@ -115,7 +116,7 @@ public class potencia extends AppCompatActivity {
                 if(!charSequence.toString().isEmpty()) {
 
 
-                    if (seleccion.equals("Grado centesimal")) {
+                    if (seleccion.equals(getString(R.string.ang_gracen))) {
 
 
                         double valor1 = Double.parseDouble(edNumeros.getText().toString());//km
@@ -138,8 +139,7 @@ public class potencia extends AppCompatActivity {
                         segSe.setText("" + op6);
 
 
-
-                    }    else if (seleccion.equals("Grado sexagesimal")) {
+                    }    else if (seleccion.equals(getString(R.string.ang_grasex))) {
 
 
                         double valor1 = Double.parseDouble(edNumeros.getText().toString());//km
@@ -163,8 +163,9 @@ public class potencia extends AppCompatActivity {
 
 
 
+
                     }
-                    else if (seleccion.equals("Mil angular")) {
+                    else if (seleccion.equals(getString(R.string.ang_mil))) {
 
 
                         double valor1 = Double.parseDouble(edNumeros.getText().toString());//km
@@ -189,8 +190,7 @@ public class potencia extends AppCompatActivity {
 
 
                     }
-
-                    else if (seleccion.equals("Minuto de arco")) {
+                    else if (seleccion.equals(getString(R.string.ang_minutoArco))) {
 
 
                         double valor1 = Double.parseDouble(edNumeros.getText().toString());//km
@@ -215,7 +215,7 @@ public class potencia extends AppCompatActivity {
 
 
                     }
-                    else if (seleccion.equals("Radián")) {
+                    else if (seleccion.equals(getString(R.string.ang_Radian))) {
 
 
                         double valor1 = Double.parseDouble(edNumeros.getText().toString());//km
@@ -240,7 +240,7 @@ public class potencia extends AppCompatActivity {
 
 
                     }
-                    else if (seleccion.equals("Segundo sexagesimal")) {
+                    else if (seleccion.equals(getString(R.string.ang_segundoSexa))) {
 
 
                         double valor1 = Double.parseDouble(edNumeros.getText().toString());//km

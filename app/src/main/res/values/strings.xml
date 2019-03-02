@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">vale</string>
+    <string name="app_name">iFormulas</string>
     <string name="app_mate">Matemáticas</string>
 
     <string name="slide_1_titulo">Matemáticas, Física y más</string>
@@ -23,7 +23,7 @@
 
     <string name="descripcion">Principales ciencias que estudian las propiedades de la materia y establecen las leyes
 que explican los fenómenos naturales. </string>
-    <string name="encabezado">Herramientas que permiten conocer más a fondo las diversas ciencias estudiadas. </string>
+    <string name="encabezado">Herramientas que permiten conocer más a fondo las diversas ciencias estudiadas.</string>
 
     <string name="quimica">Ciencia que estudia la composición y las propiedades de la materia y de las transformaciones que esta experimenta sin que se alteren los elementos que la forman.</string>
     <string name="convertidor_descripcion"> La conversión de unidades es la transformación del valor numérico de una magnitud física y expresado en otra unidad de medida de la misma naturaleza.</string>
@@ -31,4 +31,177 @@ que explican los fenómenos naturales. </string>
     <string name="texto">La matemática es la ciencia deductiva que se dedica al estudio de las propiedades de los entes abstractos y de sus relaciones. Esto quiere decir que las matemáticas trabajan con números, símbolos, figuras geométricas, etc.</string>
     <string name="calculo">Se ocupa del estudio de los incrementos en las variables, pendientes de curvas, valores máximo y mínimo de funciones y de la determinación de longitudes, áreas y volúmenes. Se usa sobre todo en ciencias como las ingenierías.</string>
     <string name="fisica">La física se encarga de analizar las características de la energía, el tiempo y la materia, así como también los vínculos que se establecen entre ellos.</string>
+
+    <!-- Conversor -->
+    <string name="area_km2">Kilómetro cuadrado</string>
+    <string name="area_mt2">Metro cuadrado</string>
+    <string name="area_mill2">Square mile</string>
+    <string name="area_ya2">Yarda cuadrada</string>
+    <string name="area_pie2">Pie cuadrado</string>
+    <string name="area_pulg2">Pulgada cuadrada</string>
+    <string name="area_ha">Hectárea (ha)</string>
+    <string name="area_acre">Acre</string>
+
+    <string name="cons_titu">Consumo de combustible</string>
+    <string name="cons_km">Kilómetro por litro</string>
+    <string name="cons_mill">Milla por galón americano</string>
+    <string name="cons_mill_impe">Milla por galón (Imperial)</string>
+
+    <string name="ene_titu">Energía</string>
+    <string name="ene_juli">Julio</string>
+    <string name="ene_kiloju">Kilojoule</string>
+    <string name="ene_kiloca">Kilocaloría</string>
+    <string name="ene_vatioHora">Vatio-hora</string>
+    <string name="ene_kilovatio">Kilovatio-hora</string>
+    <string name="ene_btu">BTU</string>
+
+    <string name="Electricidad">Electricidad y Magnetismo</string>
+    <string name="Geometría">Geometría</string>
+
+    <string name="fre_titu">Frecuencia</string>
+    <string name="fre_mega">Megahercios (MHz)</string>
+    <string name="fre_herzio">Hercios (Hz)</string>
+    <string name="fre_kilo">Kilohertz (kHz)</string>
+    <string name="fre_giga">Gigahercios (GHz)</string>
+
+    <string name="lon_titu">Longitud</string>
+    <string name="lon_km">Kilómetro (Km)</string>
+    <string name="lon_me">Metro (m)</string>
+    <string name="lon_cen">Centímetro (cm)</string>
+    <string name="lon_milim">Milímetro (mm)</string>
+    <string name="lon_deci">Decímetro (dm)</string>
+    <string name="lon_milla">Milla (mi)</string>
+    <string name="lon_yarda">Yarda (yd)</string>
+    <string name="lon_pulga">Pulgada (pulg)</string>
+    <string name="lon_pie">Pie (´)</string>
+
+    <string name="como_funciona">¿CÓMO FUNCIONA?</string>
+    <string name="iniciar">INICIAR</string>
+
+    <string name="masa_titu">Masa</string>
+    <string name="masa_ton">Tonelada (t)</string>
+    <string name="masa_kg">Kilogramo (kg)</string>
+    <string name="masa_gra">Gramo (g)</string>
+    <string name="masa_quila">Quilate</string>
+    <string name="masa_milig">Miligramo (mg)</string>
+    <string name="masa_stone">Stone (st)</string>
+    <string name="masa_libra">Libra (lb)</string>
+    <string name="masa_onza">Onza</string>
+
+    <string name="ang_titul">Ángulo plano</string>
+    <string name="ang_gracen">Grado centesimal (gon)</string>
+    <string name="ang_grasex">Grado sexagesimal</string>
+    <string name="ang_mil">Mil angular</string>
+    <string name="ang_minutoArco">Minuto de arco (arcmin)</string>
+    <string name="ang_Radian">Radián</string>
+    <string name="ang_segundoSexa">Segundo sexagesimal</string>
+
+    <string name="pres_titu">Presión</string>
+    <string name="pres_atmos">Atmósfera (atm)</string>
+    <string name="pres_bar">Bar</string>
+    <string name="pres_megapas">Megapascal (MPa)</string>
+    <string name="pres_pasc">Pascal (Pa)</string>
+    <string name="pres_kilo">Kilopascal (kPa)</string>
+    <string name="pres_mili">Milibar</string>
+    <string name="pres_torr">Torr (torr)</string>
+
+    <string name="probabilidad">Probabilidad y Estadística</string>
+
+    <string name="res_titu">Resistencia eléctrica</string>
+    <string name="res_milio">Miliohmios (mΩ)</string>
+    <string name="res_ohmnio">Ohmios (Ω)</string>
+    <string name="res_kilo">Kiloohmios (kΩ)</string>
+    <string name="res_mega">Megaohmios (MΩ)</string>
+    <string name="res_abo">Abohmios (abΩ)</string>
+    <string name="res_voltio">Voltios por amperios (V/A)</string>
+
+    <string name="Tempera">Temperatura</string>
+
+    <string name="Menu">MENÚ</string>
+    <string name="conve">CONVERTIDOR</string>
+    <string name="herra">HERRAMIENTA</string>
+
+    <string name="inic">INICIAR</string>
+    <string name="sig">SIGUIENTE</string>
+    <string name="omit">OMITIR</string>
+
+    <string name="tabla_peri">Tabla periódica</string>
+    <string name="alfabeto_griego">Alfabeto griego</string>
+    <string name="calcular_area">Calcular área y volúmenes</string>
+    <string name="constantes_universale">Constantes universales</string>
+
+    <string name="mate">Matemáticas</string>
+    <string name="quimi">Química</string>
+    <string name="calcul">Cálculo</string>
+    <string name="fisic">Física</string>
+
+    <string name="tiempo_titu">Tiempo</string>
+    <string name="tiemp_deca">Decada</string>
+    <string name="tiemp_año">Año</string>
+    <string name="tiemp_mes">Mes</string>
+    <string name="tiemp_semana">Semana</string>
+    <string name="tiemp_dia">Día</string>
+    <string name="tiemp_hora">Hora (hr)</string>
+    <string name="tiemp_minu">Minuto (min)</string>
+    <string name="tiemp_seg">Segundo (s)</string>
+
+    <string name="velo_titu">Velocidad</string>
+    <string name="velo_millaxh">Milla por hora (mph/h)</string>
+    <string name="velo_piexseg">Pie por segundo (ft/s)</string>
+    <string name="velo_metroxseg">Metro por segundo (m/s)</string>
+    <string name="velo_kiloxhora">Kilómetro por hora (km/h)</string>
+    <string name="velo_nudo">Nudo</string>
+
+    <string name="area">Área</string>
+
+    <string name="vol_titu">Volumen</string>
+    <string name="vol_litro">Litro (l)</string>
+    <string name="vol_milimetro">Milimetro (ml)</string>
+    <string name="vol_galon">Galón (gal)-US</string>
+    <string name="vol_metro3">Metro Cúbico (m³)</string>
+    <string name="vol_pie3">Pie Cúbico (ft³)</string>
+    <string name="vol_pulgada3">Pulgada Cúbica</string>
+    <string name="vol_cuartogalo">Cuarto de Galón</string>
+    <string name="vol_pinta">Pinta (pt)-US</string>
+
+    <string name="arit">ARITMÉTICA</string>
+    <string name="geometria">GEOMETRÍA ANALÍTICA</string>
+    <string name="algebra">ÁLGEBRA</string>
+    <string name="trigonometria">TRIGONOMETRÍA</string>
+    <string name="algebralineal">ÁLGEBRA LINEAL</string>
+
+    <string name="mecanica">MECÁNICA</string>
+    <string name="dinamica">DINÁMICA</string>
+    <string name="termologia">TERMOLOGIA</string>
+    <string name="optica">ÓPTICA</string>
+    <string name="estatica">ESTÁTICA</string>
+    <string name="proba">PROBABILIDAD Y ESTADÍSTICA</string>
+    <string name="electricidad_mag">ELECTRICIDAD Y MAGNETISMO</string>
+    <string name="Open">Open</string>
+    <string name="Close">close</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+
+    <string name ="calculo_difrencial">Cálculo Diferencial e Integral</string>
+    <string name = "estequiometria">ESTEQUIOMETRÍA</string>
+    <string name = "mecanica_fluidos">MECÁNICA DE FLUIDOS</string>
+    <string name = "OPTICA">ÓPTICA</string>
+    <string name = "termodinamica">TERMODINÁMICA</string>
+<string name= "calculo_vectorial">Cálculo Vectorial</string>
+
+    <string name ="valorar">Valorar Aplicación en Play Store</string>
+<string name ="desarrolada">- DESARROLLADA POR: Kevin Hernandez"</string>
+    <string name = "descripcion_app">iFormulas es una de las mejores en su categoria, desde niveles basicos hasta universidad, todas las formulas en la palma de tu mano y sin conexión a internet.</string>
+<string name="layout3">La app cuenta con múltiples herramientas que permiten al estudiante entender mejor las matemáticas, haciéndose más fácil la resolución de problemas.</string>
+    <string name="layout2">Realiza conversiones entre distintas unidades del sistema internacional y el sistema inglés de manera rápida y precisa.</string>
+    <string name ="layout1">Descubre las principales fórmulas de las ciencias exactas que te ayudarán a resolver con los ejercicios académicos.</string>
+    <string name="desc_4">Todas las formulas en una aplicación</string>
+    <string name="desc_3">Diferentes Herramientas para el estudiante</string>
+    <string name="desc_2">Convertidor de unidades</string>
+    <string name="desc_1">Matemáticas, Fisica y Quimica</string>
+    <string name="layout4">Más de 500 formulas. No necesita conexión a internet y siempre esta en constantes actualizaciones para que disfrutes de todo.</string>
+
+    <string name ="default_notification_channel_id" translatable="false">default_channel </string>
 </resources>

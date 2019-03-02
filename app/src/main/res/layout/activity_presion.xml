@@ -12,7 +12,7 @@
         android:background="@color/colorPrimary"
         android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
         android:id="@+id/my_toolbar"
-        app:title="Presión"
+        app:title="@string/pres_titu"
         app:titleTextColor="@android:color/white"
         android:layout_height="?actionBarSize">
 
@@ -102,7 +102,7 @@ android:focusable="false"
                 android:layout_width="match_parent"
                 android:maxLength="23"
 
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:layout_alignStart="@+id/l1"
                 android:layout_weight="4"
                 android:ems="10"
@@ -125,7 +125,7 @@ android:focusable="false"
                 android:enabled="false"
                 android:focusable="false"
                 android:inputType="none"
-                android:text="Atmósfera (atm)"
+                android:text="@string/pres_atmos"
                 android:textColor="@android:color/black"
                 android:textSize="15dp" />
         </LinearLayout>
@@ -143,7 +143,7 @@ android:focusable="false"
             <com.aldoapps.autoformatedittext.AutoFormatEditText
                 android:id="@+id/bar"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:layout_alignStart="@+id/l1"
                 android:maxLength="23"
 
@@ -167,7 +167,7 @@ android:focusable="false"
                 android:enabled="false"
                 android:focusable="false"
                 android:inputType="none"
-                android:text="Bar"
+                android:text="@string/pres_bar"
                 android:textColor="@android:color/black"
                 android:textSize="15dp" />
         </LinearLayout>
@@ -185,7 +185,7 @@ android:focusable="false"
             <com.aldoapps.autoformatedittext.AutoFormatEditText
                 android:id="@+id/megapasca"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:maxLength="23"
 
                 android:layout_alignStart="@+id/l1"
@@ -209,7 +209,7 @@ android:focusable="false"
                 android:enabled="false"
                 android:focusable="false"
                 android:inputType="none"
-                android:text="Megapascal (MPa)"
+                android:text="@string/pres_megapas"
                 android:textColor="@android:color/black"
                 android:textSize="15dp" />
         </LinearLayout>
@@ -217,7 +217,7 @@ android:focusable="false"
         <LinearLayout
             android:id="@+id/l5"
             android:layout_width="match_parent"
-            android:layout_height="40dp"
+            android:layout_height="50dp"
             android:layout_below="@id/l4"
             android:orientation="horizontal"
             android:weightSum="5">
@@ -226,7 +226,7 @@ android:focusable="false"
             <com.aldoapps.autoformatedittext.AutoFormatEditText
                 android:id="@+id/kiopascal"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:layout_alignStart="@+id/l1"
                 android:layout_weight="4"
                 android:ems="10"
@@ -249,7 +249,7 @@ android:focusable="false"
                 android:enabled="false"
                 android:focusable="false"
                 android:inputType="none"
-                android:text="Kilopascal (kPa)"
+                android:text="@string/pres_kilo"
                 android:textColor="@android:color/black"
                 android:textSize="15dp" />
         </LinearLayout>
@@ -257,7 +257,7 @@ android:focusable="false"
         <LinearLayout
             android:id="@+id/l6"
             android:layout_width="match_parent"
-            android:layout_height="40dp"
+            android:layout_height="50dp"
             android:layout_below="@id/l5"
             android:orientation="horizontal"
             android:weightSum="5">
@@ -266,7 +266,7 @@ android:focusable="false"
             <com.aldoapps.autoformatedittext.AutoFormatEditText
                 android:id="@+id/milibar"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:layout_alignStart="@+id/l1"
                 android:layout_weight="4"
                 android:ems="10"
@@ -289,7 +289,7 @@ android:focusable="false"
                 android:enabled="false"
                 android:focusable="false"
                 android:inputType="none"
-                android:text="Milibar"
+                android:text="@string/pres_mili"
                 android:textColor="@android:color/black"
                 android:textSize="15dp" />
         </LinearLayout>
@@ -307,7 +307,7 @@ android:focusable="false"
             <com.aldoapps.autoformatedittext.AutoFormatEditText
                 android:id="@+id/pascal"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:layout_alignStart="@+id/l1"
                 android:layout_weight="4"
                 android:ems="10"
@@ -330,7 +330,7 @@ android:focusable="false"
                 android:enabled="false"
                 android:focusable="false"
                 android:inputType="none"
-                android:text="Pascal (Pa) "
+                android:text="@string/pres_pasc"
                 android:textColor="@android:color/black"
                 android:textSize="15dp" />
         </LinearLayout>
@@ -348,7 +348,7 @@ android:focusable="false"
             <com.aldoapps.autoformatedittext.AutoFormatEditText
                 android:id="@+id/toor"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:layout_alignStart="@+id/l1"
                 android:layout_weight="4"
                 android:ems="10"
@@ -371,7 +371,7 @@ android:focusable="false"
                 android:enabled="false"
                 android:focusable="false"
                 android:inputType="none"
-                android:text="Torr (torr)"
+                android:text="@string/pres_torr"
                 android:textColor="@android:color/black"
                 android:textSize="15dp" />
         </LinearLayout>

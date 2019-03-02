@@ -70,7 +70,9 @@ public class presion extends AppCompatActivity {
 
 
 
-        String[] opciones = {"Atmósfera","Bar","Megapascal","Pascal","Kilopascal","Milibar","Torr"};
+        String[] opciones = {getString(R.string.pres_atmos),getString(R.string.pres_bar),
+                getString(R.string.pres_megapas)
+                ,getString(R.string.pres_pasc),getString(R.string.pres_kilo),getString(R.string.pres_mili),getString(R.string.pres_torr)};
 
 
 
@@ -114,7 +116,7 @@ public class presion extends AppCompatActivity {
                 if(!charSequence.toString().isEmpty()) {
 
 
-                    if (seleccion.equals("Atmósfera")) {
+                    if (seleccion.equals(getString(R.string.pres_atmos))) {
 
 
                         double valor1 = Double.parseDouble(edNumeros.getText().toString());//km
@@ -142,7 +144,7 @@ public class presion extends AppCompatActivity {
 
 
 
-                    }        else if (seleccion.equals("Bar")) {
+                    }        else if (seleccion.equals(getString(R.string.pres_bar))) {
 
 
                         double valor1 = Double.parseDouble(edNumeros.getText().toString());//km
@@ -167,7 +169,7 @@ public class presion extends AppCompatActivity {
                         double op7 = valor1 * 750.062;//libra
                         torr.setText("" + op7);
                     }
-                    else if (seleccion.equals("Megapascal")) {
+                    else if (seleccion.equals(getString(R.string.pres_megapas))) {
 
 
                         double valor1 = Double.parseDouble(edNumeros.getText().toString());//km
@@ -192,7 +194,7 @@ public class presion extends AppCompatActivity {
                         double op7 = valor1 * 7500.617;//libra
                         torr.setText("" + op7);
 
-                    }    else if (seleccion.equals("Pascal")) {
+                    }    else if (seleccion.equals(getString(R.string.pres_pasc))) {
 
 
                         double valor1 = Double.parseDouble(edNumeros.getText().toString());//km
@@ -217,7 +219,7 @@ public class presion extends AppCompatActivity {
                         double op7 = valor1 / 133.322;//libra
                         torr.setText("" + op7);
                     }
-                    else if (seleccion.equals("Kilopascal")) {
+                    else if (seleccion.equals(getString(R.string.pres_kilo))) {
 
 
                         double valor1 = Double.parseDouble(edNumeros.getText().toString());//km
@@ -243,7 +245,7 @@ public class presion extends AppCompatActivity {
                         torr.setText("" + op7);
 
                     }
-                    else if (seleccion.equals("Milibar")) {
+                    else if (seleccion.equals(getString(R.string.pres_mili))) {
 
 
                         double valor1 = Double.parseDouble(edNumeros.getText().toString());//km
@@ -269,7 +271,7 @@ public class presion extends AppCompatActivity {
                         torr.setText("" + op7);
 
                     }
-                    else if (seleccion.equals("Torr")) {
+                    else if (seleccion.equals(getString(R.string.pres_torr))) {
 
 
                         double valor1 = Double.parseDouble(edNumeros.getText().toString());//km

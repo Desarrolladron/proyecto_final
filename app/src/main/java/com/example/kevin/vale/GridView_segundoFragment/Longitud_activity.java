@@ -80,7 +80,10 @@ public class Longitud_activity extends AppCompatActivity {
 
 
 
-        String[] opciones = {"Kilometro","Metro","Centimetro","Milimetro","Decímetro","Milla","Yarda","Pulgada","Pie"};
+        String[] opciones = {getString(R.string.lon_km),
+                getString(R.string.lon_me),getString(R.string.lon_cen),getString(R.string.lon_milim),
+                getString(R.string.lon_deci),getString(R.string.lon_milla),getString(R.string.lon_yarda),
+                getString(R.string.lon_pulga),getString(R.string.lon_pie)};
 
 
 
@@ -124,7 +127,7 @@ public class Longitud_activity extends AppCompatActivity {
                 if(!charSequence.toString().isEmpty()) {
 
 
-                    if (seleccion.equals("Kilometro")) {
+                    if (seleccion.equals(getString(R.string.lon_km))) {
 
                         limpiar();
                         double valor1 = Double.parseDouble(edNumeros.getText().toString());//km
@@ -155,7 +158,7 @@ public class Longitud_activity extends AppCompatActivity {
                         double op9 = valor1 *  3280.84;//pulgada
                         ed_pie.setText("" + op9);
                     }
-                    else if (seleccion.equals("Metro")) {
+                    else if (seleccion.equals(getString(R.string.lon_me))) {
 
                         double valor1 = Double.parseDouble(edNumeros.getText().toString());//km
                         double op = valor1 / 1000;
@@ -186,7 +189,7 @@ public class Longitud_activity extends AppCompatActivity {
                         ed_pie.setText("" + op9);
 
                     }
-                    else if (seleccion.equals("Centimetro")) {
+                    else if (seleccion.equals(getString(R.string.lon_cen))) {
 
                         double valor1 = Double.parseDouble(edNumeros.getText().toString());//km
                         double op = valor1 / 100000; //kilometro
@@ -217,7 +220,7 @@ public class Longitud_activity extends AppCompatActivity {
                         ed_pie.setText("" + op9);
 
                     }
-                    else if (seleccion.equals("Milimetro")) {
+                    else if (seleccion.equals(getString(R.string.lon_milim))) {
 
                         double valor1 = Double.parseDouble(edNumeros.getText().toString());//km
                         double op = valor1 / 1000000; //kilometro
@@ -250,7 +253,7 @@ public class Longitud_activity extends AppCompatActivity {
                         ed_pie.setText("" + op9);
 
                     }
-                    else if (seleccion.equals("Decímetro")) {
+                    else if (seleccion.equals(getString(R.string.lon_deci))) {
 
                         double valor1 = Double.parseDouble(edNumeros.getText().toString());//km
                         double op = valor1 / 10000; //kilometro
@@ -283,7 +286,7 @@ public class Longitud_activity extends AppCompatActivity {
                         ed_pie.setText("" + op9);
 
                     }
-                    else if (seleccion.equals("Milla")) {
+                    else if (seleccion.equals(getString(R.string.lon_milla))) {
 
                         double valor1 = Double.parseDouble(edNumeros.getText().toString());//km
                         double op = valor1 * 1.609; //kilometro
@@ -314,7 +317,7 @@ public class Longitud_activity extends AppCompatActivity {
                         ed_pie.setText("" + op9);
 
                     }
-                    else if (seleccion.equals("Yarda")) {
+                    else if (seleccion.equals(getString(R.string.lon_yarda))) {
 
                         double valor1 = Double.parseDouble(edNumeros.getText().toString());//km
                         double op = valor1 / 1093.613; //kilometro
@@ -345,7 +348,7 @@ public class Longitud_activity extends AppCompatActivity {
                         ed_pie.setText("" + op9);
 
                     }
-                    else if (seleccion.equals("Pulgada")) {
+                    else if (seleccion.equals(getString(R.string.lon_pulga))) {
 
                         double valor1 = Double.parseDouble(edNumeros.getText().toString());//km
                         double op = valor1 / 39370.079  ; //kilometro
@@ -378,7 +381,7 @@ public class Longitud_activity extends AppCompatActivity {
                         ed_pie.setText("" + op9);
 
                     }
-                    else if (seleccion.equals("Pie")) {
+                    else if (seleccion.equals(getString(R.string.lon_pie))) {
 
                         double valor1 = Double.parseDouble(edNumeros.getText().toString());//km
                         double op = valor1 / 3280.84  ; //kilometro

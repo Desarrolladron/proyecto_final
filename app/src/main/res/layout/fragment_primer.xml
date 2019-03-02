@@ -86,7 +86,7 @@
                     android:layout_height="match_parent" />
                 <TextView
                     android:textColor="@android:color/holo_green_dark"
-                    android:text="Matemáticas"
+                    android:text="@string/mate"
                     android:textSize="14dp"
                     android:id="@+id/xd"
                     android:layout_centerHorizontal="true"
@@ -136,7 +136,7 @@
                     android:layout_height="match_parent" />
                 <TextView
                     android:textColor="@android:color/holo_green_dark"
-                    android:text="Química"
+                    android:text="@string/quimi"
                     android:textSize="14dp"
                     android:id="@+id/xd2"
                     android:layout_centerHorizontal="true"
@@ -186,7 +186,7 @@
                     android:layout_height="match_parent" />
                 <TextView
                     android:textColor="@android:color/holo_green_dark"
-                    android:text="Cálculo"
+                    android:text="@string/calcul"
                     android:textSize="14dp"
                     android:textStyle="bold"
                     android:id="@+id/xd3"
@@ -235,7 +235,7 @@
                     android:layout_height="match_parent" />
                 <TextView
                     android:textColor="@android:color/holo_green_dark"
-                    android:text="Física"
+                    android:text="@string/fisic"
 
                     android:textSize="14dp"
                     android:textStyle="bold"

@@ -13,10 +13,12 @@ import com.example.kevin.vale.R;
 public class ExpandableListViewAdapter extends BaseExpandableListAdapter {
 
     String[] gruponombres = {"Ley De Los Exponentes","Productos Notables","Valor Absoluto","Binomio de Newton","Números Reales",
-    "Ecuaciones","Números Complejos","Ley de Signos","Formula General"};
+    "Números Complejos","Ley de Signos","Formula General","Formulas de Sumatoria","Operaciones con Números Complejos","Conjugado de un número complejo",
+    "Representación de un Número Complejo"};
 
     int[][] childNames = {{R.drawable.ley_exponente},{R.drawable.productos_notables},{R.drawable.valor_absoluto},{R.drawable.newton},{R.drawable.numeros_reales},
-            {R.drawable.ecuacioness},{R.drawable.numero_complejo},{R.drawable.ley_signos},{R.drawable.formula_gral}};
+           {R.drawable.numero_complejo},{R.drawable.ley_signos},{R.drawable.formula_gral},{R.drawable.sumatoria},{R.drawable.operaciones_complejos},
+    {R.drawable.conjugado_numero_completo},{R.drawable.repesentacion_num_complejo}};
     Context context;
 
     public ExpandableListViewAdapter(Context context){ //aqui colocar el int [] imagenes

@@ -13,6 +13,7 @@ import android.widget.ListView;
 import com.example.kevin.vale.ListView_primerFragment.CustomAdapter2;
 import com.example.kevin.vale.ListView_primerFragment.lista;
 import com.example.kevin.vale.R;
+import com.example.kevin.vale.TercerFragmento.Prefijos;
 import com.example.kevin.vale.TercerFragmento.constantes;
 import com.example.kevin.vale.TercerFragmento.tablaPeriodica;
 import com.example.kevin.vale.TercerFragmento.toxicidad;
@@ -40,11 +41,13 @@ public class TercerFragment extends Fragment {
         list = (ListView) view.findViewById(R.id.listaHerramientas);
 
         final ArrayList<lista> listItems = new ArrayList<>();
-        listItems.add(new lista((R.drawable.longitud), "Tabla Periódica"));
-        listItems.add(new lista((R.drawable.cuboo), "Alfabeto Griego y Prefijos Importantes"));
-        listItems.add(new lista((R.drawable.parabolic), "Calcular Área y Volúmenes"));
+        listItems.add(new lista((R.drawable.presentation), getString(R.string.tabla_peri)));
+        listItems.add(new lista((R.drawable.note), getString(R.string.alfabeto_griego)));
+        listItems.add(new lista((R.drawable.notes), "Prefijos Importantes"));
 
-        listItems.add(new lista((R.drawable.parabolic), "Constantes Universales"));
+
+        listItems.add(new lista((R.drawable.artboard), getString(R.string.constantes_universale)));
+        listItems.add(new lista((R.drawable.cuboo), getString(R.string.calcular_area)+" (Proximamente)"));
 
 
 
@@ -67,6 +70,10 @@ public class TercerFragment extends Fragment {
 
         else if(i == 3){
             Intent k = new Intent(getActivity(),constantes.class);
+            startActivity(k);
+        }
+        else if(i == 2){
+            Intent k = new Intent(getActivity(), Prefijos.class);
             startActivity(k);
         }
             }

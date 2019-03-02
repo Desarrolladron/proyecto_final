@@ -51,16 +51,16 @@ public class aritmetica extends AppCompatActivity {
                 Intent intent = new Intent(aritmetica.this, Menu_principal.class);
 
                 startActivity(intent);
-
+            finish();
             }
         });
     }
 
     public class ExpandableListViewAdapter2 extends BaseExpandableListAdapter {
 
-        String[] gruponombres = {"Suma de Fracciones","Multiplicación de Fracciones"};
+        String[] gruponombres = {"Regla de tres Directa","Numero mixto","Potencia de Fracciones","Operaciones con Fracciones"};
 
-        int[][] childNames = {{R.drawable.suma_fracciones},{R.drawable.multiplicacion}};
+        int[][] childNames = {{R.drawable.regla_3},{R.drawable.numero_mixto},{R.drawable.potencia_fracciones},{R.drawable.operaciones_fracciones}};
         Context context;
 
         public ExpandableListViewAdapter2(Context context) { //aqui colocar el int [] imagenes
@@ -117,7 +117,7 @@ public class aritmetica extends AppCompatActivity {
             ImageView imag = new ImageView(context);
             imag.setImageResource(childNames[i][i1]);
             imag.setScaleType(ImageView.ScaleType.FIT_START);
-            imag.setPadding(0, 75, 0, 75);
+            imag.setPadding(0, 75, 0, 30);
 
             return imag;
         }

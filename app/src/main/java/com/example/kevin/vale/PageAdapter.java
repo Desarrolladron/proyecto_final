@@ -36,3 +36,5 @@ public class PageAdapter extends FragmentStatePagerAdapter {
         return numeroTabs;
     }
 }
+
+//170e255adcc8cf558c4bf864eb079ede0e3943ae

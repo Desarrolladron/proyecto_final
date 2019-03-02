@@ -11,7 +11,7 @@
         android:background="@color/colorPrimary"
         android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
         android:id="@+id/my_toolbar"
-        app:title="Longitud"
+        app:title="@string/lon_titu"
         app:titleTextColor="@android:color/white"
         android:layout_height="?actionBarSize">
 
@@ -297,7 +297,7 @@
         <LinearLayout
             android:id="@+id/l1"
             android:layout_width="match_parent"
-            android:layout_height="40dp"
+            android:layout_height="50dp"
             android:layout_alignParentStart="true"
             android:layout_marginTop="7dp"
 
@@ -308,7 +308,7 @@
             <com.aldoapps.autoformatedittext.AutoFormatEditText
                 android:id="@+id/texto_km"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:layout_alignStart="@+id/l1"
                 android:layout_weight="4"
                 android:maxLength="23"
@@ -333,7 +333,7 @@
                 android:enabled="false"
                 android:focusable="false"
                 android:inputType="none"
-                android:text="Kilómetro (Km)"
+                android:text="@string/lon_km"
                 android:textColor="@android:color/black"
                 android:textSize="15dp" />
         </LinearLayout>
@@ -342,7 +342,7 @@
         <LinearLayout
             android:id="@+id/l2"
             android:layout_width="match_parent"
-            android:layout_height="40dp"
+            android:layout_height="50dp"
             android:layout_below="@id/l1"
             android:orientation="horizontal"
             android:weightSum="5">
@@ -351,7 +351,7 @@
             <com.aldoapps.autoformatedittext.AutoFormatEditText
                 android:id="@+id/texto_m"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:layout_alignStart="@+id/l1"
                 android:layout_weight="4"
                 android:maxLength="23"
@@ -375,7 +375,7 @@
                 android:enabled="false"
                 android:focusable="false"
                 android:inputType="none"
-                android:text="Metro (m)"
+                android:text="@string/lon_me"
                 android:textColor="@android:color/black"
                 android:textSize="15dp" />
         </LinearLayout>
@@ -384,7 +384,7 @@
         <LinearLayout
             android:id="@+id/l3"
             android:layout_width="match_parent"
-            android:layout_height="40dp"
+            android:layout_height="50dp"
             android:layout_below="@id/l2"
             android:orientation="horizontal"
             android:weightSum="5">
@@ -393,7 +393,7 @@
             <com.aldoapps.autoformatedittext.AutoFormatEditText
                 android:id="@+id/texto_cm"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:layout_alignStart="@+id/l1"
                 android:layout_weight="4"
                 android:ems="10"
@@ -417,7 +417,7 @@
                 android:enabled="false"
                 android:focusable="false"
                 android:inputType="none"
-                android:text="Centimetro (cm)"
+                android:text="@string/lon_cen"
                 android:textColor="@android:color/black"
                 android:textSize="15dp" />
         </LinearLayout>
@@ -425,7 +425,7 @@
         <LinearLayout
             android:id="@+id/l5"
             android:layout_width="match_parent"
-            android:layout_height="40dp"
+            android:layout_height="50dp"
             android:layout_below="@id/l4"
             android:orientation="horizontal"
             android:weightSum="5">
@@ -434,7 +434,7 @@
             <com.aldoapps.autoformatedittext.AutoFormatEditText
                 android:id="@+id/texto_Decim"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:layout_alignStart="@+id/l1"
                 android:layout_weight="4"
                 android:ems="10"
@@ -457,7 +457,7 @@
                 android:enabled="false"
                 android:focusable="false"
                 android:inputType="none"
-                android:text="Decímetro (dm)"
+                android:text="@string/lon_deci"
                 android:textColor="@android:color/black"
                 android:textSize="15dp" />
         </LinearLayout>
@@ -465,7 +465,7 @@
         <LinearLayout
             android:id="@+id/l6"
             android:layout_width="match_parent"
-            android:layout_height="40dp"
+            android:layout_height="50dp"
             android:layout_below="@id/l5"
             android:orientation="horizontal"
             android:weightSum="5">
@@ -474,7 +474,7 @@
             <com.aldoapps.autoformatedittext.AutoFormatEditText
                 android:id="@+id/texto_milla"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:layout_alignStart="@+id/l1"
                 android:layout_weight="4"
                 android:ems="10"
@@ -497,7 +497,7 @@
                 android:enabled="false"
                 android:focusable="false"
                 android:inputType="none"
-                android:text="Milla (mi)"
+                android:text="@string/lon_milla"
                 android:textColor="@android:color/black"
                 android:textSize="15dp" />
         </LinearLayout>
@@ -506,7 +506,7 @@
         <LinearLayout
             android:id="@+id/l4"
             android:layout_width="match_parent"
-            android:layout_height="40dp"
+            android:layout_height="50dp"
             android:layout_below="@id/l3"
             android:orientation="horizontal"
             android:weightSum="5">
@@ -515,7 +515,7 @@
             <com.aldoapps.autoformatedittext.AutoFormatEditText
                 android:id="@+id/texto_milimetro"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:layout_alignStart="@+id/l1"
                 android:layout_weight="4"
                 android:ems="10"
@@ -538,7 +538,7 @@
                 android:enabled="false"
                 android:focusable="false"
                 android:inputType="none"
-                android:text="Milimetro (mm)"
+                android:text="@string/lon_milim"
                 android:textColor="@android:color/black"
                 android:textSize="15dp" />
         </LinearLayout>
@@ -547,7 +547,7 @@
         <LinearLayout
             android:id="@+id/l7"
             android:layout_width="match_parent"
-            android:layout_height="40dp"
+            android:layout_height="50dp"
             android:layout_below="@id/l6"
             android:orientation="horizontal"
             android:weightSum="5">
@@ -556,7 +556,7 @@
             <com.aldoapps.autoformatedittext.AutoFormatEditText
                 android:id="@+id/texto_yarda"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:layout_alignStart="@+id/l1"
                 android:layout_weight="4"
                 android:ems="10"
@@ -579,7 +579,7 @@
                 android:enabled="false"
                 android:focusable="false"
                 android:inputType="none"
-                android:text="Yarda (yd)"
+                android:text="@string/lon_yarda"
                 android:textColor="@android:color/black"
                 android:textSize="15dp" />
         </LinearLayout>
@@ -587,7 +587,7 @@
         <LinearLayout
             android:id="@+id/l8"
             android:layout_width="match_parent"
-            android:layout_height="40dp"
+            android:layout_height="50dp"
             android:layout_below="@id/l7"
             android:orientation="horizontal"
             android:weightSum="5">
@@ -596,7 +596,7 @@
             <com.aldoapps.autoformatedittext.AutoFormatEditText
                 android:id="@+id/texto_pulgada"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:layout_alignStart="@+id/l1"
                 android:layout_weight="4"
                 android:ems="10"
@@ -619,7 +619,7 @@
                 android:enabled="false"
                 android:focusable="false"
                 android:inputType="none"
-                android:text="Pulgada (pulg)"
+                android:text="@string/lon_pulga"
                 android:textColor="@android:color/black"
                 android:textSize="15dp" />
         </LinearLayout>
@@ -627,7 +627,7 @@
         <LinearLayout
             android:id="@+id/l9"
             android:layout_width="match_parent"
-            android:layout_height="40dp"
+            android:layout_height="50dp"
             android:layout_below="@id/l8"
             android:orientation="horizontal"
             android:weightSum="5">
@@ -636,7 +636,7 @@
             <com.aldoapps.autoformatedittext.AutoFormatEditText
                 android:id="@+id/texto_pie"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:layout_alignStart="@+id/l1"
                 android:layout_weight="4"
                 android:ems="10"
@@ -659,7 +659,7 @@
                 android:enabled="false"
                 android:focusable="false"
                 android:inputType="none"
-                android:text="Pie (´)"
+                android:text="@string/lon_pie"
                 android:textColor="@android:color/black"
                 android:textSize="15dp" />
         </LinearLayout>

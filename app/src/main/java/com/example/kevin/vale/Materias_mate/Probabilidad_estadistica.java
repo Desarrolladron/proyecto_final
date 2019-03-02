@@ -52,6 +52,7 @@ public class Probabilidad_estadistica extends AppCompatActivity {
                 Intent intent = new Intent(Probabilidad_estadistica.this, Menu_principal.class);
 
                 startActivity(intent);
+                finish();
 
             }
         });
@@ -59,9 +60,13 @@ public class Probabilidad_estadistica extends AppCompatActivity {
 
     public class ExpandableListViewAdapter3 extends BaseExpandableListAdapter {
 
-        String[] gruponombres = {"Principio Fundamental del Conteo", "Combinaciones","Probabilidad","Esperanza Matemática","Permutaciones", "Conteo de Ordenaciones de Eventos"};
+        String[] gruponombres = {"Moda de Datos Agrupados","Media aritmética o Promedio",
+                "Desviación Estándar","Varianza","Operaciones con Conjuntos","Probabilidad Condicional",
+                "Esperanza Matemática","Permutaciones","Ordenaciones y Combinaciones"};
 
-        int[][] childNames = {{R.drawable.principio_conteo},{R.drawable.combi2},{R.drawable.probabilidad},{R.drawable.esperanza},{R.drawable.permut2},{R.drawable.conteo_ordenacion}};
+        int[][] childNames = {{R.drawable.moda_datos_agrupados},{R.drawable.media_o_promedio},
+                {R.drawable.desviacion_estandar},{R.drawable.varianza},{R.drawable.operaciones_conjuntos},{R.drawable.proba_condicional},
+                {R.drawable.esperanza_mateamtica},{R.drawable.permutacion},{R.drawable.ordenaciones_y_combinaciones}};
         Context context;
 
         public ExpandableListViewAdapter3(Context context) { //aqui colocar el int [] imagenes
@@ -118,7 +123,8 @@ public class Probabilidad_estadistica extends AppCompatActivity {
             ImageView imag = new ImageView(context);
             imag.setImageResource(childNames[i][i1]);
             imag.setScaleType(ImageView.ScaleType.FIT_START);
-            imag.setPadding(0, 75, 0, 75);
+            imag.setPadding(0, 75, 0, 10);
+
 
             return imag;
         }

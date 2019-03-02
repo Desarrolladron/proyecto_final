@@ -12,7 +12,7 @@
         android:background="@color/colorPrimary"
         android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
         android:id="@+id/my_toolbar"
-        app:title="Energía"
+        app:title="@string/ene_titu"
         app:titleTextColor="@android:color/white"
         android:layout_height="?actionBarSize">
 
@@ -127,7 +127,7 @@
                 android:enabled="false"
                 android:focusable="false"
                 android:inputType="none"
-                android:text="Julio"
+                android:text="@string/ene_juli"
                 android:textColor="@android:color/black"
                 android:textSize="15dp" />
         </LinearLayout>
@@ -170,7 +170,7 @@
                 android:enabled="false"
                 android:focusable="false"
                 android:inputType="none"
-                android:text="Kilojoule"
+                android:text="@string/ene_kiloju"
                 android:textColor="@android:color/black"
                 android:textSize="15dp" />
         </LinearLayout>
@@ -213,7 +213,7 @@
                 android:enabled="false"
                 android:focusable="false"
                 android:inputType="none"
-                android:text="Kilocaloría"
+                android:text="@string/ene_kiloca"
                 android:textColor="@android:color/black"
                 android:textSize="15dp" />
         </LinearLayout>
@@ -253,7 +253,7 @@
                 android:enabled="false"
                 android:focusable="false"
                 android:inputType="none"
-                android:text="Kilovatio-hora"
+                android:text="@string/ene_kilovatio"
                 android:textColor="@android:color/black"
                 android:textSize="15dp" />
         </LinearLayout>
@@ -293,7 +293,7 @@
                 android:enabled="false"
                 android:focusable="false"
                 android:inputType="none"
-                android:text="BTU"
+                android:text="@string/ene_btu"
                 android:textColor="@android:color/black"
                 android:textSize="15dp" />
         </LinearLayout>
@@ -334,7 +334,7 @@
                 android:enabled="false"
                 android:focusable="false"
                 android:inputType="none"
-                android:text="Vatio-hora"
+                android:text="@string/ene_vatioHora"
                 android:textColor="@android:color/black"
                 android:textSize="15dp" />
         </LinearLayout>

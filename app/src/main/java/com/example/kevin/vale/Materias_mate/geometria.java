@@ -54,6 +54,7 @@ public class geometria extends AppCompatActivity {
                 Intent intent = new Intent(geometria.this, Menu_principal.class);
 
                 startActivity(intent);
+                finish();
 
             }
         });
@@ -62,10 +63,11 @@ public class geometria extends AppCompatActivity {
     public class ExpandableListViewAdapter4 extends BaseExpandableListAdapter {
 
         String[] gruponombres = {"Distancia entre dos puntos","Punto medio de la recta","Forma punto/pendiente","Distancia de un punto a una recta",
-        "Ecuación general de las cónicas","Circunferencia con centro en el origen","Circunferencia con centro fuera del origen"};
+        "Ecuación general de las cónicas","Circunferencia con centro en el origen","Circunferencia con centro fuera del origen","Hiperbola"};
+
 
         int[][] childNames = {{R.drawable.distancia2},{R.drawable.punto_medio_def},{R.drawable.pendiente_buena},{R.drawable.punto_recta},{R.drawable.conicas},
-                {R.drawable.centro_origen},{R.drawable.fuera_origen}};
+                {R.drawable.centro_origen},{R.drawable.fuera_origen},{R.drawable.hiperbola}};
         Context context;
 
         public ExpandableListViewAdapter4(Context context) { //aqui colocar el int [] imagenes
@@ -121,6 +123,7 @@ public class geometria extends AppCompatActivity {
         public View getChildView(int i, int i1, boolean b, View view, ViewGroup viewGroup) {
             ImageView imag = new ImageView(context);
             imag.setImageResource(childNames[i][i1]);
+
             imag.setScaleType(ImageView.ScaleType.FIT_START);
             imag.setPadding(0, 75, 0, 75);
 

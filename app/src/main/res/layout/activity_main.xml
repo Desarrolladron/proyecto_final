@@ -11,39 +11,38 @@
 <RelativeLayout
 
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     android:layout_weight="1"
 
     >
     <android.support.v7.widget.CardView
         android:layout_width="match_parent"
         app:cardCornerRadius="10dp"
-        android:elevation="10dp"
-        android:layout_height="match_parent">
+        android:elevation="20dp"
+       app:cardBackgroundColor="#F4F5F4"
+        android:layout_height="wrap_content">
 
         <ImageView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-
-
-            android:foreground="?attr/selectableItemBackground"
+            android:layout_gravity="center_vertical"
             android:clickable="true"
-            android:src="@drawable/mate"
-            />
+            android:foreground="?attr/selectableItemBackground"
+            android:src="@drawable/mate" />
+
         <TextView
 
+            android:id="@+id/titulo"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:padding="15dp"
-            android:id="@+id/titulo"
-            android:text="FORMULAS"
-            android:gravity="center_horizontal"
+            android:background="#D4B0B4A6"
+            android:gravity="center_vertical|center_horizontal"
+            android:layout_gravity="center_vertical"
+            android:padding="13dp"
+            android:text="iFORMULAS"
             android:textColor="@android:color/white"
             android:textSize="25dp"
-            android:textStyle="bold"
-            android:background="#d4c2c4bd"
-            android:layout_centerVertical="true"
-            />
+            android:textStyle="bold" />
 
     </android.support.v7.widget.CardView>
 
@@ -51,6 +50,12 @@
 
 
 </RelativeLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+    </LinearLayout>
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -61,22 +66,25 @@
 
         <Button
             android:layout_width="match_parent"
-            android:padding="25dp"
-            android:textSize="14dp"
-            android:layout_weight="1"
-            android:onClick="loadSlides"
-
-            android:textColor="#ffff"
-            android:clickable="true"
-            android:foreground="?selectableItemBackground"
-            android:background="#009688"
             android:layout_height="wrap_content"
-            android:text="¿Como funciona?"
-            android:layout_gravity="bottom"/>
+            android:layout_weight="1"
+            android:background="#009688"
+            android:clickable="true"
+            android:layout_gravity="bottom"
+
+            android:foreground="?selectableItemBackground"
+            android:onClick="loadSlides"
+            android:padding="28dp"
+            android:textAlignment="center"
+
+
+            android:text="@string/como_funciona"
+            android:textColor="#ffff"
+            android:textSize="13.5dp" />
 
         <Button
             android:layout_width="match_parent"
-            android:padding="25dp"
+            android:padding="28dp"
             android:textSize="14dp"
             android:clickable="true"
             android:foreground="?selectableItemBackground"
@@ -84,9 +92,10 @@
             android:layout_weight="1"
             android:background="@color/colorPrimary"
             android:id="@+id/inicio"
+            android:textAlignment="center"
             android:layout_height="wrap_content"
             android:layout_gravity="bottom"
-            android:text="Iniciar"/>
+            android:text="@string/iniciar"/>
     </LinearLayout>
 
 </LinearLayout>

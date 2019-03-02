@@ -48,6 +48,7 @@ public class algebra extends AppCompatActivity {
                 Intent intent = new Intent(algebra.this, Menu_principal.class);
 
                 startActivity(intent);
+                finish();
 
             }
         });

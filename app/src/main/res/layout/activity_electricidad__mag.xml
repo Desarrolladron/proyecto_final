@@ -3,6 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:background="@android:color/white"
     android:layout_height="match_parent"
     tools:context=".Materias_Fisica.Electricidad_Mag">
 
@@ -10,7 +11,7 @@
         android:layout_width="match_parent"
         android:background="@color/colorPrimary"
         android:id="@+id/my_toolbar"
-        app:title="Electricidad y Magnetismo"
+        app:title="@string/Electricidad"
         app:titleTextColor="@android:color/white"
         android:layout_height="?actionBarSize">
 
@@ -33,15 +34,7 @@
 
     </ExpandableListView>
 
-    <android.support.design.widget.FloatingActionButton
-        android:id="@+id/fab"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentEnd="true"
-        android:layout_gravity="left"
-        android:layout_marginBottom="26dp"
-        android:layout_marginEnd="31dp"
-        app:srcCompat="@android:drawable/ic_menu_directions" />
 
+    <include
+        layout="@layout/boton_flotante"></include>
 </RelativeLayout>

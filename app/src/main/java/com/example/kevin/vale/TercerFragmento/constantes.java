@@ -11,7 +11,7 @@ import com.example.kevin.vale.R;
 import uk.co.senab.photoview.PhotoViewAttacher;
 
 public class constantes extends AppCompatActivity {
-    ImageView imageView,image2,imagen3;
+    ImageView imageView;
     PhotoViewAttacher photoViewAttacher;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,7 +25,6 @@ public class constantes extends AppCompatActivity {
         photoViewAttacher = new PhotoViewAttacher(imageView);
 
 
-        imagen3 =(ImageView) findViewById(R.id.conceptos);
-        photoViewAttacher = new PhotoViewAttacher(imagen3);
+
     }
 }

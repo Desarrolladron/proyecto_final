@@ -68,7 +68,8 @@ public class Frecuencia extends AppCompatActivity {
 
 
 
-        String[] opciones = {"Hercio","Kilohertz","Megahercio","Gigahercio"};
+        String[] opciones = {getString(R.string.fre_herzio),getString(R.string.fre_kilo)
+                ,getString(R.string.fre_mega),getString(R.string.fre_giga)};
 
 
 
@@ -112,7 +113,7 @@ public class Frecuencia extends AppCompatActivity {
                 if (!charSequence.toString().isEmpty()) {
 
 
-                    if (seleccion.equals("Hercio")) {
+                    if (seleccion.equals(getString(R.string.fre_herzio))) {
 
 
                         double valor1 = Double.parseDouble(edNumeros.getText().toString());//km
@@ -130,7 +131,7 @@ public class Frecuencia extends AppCompatActivity {
 
 
                     }
-                    else if (seleccion.equals("Kilohertz")) {
+                    else if (seleccion.equals(getString(R.string.fre_kilo))) {
 
 
                         double valor1 = Double.parseDouble(edNumeros.getText().toString());//km
@@ -151,7 +152,7 @@ public class Frecuencia extends AppCompatActivity {
 
 
                     }
-                    else if (seleccion.equals("Megahercio")) {
+                    else if (seleccion.equals(getString(R.string.fre_mega))) {
 
 
                         double valor1 = Double.parseDouble(edNumeros.getText().toString());//km
@@ -170,7 +171,7 @@ public class Frecuencia extends AppCompatActivity {
 
 
                     }
-                    else if (seleccion.equals("Gigahercio")) {
+                    else if (seleccion.equals(getString(R.string.fre_giga))) {
 
 
                         double valor1 = Double.parseDouble(edNumeros.getText().toString());//km

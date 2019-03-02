@@ -32,7 +32,6 @@ public class toxicidad extends AppCompatActivity {
                 finish();
             }
         });
-
         imagen =(ImageView) findViewById(R.id.kota);
         photoViewAttacher = new PhotoViewAttacher(imagen);
     }

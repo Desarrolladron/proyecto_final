@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">iFormulas</string>
+    <string name="app_mate">Maths</string>
+
+    <string name="slide_1_titulo">Matemáticas, Física y más</string>
+    <string name="slide_1_desc"> Las principale </string>
+
+    <string name="slide_2_titulo">Personajes Relevantes y aportaciones</string>
+    <string name="slide_2_desc"> Aquellos cientificos, matematicos , filosofos e inventores de algunas herramientas que hoy en dia conocemos.</string>
+
+    <string name="slide_3_titulo">Interfaz amigable y intuitiva</string>
+    <string name="slide_3_desc">Aqui dfqwerwquna pinshe prueba aver como sale esta madre espero y si funcione alv </string>
+
+    <string name="slide_4_titulo">Todas las formulas en un aplicación</string>
+    <string name="slide_4_desc">kyc gei</string>
+
+    <string name="my_preference">"com.abc.com.Mypref"</string>
+    <string name="my_preference_key">"com.abc.com.MyprefKey"</string>
+
+
+    <string name="menu_principal">Main menu</string>
+
+    <!-- TODO IMPORTANTE AQUI   -->
+
+    <string name="descripcion">Main sciences that study the properties of matter and establish laws
+that explain natural phenomena. </string>
+    <string name="encabezado">Tools that allow to know more thoroughly the different sciences studied.</string>
+<string name ="convertidor_descripcion" >Unit conversion is the transformation of the numerical value of a physical quantity and expressed in another unit of measure of the same nature.
+</string>
+<string name="texto">Mathematics is the deductive science that is dedicated to the study of the properties of abstract entities and their relations. This means that mathematics works with numbers, symbols, geometric figures, etc.
+</string>
+
+    <string name ="quimica">Science that studies the composition and properties of matter and the transformations it undergoes without altering the elements that form it.</string>
+    <string name="calculo">It deals with the study of the increments in the variables, slopes of curves, maximum and minimum values ​​of functions and the determination of lengths, areas and volumes. It is used especially in sciences such as engineering.
+ </string>
+    <string name="fisica">Physics is responsible for analyzing the characteristics of energy, time and matter, as well as the links that lie between them.
+ </string>
+
+    <!-- Conversor -->
+    <string name ="area_km2">Square kilometer</string>
+    <string name ="area_mt2">Square meter</string>
+    <string name ="area_mill2">Square mile</string>
+    <string name ="area_ya2">Square yard</string>
+    <string name ="area_pie2">Square feet</string>
+    <string name ="area_pulg2">Square inch</string>
+    <string name ="area_ha">Hectare (ha)</string>
+    <string name ="area_acre">Acre</string>
+
+    <string name ="cons_km">Kilometer per liter</string>
+    <string name ="cons_mill">Mile per American gallon</string>
+    <string name ="cons_mill_impe">Mile per gallon (Imperial)</string>
+    <string name ="cons_titu">Fuel consumption</string>
+
+    <string name ="ene_titu">Energy</string>
+    <string name ="ene_juli">Joule</string>
+    <string name ="ene_kiloju">Kilojoule</string>
+    <string name ="ene_kiloca">Kilocaloría</string>
+    <string name ="ene_vatioHora">Watt-hour</string>
+    <string name ="ene_kilovatio">Kilowatt-hour</string>
+    <string name ="ene_btu">BTU</string>
+
+    <string name ="Electricidad">Electricity and magnetism</string>
+    <string name ="Geometría">Geometry</string>
+
+    <string name ="fre_titu">Frequency</string>
+    <string name ="fre_mega">Megahertz (MHz)</string>
+    <string name ="fre_herzio">Hertz (Hz)</string>
+    <string name ="fre_kilo">Kilohertz (kHz)</string>
+    <string name ="fre_giga">Gigahertz (GHz)</string>
+
+    <string name ="lon_titu">Longitude</string>
+    <string name ="lon_km">Kilometer (Km)</string>
+    <string name ="lon_me">Meter (m)</string>
+    <string name ="lon_cen">Centimeter (cm)</string>
+    <string name ="lon_milim">Millimeter (mm)</string>
+    <string name ="lon_deci">Decimeter (dm)</string>
+    <string name ="lon_milla">Mile (mi)</string>
+    <string name ="lon_yarda">Yard (yd)</string>
+    <string name ="lon_pulga">Inch (pulg)</string>
+    <string name ="lon_pie">Foot (´)</string>
+
+    <string name ="como_funciona">HELP</string>
+    <string name="iniciar">START</string>
+
+    <string name ="masa_titu">Masa</string>
+    <string name ="masa_ton">Ton (t)</string>
+    <string name ="masa_kg">Kilogram (kg)</string>
+    <string name ="masa_gra">Gram (g)</string>
+    <string name ="masa_quila">Carat</string>
+    <string name ="masa_milig">Milligram (mg)</string>
+    <string name ="masa_stone">Stone (st)</string>
+    <string name ="masa_libra">Pounds(lb)</string>
+    <string name ="masa_onza">Ounce (oz)</string>
+
+    <string name = "ang_titul">Flat angle</string>
+    <string name = "ang_gracen">Degree centesimal (gon)</string>
+    <string name = "ang_grasex">Sexagesimal degree</string>
+    <string name = "ang_mil">Angular Mils</string>
+    <string name = "ang_minutoArco">Minutes of arc (arcmin)</string>
+    <string name = "ang_Radian">Radián</string>
+    <string name = "ang_segundoSexa">Second sexagesimal</string>
+
+    <string name ="pres_titu">Pressure</string>
+    <string name ="pres_atmos">Atmosphere (atm)</string>
+    <string name ="pres_bar">Bar</string>
+    <string name ="pres_megapas">Megapascal (MPa)</string>
+    <string name ="pres_pasc">Pascal (Pa)</string>
+    <string name ="pres_kilo">Kilopascal(kPa)</string>
+    <string name ="pres_mili">Millibar </string>
+    <string name ="pres_torr">Torr (torr)</string>
+
+    <string name = "probabilidad">Probability and Statistics</string>
+
+    <string name ="res_titu">Electric resistance</string>
+    <string name ="res_milio">Milliohms (mΩ)</string>
+    <string name ="res_ohmnio">Ohms (Ω)</string>
+    <string name ="res_kilo">Kiloohmios (kΩ)</string>
+    <string name ="res_mega">Megaohm (MΩ)</string>
+    <string name ="res_abo">Abohms (abΩ)</string>
+    <string name ="res_voltio">Volts per amps (V/A)</string>
+
+    <string name ="Tempera">Temperature</string>
+
+    <string name ="Menu">MENU</string>
+    <string name ="conve">CONVERTER</string>
+    <string name ="herra">TOOLS</string>
+
+    <string name ="inic">START</string>
+    <string name ="sig">NEXT</string>
+    <string name ="omit">SKIP</string>
+
+    <string name ="tabla_peri">Periodic table</string>
+    <string name ="alfabeto_griego">Greek alphabet</string>
+    <string name ="calcular_area">Calculate area and volumes</string>
+    <string name ="constantes_universale">Universal constants</string>
+
+   <string name ="mate">Mathematics</string>
+   <string name ="quimi">Chemistry</string>
+   <string name ="calcul">Calculation</string>
+   <string name ="fisic">Physics</string>
+
+    <string name ="tiempo_titu">Time</string>
+    <string name ="tiemp_deca">Decade</string>
+    <string name ="tiemp_año">Year</string>
+    <string name ="tiemp_mes">Month</string>
+    <string name ="tiemp_semana">Week</string>
+    <string name ="tiemp_dia">Day</string>
+    <string name ="tiemp_hora">Hour (hr)</string>
+    <string name ="tiemp_minu">Minute (min)</string>
+    <string name ="tiemp_seg">Second (s)</string>
+
+    <string name ="velo_titu">Velocity</string>
+    <string name ="velo_millaxh">Mile per hour (mph/h)</string>
+    <string name ="velo_piexseg">Foot per second(ft/s)</string>
+    <string name ="velo_metroxseg">Meters per second (m/s)</string>
+    <string name ="velo_kiloxhora">Kilometer per hour(km/h)</string>
+    <string name ="velo_nudo">Knots</string>
+
+    <string name ="vol_titu">Volume</string>
+    <string name ="vol_litro">Liter (l)</string>
+    <string name ="vol_milimetro">Millimeter (ml)</string>
+    <string name ="vol_galon">Gallon (gal)-US</string>
+    <string name ="vol_metro3">Cubic meter (m³)</string>
+    <string name ="vol_pie3">Cubic foot(ft³)</string>
+    <string name ="vol_pulgada3">Cubic inch</string>
+    <string name ="vol_cuartogalo">Quart</string>
+    <string name ="vol_pinta">Pinta (pt)-US</string>
+
+    <string name ="area">Area</string>
+
+    <string name ="arit">ARITHMETIC</string>
+    <string name ="geometria">GEOMETRY ANALITYC</string>
+    <string name ="algebra">ALGEBRA</string>
+    <string name ="trigonometria">TRIGONOMETRY</string>
+    <string name ="algebralineal">LINEAR ALGEBRA</string>
+
+    <string name ="mecanica">MECHANICS</string>
+    <string name ="dinamica">DYNAMICS</string>
+    <string name ="termologia">TERMOLOGY</string>
+    <string name ="optica">OPTICS</string>
+    <string name ="estatica">STATICS</string>
+     <string name ="proba">PROBABILITY AND STATISTICS</string>
+    <string name ="electricidad_mag">ELECTRICITY AND MAGNETISM</string>
+    <string name="Open">Open</string>
+    <string name="Close">close</string>
+
+    <string name ="calculo_difrencial">Differential and Integral Calculus
+</string>
+    <string name = "estequiometria">STOICHIOMETRY</string>
+    <string name = "mecanica_fluidos">FLUID MECHANICS</string>
+    <string name = "OPTICA">OPTICS</string>
+    <string name = "termodinamica">THERMODYNAMICS</string>
+    <string name= "calculo_vectorial">Cálculo Vectorial</string>
+
+    <string name ="desarrolada">- DEVELOPED BY: Kevin Hernandez
+</string>
+    <string name="valorar">Value Application in Play Store
+</string>
+    <string name ="descripcion_app">
+iFormulas is one of the best in its category, from basic levels to university, all formulas in the palm of your hand and without internet connection.</string>
+<string name="layout2">Conversions between different units of the international system and the English system quickly and accurately.
+</string>
+
+    <string name="layout3">The app has multiple tools that allow the student to better understand mathematics, making it easier to solve problems.
+</string>
+    <string name ="layout1">Discover the main formulas of the exact sciences that will help you to solve with the academic exercises.
+</string>
+    <string name="layout4">More than 500 formulas. It does not need internet connection and it is always in constant updates so you can enjoy everything.
+</string>
+
+    <string name="desc_4">All the formulas in an application
+</string>
+    <string name="desc_3">Different tools for the student
+</string>
+    <string name="desc_1">Mathematics, Physics and Chemistry</string>
+    <string name="desc_2">Unit converter</string>
+    <string name ="default_notification_channel_id" translatable="false">default_channel </string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+</resources>

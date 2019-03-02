@@ -12,7 +12,7 @@
         android:background="@color/colorPrimary"
         android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
         android:id="@+id/my_toolbar"
-        app:title="Consumo de Combustible"
+        app:title="@string/cons_titu"
         app:titleTextColor="@android:color/white"
         android:layout_height="?actionBarSize">
 
@@ -126,7 +126,7 @@
                 android:enabled="false"
                 android:focusable="false"
                 android:inputType="none"
-                android:text="Kilómetro por litro"
+                android:text="@string/cons_km"
                 android:textColor="@android:color/black"
                 android:textSize="15dp" />
         </LinearLayout>
@@ -168,7 +168,7 @@
                 android:enabled="false"
                 android:focusable="false"
                 android:inputType="none"
-                android:text="Milla por galón americano"
+                android:text="@string/cons_mill"
                 android:textColor="@android:color/black"
                 android:textSize="15dp" />
         </LinearLayout>
@@ -211,7 +211,7 @@
                 android:focusable="false"
                 android:inputType="none"
 
-                android:text="Milla por galón (Imperial)"
+                android:text="@string/cons_mill_impe"
                 android:textColor="@android:color/black"
                 android:textSize="15dp" />
         </LinearLayout>

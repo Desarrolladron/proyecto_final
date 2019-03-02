@@ -4,6 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@android:color/white"
+
     tools:context=".Materias_mate.geometria">
 
 
@@ -11,7 +13,7 @@
         android:layout_width="match_parent"
         android:background="@color/colorPrimary"
         android:id="@+id/my_toolbar"
-        app:title="Geometria"
+        app:title="@string/Geometría"
         app:titleTextColor="@android:color/white"
         android:layout_height="?actionBarSize">
 
@@ -34,16 +36,6 @@
 
     </ExpandableListView>
 
-    <android.support.design.widget.FloatingActionButton
-        android:id="@+id/fab"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentEnd="true"
-        android:layout_gravity="left"
-        android:layout_marginBottom="26dp"
-        android:layout_marginEnd="31dp"
-        app:fabSize="normal"
-        android:src="@drawable/ic_home_black_24dp"
-       />
+   <include
+       layout="@layout/boton_flotante"></include>
 </RelativeLayout>

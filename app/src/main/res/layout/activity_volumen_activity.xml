@@ -11,7 +11,7 @@
         android:background="@color/colorPrimary"
         android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
         android:id="@+id/my_toolbar"
-        app:title="Volumen"
+        app:title="@string/vol_titu"
         app:titleTextColor="@android:color/white"
         android:layout_height="?actionBarSize">
 
@@ -54,6 +54,7 @@
             android:id="@+id/numero"
             android:hint="0"
             android:layout_width="match_parent"
+            android:focusable="false"
             android:layout_height="match_parent"
             android:singleLine="true"
             android:layout_weight="2.4"
@@ -69,6 +70,12 @@
 
     </LinearLayout>
 
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_below="@id/linea"
+        android:layout_marginBottom="120dp"
+        android:layout_height="match_parent">
+
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -82,7 +89,7 @@
         <LinearLayout
             android:id="@+id/l1"
             android:layout_width="match_parent"
-            android:layout_height="42dp"
+            android:layout_height="50dp"
             android:layout_alignParentStart="true"
             android:layout_marginTop="7dp"
 
@@ -93,7 +100,7 @@
             <com.aldoapps.autoformatedittext.AutoFormatEditText
                 android:id="@+id/texto_l"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:layout_alignStart="@+id/l1"
                 android:layout_weight="4"
                 android:ems="10"
@@ -116,7 +123,7 @@
                 android:enabled="false"
                 android:focusable="false"
                 android:inputType="none"
-                android:text="Litro (l)"
+                android:text="@string/vol_litro"
                 android:textColor="@android:color/black"
                 android:textSize="15dp" />
         </LinearLayout>
@@ -125,7 +132,7 @@
         <LinearLayout
             android:id="@+id/l2"
             android:layout_width="match_parent"
-            android:layout_height="42dp"
+            android:layout_height="50dp"
             android:layout_below="@id/l1"
             android:orientation="horizontal"
             android:weightSum="5">
@@ -134,7 +141,7 @@
             <com.aldoapps.autoformatedittext.AutoFormatEditText
                 android:id="@+id/texto_ml"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:layout_alignStart="@+id/l1"
                 android:layout_weight="4"
                 android:ems="10"
@@ -156,7 +163,7 @@
                 android:enabled="false"
                 android:focusable="false"
                 android:inputType="none"
-                android:text="Mililitro (ml)"
+                android:text="@string/vol_milimetro"
                 android:textColor="@android:color/black"
                 android:textSize="15dp" />
         </LinearLayout>
@@ -165,7 +172,7 @@
         <LinearLayout
             android:id="@+id/l3"
             android:layout_width="match_parent"
-            android:layout_height="42dp"
+            android:layout_height="50dp"
             android:layout_below="@id/l2"
             android:orientation="horizontal"
             android:weightSum="5">
@@ -174,7 +181,7 @@
             <com.aldoapps.autoformatedittext.AutoFormatEditText
                 android:id="@+id/texto_gal"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:layout_alignStart="@+id/l1"
                 android:layout_weight="4"
                 android:ems="10"
@@ -196,7 +203,7 @@
                 android:enabled="false"
                 android:focusable="false"
                 android:inputType="none"
-                android:text="Galón (gal) - US "
+                android:text="@string/vol_galon"
                 android:textColor="@android:color/black"
                 android:textSize="15dp" />
         </LinearLayout>
@@ -204,7 +211,7 @@
         <LinearLayout
             android:id="@+id/l5"
             android:layout_width="match_parent"
-            android:layout_height="42dp"
+            android:layout_height="50dp"
             android:layout_below="@id/l4"
             android:orientation="horizontal"
             android:weightSum="5">
@@ -213,7 +220,7 @@
             <com.aldoapps.autoformatedittext.AutoFormatEditText
                 android:id="@+id/texto_pi3"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:layout_alignStart="@+id/l1"
                 android:layout_weight="4"
                 android:ems="10"
@@ -234,7 +241,7 @@
                 android:enabled="false"
                 android:focusable="false"
                 android:inputType="none"
-                android:text="Pie Cúbico (ft³)"
+                android:text="@string/vol_pie3"
                 android:textColor="@android:color/black"
                 android:textSize="15dp" />
         </LinearLayout>
@@ -242,7 +249,7 @@
         <LinearLayout
             android:id="@+id/l6"
             android:layout_width="match_parent"
-            android:layout_height="42dp"
+            android:layout_height="50dp"
             android:layout_below="@id/l5"
             android:orientation="horizontal"
             android:weightSum="5">
@@ -251,7 +258,7 @@
             <com.aldoapps.autoformatedittext.AutoFormatEditText
                 android:id="@+id/texto_pul3"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:layout_alignStart="@+id/l1"
                 android:layout_weight="4"
                 android:ems="10"
@@ -272,7 +279,7 @@
                 android:enabled="false"
                 android:focusable="false"
                 android:inputType="none"
-                android:text="Pulgada Cúbica "
+                android:text="@string/vol_pulgada3"
                 android:textColor="@android:color/black"
                 android:textSize="15dp" />
         </LinearLayout>
@@ -281,7 +288,7 @@
         <LinearLayout
             android:id="@+id/l4"
             android:layout_width="match_parent"
-            android:layout_height="42dp"
+            android:layout_height="50dp"
             android:layout_below="@id/l3"
             android:orientation="horizontal"
             android:weightSum="5">
@@ -290,7 +297,7 @@
             <com.aldoapps.autoformatedittext.AutoFormatEditText
                 android:id="@+id/texto_m3"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:layout_alignStart="@+id/l1"
                 android:layout_weight="4"
                 android:ems="10"
@@ -311,7 +318,7 @@
                 android:enabled="false"
                 android:focusable="false"
                 android:inputType="none"
-                android:text="Metro Cúbico (m³)"
+                android:text="@string/vol_metro3"
                 android:textColor="@android:color/black"
                 android:textSize="15dp" />
         </LinearLayout>
@@ -320,7 +327,7 @@
         <LinearLayout
             android:id="@+id/l7"
             android:layout_width="match_parent"
-            android:layout_height="42dp"
+            android:layout_height="50dp"
             android:layout_below="@id/l6"
             android:orientation="horizontal"
             android:weightSum="5">
@@ -329,7 +336,7 @@
             <com.aldoapps.autoformatedittext.AutoFormatEditText
                 android:id="@+id/texto_cuartogal"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:layout_alignStart="@+id/l1"
                 android:layout_weight="4"
                 android:ems="10"
@@ -351,7 +358,7 @@
                 android:focusable="false"
                 android:inputType="none"
 
-                android:text="Cuarto de Galón"
+                android:text="@string/vol_cuartogalo"
                 android:textColor="@android:color/black"
                 android:textSize="15dp" />
         </LinearLayout>
@@ -359,7 +366,7 @@
         <LinearLayout
             android:id="@+id/l8"
             android:layout_width="match_parent"
-            android:layout_height="42dp"
+            android:layout_height="50dp"
             android:layout_below="@id/l7"
             android:orientation="horizontal"
             android:weightSum="5">
@@ -368,7 +375,7 @@
             <com.aldoapps.autoformatedittext.AutoFormatEditText
                 android:id="@+id/texto_pinta"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:layout_alignStart="@+id/l1"
                 android:layout_weight="4"
                 android:ems="10"
@@ -389,11 +396,13 @@
                 android:enabled="false"
                 android:focusable="false"
                 android:inputType="none"
-                android:text="Pinta (pt) -US"
+                android:text="@string/vol_pinta"
                 android:textColor="@android:color/black"
                 android:textSize="15dp" />
         </LinearLayout>
 
 
     </RelativeLayout>
+    </ScrollView>
+
 </RelativeLayout>

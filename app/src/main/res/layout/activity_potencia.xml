@@ -12,7 +12,7 @@
         android:background="@color/colorPrimary"
         android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
         android:id="@+id/my_toolbar"
-        app:title="Ángulo plano"
+        app:title="@string/ang_titul"
         app:titleTextColor="@android:color/white"
         android:layout_height="?actionBarSize">
 
@@ -125,7 +125,7 @@
                     android:enabled="false"
                     android:focusable="false"
                     android:inputType="none"
-                    android:text="Grado centesimal (gon)"
+                    android:text="@string/ang_gracen"
                     android:textColor="@android:color/black"
                     android:textSize="15dp" />
             </LinearLayout>
@@ -167,7 +167,7 @@
                     android:enabled="false"
                     android:focusable="false"
                     android:inputType="none"
-                    android:text="Grado sexagesimal"
+                    android:text="@string/ang_grasex"
                     android:textColor="@android:color/black"
                     android:textSize="15dp" />
             </LinearLayout>
@@ -209,7 +209,7 @@
                     android:enabled="false"
                     android:focusable="false"
                     android:inputType="none"
-                    android:text="Mil angular"
+                    android:text="@string/ang_mil"
                     android:textColor="@android:color/black"
                     android:textSize="15dp" />
             </LinearLayout>
@@ -249,7 +249,7 @@
                     android:enabled="false"
                     android:focusable="false"
                     android:inputType="none"
-                    android:text="Radián"
+                    android:text="@string/ang_Radian"
                     android:textColor="@android:color/black"
                     android:textSize="15dp" />
             </LinearLayout>
@@ -289,7 +289,7 @@
                     android:enabled="false"
                     android:focusable="false"
                     android:inputType="none"
-                    android:text="Segundo sexagesimal (arcosegundo)"
+                    android:text="@string/ang_segundoSexa"
                     android:textColor="@android:color/black"
                     android:textSize="15dp" />
             </LinearLayout>
@@ -330,7 +330,7 @@
                     android:enabled="false"
                     android:focusable="false"
                     android:inputType="none"
-                    android:text="Minuto de arco (arcmin)"
+                    android:text="@string/ang_minutoArco"
                     android:textColor="@android:color/black"
                     android:textSize="15dp" />
             </LinearLayout>

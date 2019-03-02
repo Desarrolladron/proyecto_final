@@ -9,6 +9,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.Window;
 import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.ImageView;
@@ -30,6 +31,8 @@ private Button next;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        requestWindowFeature(Window.FEATURE_NO_TITLE);
+        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
         if(new PreferencesManager(this).checkPreferences())
@@ -69,11 +72,11 @@ private Button next;
                 crearDots(position);
 
                 if(position== layuots.length-1){
-                next.setText("Iniciar");
+                next.setText(getString(R.string.inic));
                 omitir.setVisibility(View.INVISIBLE);
                 }
                 else{
-                    next.setText("Siguiente");
+                    next.setText(getString(R.string.sig));
                     omitir.setVisibility(View.VISIBLE);
                 }
             }

@@ -72,8 +72,9 @@ public class Area extends AppCompatActivity {
 
 
 
-        String[] opciones = {"Kilómetro Cuadrado","Metro Cuadrado","Milla Cuadrada","Yarda Cuadrada","Pie Cuadrado","Pulgada Cuadrada",
-                "Hectárea","Acre"};
+        String[] opciones = {getString(R.string.area_km2),getString(R.string.area_mt2),
+                getString(R.string.area_mill2),getString(R.string.area_ya2),getString(R.string.area_pie2),getString(R.string.area_pulg2),
+                getString(R.string.area_ha),getString(R.string.area_acre)};
 
 
 
@@ -117,7 +118,8 @@ public class Area extends AppCompatActivity {
                 if (!charSequence.toString().isEmpty()) {
 
 
-                    if (seleccion.equals("Kilómetro Cuadrado")) {
+
+                    if (seleccion.equals(getString(R.string.area_km2))) {
 
 
                         double valor1 = Double.parseDouble(edNumeros.getText().toString());//km
@@ -144,7 +146,7 @@ public class Area extends AppCompatActivity {
                         acre.setText("" + op8);
 
 
-                    }else if (seleccion.equals("Metro Cuadrado")) {
+                    }else if (seleccion.equals(getString(R.string.area_mt2))) {
 
 
                         double valor1 = Double.parseDouble(edNumeros.getText().toString());//km
@@ -171,7 +173,7 @@ public class Area extends AppCompatActivity {
                         acre.setText("" + op8);
 
 
-                    }else if (seleccion.equals("Milla Cuadrada")) {
+                    }else if (seleccion.equals(getString(R.string.area_mill2))) {
 
 
                         double valor1 = Double.parseDouble(edNumeros.getText().toString());//km
@@ -198,7 +200,7 @@ public class Area extends AppCompatActivity {
                         acre.setText("" + op8);
 
 
-                    }else if (seleccion.equals("Yarda Cuadrada")) {
+                    }else if (seleccion.equals(getString(R.string.area_ya2))) {
 
 
                         double valor1 = Double.parseDouble(edNumeros.getText().toString());//km
@@ -227,7 +229,7 @@ public class Area extends AppCompatActivity {
 
 
                     }
-                    else if (seleccion.equals("Pie Cuadrado")) {
+                    else if (seleccion.equals(getString(R.string.area_pie2))) {
 
 
                         double valor1 = Double.parseDouble(edNumeros.getText().toString());//km
@@ -253,8 +255,7 @@ public class Area extends AppCompatActivity {
                         double op8 = valor1 / 43560;//acre
                         acre.setText("" + op8);
 
-
-                    }  else if (seleccion.equals("Pulgada Cuadrada")) {
+                    }  else if (seleccion.equals(getString(R.string.area_pulg2))) {
 
 
                         double valor1 = Double.parseDouble(edNumeros.getText().toString());//km
@@ -281,7 +282,7 @@ public class Area extends AppCompatActivity {
                         acre.setText("" + op8);
 
 
-                    } else if (seleccion.equals("Hectárea")) {
+                    } else if (seleccion.equals(getString(R.string.area_ha))) {
 
 
                         double valor1 = Double.parseDouble(edNumeros.getText().toString());//km
@@ -309,7 +310,7 @@ public class Area extends AppCompatActivity {
 
 
                     }
-                    else if (seleccion.equals("Acre")) {
+                    else if (seleccion.equals(getString(R.string.area_acre))) {
 
 
                         double valor1 = Double.parseDouble(edNumeros.getText().toString());//km

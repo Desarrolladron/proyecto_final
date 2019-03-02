@@ -69,7 +69,9 @@ public class Energia extends AppCompatActivity {
 
 
 
-        String[] opciones = {"Julio","Kilojoule","Kilocaloria","Vatio-hora","Kilovatio-hora","BTU"};
+        String[] opciones = {getString(R.string.ene_juli),getString(R.string.ene_kiloju),
+                getString(R.string.ene_kiloca),getString(R.string.ene_vatioHora),
+                getString(R.string.ene_kilovatio),getString(R.string.ene_btu)};
 
 
 
@@ -112,7 +114,7 @@ public class Energia extends AppCompatActivity {
                 if (!charSequence.toString().isEmpty()) {
 
 
-                    if (seleccion.equals("Julio")) {
+                    if (seleccion.equals(getString(R.string.ene_juli))) {
 
 
                         double valor1 = Double.parseDouble(edNumeros.getText().toString());//km
@@ -135,7 +137,7 @@ public class Energia extends AppCompatActivity {
                         double op7 = valor1 / 1055.056;//yarda
                         BTU.setText("" + op7);
                     }
-                        else if (seleccion.equals("Kilojoule")) {
+                        else if (seleccion.equals(getString(R.string.ene_kiloju))) {
 
 
                         double valor1 = Double.parseDouble(edNumeros.getText().toString());//km
@@ -159,7 +161,7 @@ public class Energia extends AppCompatActivity {
                         BTU.setText("" + op7);
                     }
 
-                    else if (seleccion.equals("Kilocaloria")) {
+                    else if (seleccion.equals(getString(R.string.ene_kiloca))) {
 
 
                         double valor1 = Double.parseDouble(edNumeros.getText().toString());//km
@@ -183,7 +185,7 @@ public class Energia extends AppCompatActivity {
                         BTU.setText("" + op7);
                     }
 
-                    else if (seleccion.equals("Kilovatio-hora")) {
+                    else if (seleccion.equals(getString(R.string.ene_vatioHora))) {
 
 
                         double valor1 = Double.parseDouble(edNumeros.getText().toString());//km
@@ -206,7 +208,7 @@ public class Energia extends AppCompatActivity {
                         double op7 = valor1 * 3412.142;//yarda
                         BTU.setText("" + op7);
                     }
-                    else if (seleccion.equals("Vatio-hora")) {
+                    else if (seleccion.equals(getString(R.string.ene_kilovatio))) {
 
 
                         double valor1 = Double.parseDouble(edNumeros.getText().toString());//km
@@ -229,7 +231,7 @@ public class Energia extends AppCompatActivity {
                         double op7 = valor1 * 3.412;//yarda
                         BTU.setText("" + op7);
                     }
-                    else if (seleccion.equals("BTU")) {
+                    else if (seleccion.equals(getString(R.string.ene_btu))) {
 
 
                         double valor1 = Double.parseDouble(edNumeros.getText().toString());//km

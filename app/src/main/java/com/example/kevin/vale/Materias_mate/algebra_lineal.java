@@ -52,6 +52,7 @@ public class algebra_lineal extends AppCompatActivity {
                 Intent intent = new Intent(algebra_lineal.this, Menu_principal.class);
 
                 startActivity(intent);
+                finish();
 
             }
         });
@@ -59,9 +60,11 @@ public class algebra_lineal extends AppCompatActivity {
 
     public class ExpandableListViewAdapter3 extends BaseExpandableListAdapter {
 
-        String[] gruponombres = {"Símbolos del Algeba Lineal","-Conjuntos finitos e infinitos"};
+        String[] gruponombres = {"Símbolos del Algeba Lineal","Matriz Transpuesta","Regla de Cramer","Regla de Sarrus","Matriz Cuadrada",
+        "Matriz Diagonal y Escalar","Matriz Simétrica y Antisimétrica","Traza de una Matriz","Matriz Ortogonal"};
 
-        int[][] childNames = {{R.drawable.simbolo},{R.drawable.conjuntosinfinitos}};
+        int[][] childNames = {{R.drawable.simbolos},{R.drawable.matriz_traspuesta},{R.drawable.regla_cramer},{R.drawable.regla_sarrus},
+                {R.drawable.matriz_cuadrada},{R.drawable.matriz_diagonak_escalar},{R.drawable.matriz_simetricayno},{R.drawable.traza},{R.drawable.matriz_ortogonal}};
         Context context;
 
         public ExpandableListViewAdapter3(Context context) { //aqui colocar el int [] imagenes
@@ -118,7 +121,7 @@ public class algebra_lineal extends AppCompatActivity {
             ImageView imag = new ImageView(context);
             imag.setImageResource(childNames[i][i1]);
             imag.setScaleType(ImageView.ScaleType.FIT_START);
-            imag.setPadding(0, 75, 0, 75);
+            imag.setPadding(0, 75, 0, 0);
 
             return imag;
         }

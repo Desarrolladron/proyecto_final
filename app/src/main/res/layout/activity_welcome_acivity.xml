@@ -46,7 +46,7 @@
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Omitir"
+        android:text="@string/omit"
         android:textSize="16sp"
 
         android:layout_alignParentBottom="true"
@@ -61,7 +61,7 @@
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Siguiente "
+        android:text="@string/sig"
         android:textSize="16sp"
 
         android:layout_alignParentBottom="true"

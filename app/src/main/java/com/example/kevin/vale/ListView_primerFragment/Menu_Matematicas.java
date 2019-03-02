@@ -11,6 +11,7 @@ import android.widget.Toast;
 
 import com.example.kevin.vale.GridView_segundoFragment.Longitud_activity;
 import com.example.kevin.vale.Materias_mate.Probabilidad_estadistica;
+import com.example.kevin.vale.Materias_mate.Trigonometria;
 import com.example.kevin.vale.Materias_mate.algebra;
 import com.example.kevin.vale.Materias_mate.algebra_lineal;
 import com.example.kevin.vale.Materias_mate.aritmetica;
@@ -44,12 +45,12 @@ public class Menu_Matematicas extends AppCompatActivity {
         list = (ListView) findViewById(R.id.item2);
 
         final ArrayList<lista> listItems = new ArrayList<>();
-        listItems.add(new lista((R.drawable.longitud), "ARITMÉTICA"));
-        listItems.add(new lista((R.drawable.cuboo), "GEOMETRÍA"));
-        listItems.add(new lista((R.drawable.parabolic), "ALGEBRA"));
-        listItems.add(new lista((R.drawable.angle), "TRIGONOMETRÍA"));
-        listItems.add(new lista((R.drawable.longitud), "ALGEBRA LINEAL"));
-        listItems.add(new lista((R.drawable.longitud), "PROBABILIDAD Y ESTADÍSTICA"));
+        listItems.add(new lista((R.drawable.longitud), getString(R.string.arit)));
+        listItems.add(new lista((R.drawable.cuboo), getString(R.string.geometria)));
+        listItems.add(new lista((R.drawable.parabolic), getString(R.string.algebra)));
+        listItems.add(new lista((R.drawable.angle), getString(R.string.trigonometria)));
+        listItems.add(new lista((R.drawable.longitud), getString(R.string.algebralineal)));
+        listItems.add(new lista((R.drawable.bar_chart), getString(R.string.proba)));
 
         adaptador = new CustomAdapter2(this, listItems);
         list.setAdapter(adaptador);
@@ -75,7 +76,10 @@ public class Menu_Matematicas extends AppCompatActivity {
                     Intent intent = new Intent(Menu_Matematicas.this,geometria.class);
                     startActivity(intent);
                 }
-
+                else if (position == 3) {
+                    Intent intent = new Intent(Menu_Matematicas.this, Trigonometria.class);
+                    startActivity(intent);
+                }
 
             }
         });

@@ -69,7 +69,11 @@ public class Volumen_activity extends AppCompatActivity {
 
 
 
-        String[] opciones = {"Litro","Milimetro","Galón (US)","Metro Cúbico","Pie Cúbico","Pulgada Cúbica","Cuarto de Galón","Pinta (US)"};
+        String[] opciones = {getString(R.string.vol_litro),
+                getString(R.string.vol_milimetro),getString(R.string.vol_galon),
+                getString(R.string.vol_metro3),getString(R.string.vol_pie3)
+                ,getString(R.string.vol_pulgada3),
+                getString(R.string.vol_cuartogalo),getString(R.string.vol_pinta)};
 
 
 
@@ -113,7 +117,7 @@ public class Volumen_activity extends AppCompatActivity {
                 if(!charSequence.toString().isEmpty()) {
 
 
-                    if (seleccion.equals("Litro")) {
+                    if (seleccion.equals(getString(R.string.vol_litro))) {
 
                         double valor1 = Double.parseDouble(edNumeros.getText().toString());//km
                         double op = valor1 * 1;
@@ -141,7 +145,7 @@ public class Volumen_activity extends AppCompatActivity {
                         ed_pinta.setText("" + op8);
 
 
-                    } else if (seleccion.equals("Milimetro")) {
+                    } else if (seleccion.equals(getString(R.string.vol_milimetro))) {
 
                         double valor1 = Double.parseDouble(edNumeros.getText().toString());//km
                         double op = valor1 / 1000;
@@ -169,7 +173,7 @@ public class Volumen_activity extends AppCompatActivity {
                         ed_pinta.setText("" + op8);
 
 
-                    } else if (seleccion.equals("Galón (US)")) {
+                    } else if (seleccion.equals(getString(R.string.vol_galon))) {
 
                         double valor1 = Double.parseDouble(edNumeros.getText().toString());//km
                         double op = valor1 * 3.785;
@@ -197,7 +201,7 @@ public class Volumen_activity extends AppCompatActivity {
                         ed_pinta.setText("" + op8);
 
 
-                    } else if (seleccion.equals("Metro Cúbico")) {
+                    } else if (seleccion.equals(getString(R.string.vol_metro3))) {
 
                         double valor1 = Double.parseDouble(edNumeros.getText().toString());//km
                         double op = valor1 * 1000;
@@ -225,7 +229,7 @@ public class Volumen_activity extends AppCompatActivity {
                         ed_pinta.setText("" + op8);
 
 
-                    } else if (seleccion.equals("Pie Cúbico")) {
+                    } else if (seleccion.equals(getString(R.string.vol_pie3))) {
 
                         double valor1 = Double.parseDouble(edNumeros.getText().toString());//km
                         double op = valor1 * 28.317;
@@ -253,7 +257,7 @@ public class Volumen_activity extends AppCompatActivity {
                         ed_pinta.setText("" + op8);
 
 
-                    } else if (seleccion.equals("Pulgada Cúbica")) {
+                    } else if (seleccion.equals(getString(R.string.vol_pulgada3))) {
 
                         double valor1 = Double.parseDouble(edNumeros.getText().toString());//km
                         double op = valor1 / 61.024;
@@ -280,7 +284,7 @@ public class Volumen_activity extends AppCompatActivity {
                         double op8 = valor1 * 28.875;//pinta
                         ed_pinta.setText("" + op8);
 
-                    } else if (seleccion.equals("Cuarto de Galón")) {
+                    } else if (seleccion.equals(getString(R.string.vol_cuartogalo))) {
 
                         double valor1 = Double.parseDouble(edNumeros.getText().toString());//km
                         double op = valor1 / 1.057;
@@ -307,7 +311,7 @@ public class Volumen_activity extends AppCompatActivity {
                         double op8 = valor1 * 2;//pinta
                         ed_pinta.setText("" + op8);
 
-                    } else if (seleccion.equals("Pinta (US)")) {
+                    } else if (seleccion.equals(getString(R.string.vol_pinta))) {
 
                         double valor1 = Double.parseDouble(edNumeros.getText().toString());//km
                         double op = valor1 / 2.113;

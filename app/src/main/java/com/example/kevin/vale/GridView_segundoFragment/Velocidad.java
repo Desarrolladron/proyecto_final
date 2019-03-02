@@ -67,7 +67,9 @@ public class Velocidad extends AppCompatActivity {
 
 
 
-        String[] opciones = {"Milla por hora","Pie por segundo","Metro por segundo","Kilometro por hora","Nudo"};
+        String[] opciones = {getString(R.string.velo_millaxh),
+                getString(R.string.velo_piexseg),getString(R.string.velo_metroxseg),
+                getString(R.string.velo_kiloxhora),getString(R.string.velo_nudo)};
 
 
 
@@ -112,7 +114,7 @@ public class Velocidad extends AppCompatActivity {
                 if(!charSequence.toString().isEmpty()) {
 
 
-                    if (seleccion.equals("Milla por hora")) {
+                    if (seleccion.equals(getString(R.string.velo_millaxh))) {
                         double valor1 = Double.parseDouble(edNumeros.getText().toString());//km
                         double op = valor1 *1;
                         ed_mi.setText("" + op);
@@ -128,7 +130,8 @@ public class Velocidad extends AppCompatActivity {
 
                         double op5 = valor1 / 1.151;//pie c
                         nudo.setText("" + op5);
-                    } else if (seleccion.equals("Pie por segundo")) {
+
+                    } else if (seleccion.equals(getString(R.string.velo_piexseg))) {
                         double valor1 = Double.parseDouble(edNumeros.getText().toString());//km
                         double op = valor1/1.467;
                         ed_mi.setText("" + op);
@@ -144,7 +147,7 @@ public class Velocidad extends AppCompatActivity {
 
                         double op5 = valor1 / 1.688;//pie c
                         nudo.setText("" + op5);
-                    }else if (seleccion.equals("Metro por segundo")) {
+                    }else if (seleccion.equals(getString(R.string.velo_metroxseg))) {
                         double valor1 = Double.parseDouble(edNumeros.getText().toString());//km
                         double op = valor1*2.237;
                         ed_mi.setText("" + op);
@@ -161,7 +164,7 @@ public class Velocidad extends AppCompatActivity {
                         double op5 = valor1 * 1.944;//pie c
                         nudo.setText("" + op5);
                     }
-                    else if (seleccion.equals("Kilometro por hora")) {
+                    else if (seleccion.equals(getString(R.string.velo_kiloxhora))) {
                         double valor1 = Double.parseDouble(edNumeros.getText().toString());//km
                         double op = valor1/1.609;
                         ed_mi.setText("" + op);
@@ -177,7 +180,7 @@ public class Velocidad extends AppCompatActivity {
 
                         double op5 = valor1 * 1.852;//pie c
                         nudo.setText("" + op5);
-                    }  else if (seleccion.equals("Nudo")) {
+                    }  else if (seleccion.equals(getString(R.string.velo_nudo))) {
                         double valor1 = Double.parseDouble(edNumeros.getText().toString());//km
                         double op = valor1*1.151;
                         ed_mi.setText("" + op);

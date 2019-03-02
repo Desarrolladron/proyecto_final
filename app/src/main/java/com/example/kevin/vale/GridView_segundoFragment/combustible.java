@@ -67,9 +67,7 @@ public class combustible extends AppCompatActivity {
 
 
 
-        String[] opciones = {"Kilómetro por litro","Milla por galón americano","Milla por galon (Imperial)"};
-
-
+        String[] opciones = {getString(R.string.cons_km),getString(R.string.cons_mill),getString(R.string.cons_mill_impe)};
 
 
         // Ocultar teclado virtual
@@ -111,7 +109,7 @@ public class combustible extends AppCompatActivity {
                 if (!charSequence.toString().isEmpty()) {
 
 
-                    if (seleccion.equals("Kilómetro por litro")) {
+                    if (seleccion.equals(getString(R.string.cons_km))) {
 
 
                         double valor1 = Double.parseDouble(edNumeros.getText().toString());//km
@@ -127,7 +125,7 @@ public class combustible extends AppCompatActivity {
 
 
                     }
-                   else if (seleccion.equals("Milla por galón americano")) {
+                   else if (seleccion.equals(getString(R.string.cons_mill))) {
 
 
                         double valor1 = Double.parseDouble(edNumeros.getText().toString());//km
@@ -141,7 +139,7 @@ public class combustible extends AppCompatActivity {
                         miGaImpe.setText("" + op3);
 
                     }
-                    else if (seleccion.equals("Milla por galon (Imperial)")) {
+                    else if (seleccion.equals(getString(R.string.cons_mill_impe))) {
 
 
                         double valor1 = Double.parseDouble(edNumeros.getText().toString());//km

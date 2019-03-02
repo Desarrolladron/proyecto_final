@@ -9,6 +9,18 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+
+
+        <activity android:name=".Materias_Fisica.Mecanica_fluidos" />
+        <activity android:name=".Materias_Fisica.Mecanicaa" />
+        <activity android:name=".Materias_Fisica.Termodinamica_fisi" />
+        <activity android:name=".Materias_Fisica.Optica" />
+        <activity android:name=".TercerFragmento.Prefijos" />
+        <activity android:name=".Materias_Calculo.Vectorial" />
+        <activity android:name=".Materias_Calculo.Diferencial_Integral" />
+        <activity android:name=".Materias_Quimica.Estequiometria" />
+        <activity android:name=".Materias_Fisica.Dinamica" />
+        <activity android:name=".Materias_mate.Trigonometria" />
         <activity android:name=".Activitis.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -44,7 +56,7 @@
         <activity android:name=".TercerFragmento.constantes" />
         <activity android:name=".GridView_segundoFragment.potencia" />
         <activity android:name=".Materias_mate.geometria" />
-        <activity android:name=".GridView_segundoFragment.Resistencia"></activity>
+        <activity android:name=".GridView_segundoFragment.Resistencia" />
     </application>
 
 </manifest>

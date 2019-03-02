@@ -71,7 +71,9 @@ public class Tiempo extends AppCompatActivity {
 
 
 
-        String[] opciones = {"Decada","Año","Mes","Semana","Día","Hora","Minuto","Segundo"};
+        String[] opciones = {getString(R.string.tiemp_deca),getString(R.string.tiemp_año)
+                ,getString(R.string.tiemp_mes),getString(R.string.tiemp_semana),getString(R.string.tiemp_dia),
+                getString(R.string.tiemp_hora),getString(R.string.tiemp_minu),getString(R.string.tiemp_seg)};
 
 
 
@@ -114,7 +116,7 @@ public class Tiempo extends AppCompatActivity {
                 if (!charSequence.toString().isEmpty()) {
 
 
-                    if (seleccion.equals("Decada")) {
+                    if (seleccion.equals(getString(R.string.tiemp_deca))) {
 
 
                         double valor1 = Double.parseDouble(edNumeros.getText().toString());//km
@@ -137,14 +139,14 @@ public class Tiempo extends AppCompatActivity {
                         double op7 = valor1 * 87600;//yarda
                         hora.setText("" + op7);
 
-                        double op8 = valor1 * 5.256000000;//yarda
+                        double op8 = valor1 * 525600000;//yarda
                         minuto.setText("" + op8);
 
-                        double op9 = valor1 * 3.15400000000;//yarda
+                        double op9 = valor1 * 315400000;//yarda
                         segundo.setText("" + op9);
                     }
 
-                   else if (seleccion.equals("Año")) {
+                   else if (seleccion.equals(getString(R.string.tiemp_año))) {
 
 
                         double valor1 = Double.parseDouble(edNumeros.getText().toString());//km
@@ -173,7 +175,7 @@ public class Tiempo extends AppCompatActivity {
                         double op9 = valor1 * 3.1540000000;//yarda
                         segundo.setText("" + op9);
                     }
-                   else if (seleccion.equals("Mes")) {
+                   else if (seleccion.equals(getString(R.string.tiemp_mes))) {
 
 
                         double valor1 = Double.parseDouble(edNumeros.getText().toString());//km
@@ -202,7 +204,7 @@ public class Tiempo extends AppCompatActivity {
                         double op9 = valor1 * 2.628000000;//yarda
                         segundo.setText("" + op9);
                     }
-                    else if (seleccion.equals("Día")) {
+                    else if (seleccion.equals(getString(R.string.tiemp_dia))) {
 
 
                         double valor1 = Double.parseDouble(edNumeros.getText().toString());//km
@@ -231,7 +233,7 @@ public class Tiempo extends AppCompatActivity {
                         double op9 = valor1 * 86400;//yarda
                         segundo.setText("" + op9);
                     }
-                    else if (seleccion.equals("Semana")) {
+                    else if (seleccion.equals(getString(R.string.tiemp_semana))) {
 
 
                         double valor1 = Double.parseDouble(edNumeros.getText().toString());//km
@@ -260,7 +262,7 @@ public class Tiempo extends AppCompatActivity {
                         double op9 = valor1 * 604800;//yarda
                         segundo.setText("" + op9);
                     }
-                    else if (seleccion.equals("Hora")) {
+                    else if (seleccion.equals(getString(R.string.tiemp_hora))) {
 
 
                         double valor1 = Double.parseDouble(edNumeros.getText().toString());//km
@@ -289,7 +291,7 @@ public class Tiempo extends AppCompatActivity {
                         double op9 = valor1 * 3600;//yarda
                         segundo.setText("" + op9);
                     }
-                    else if (seleccion.equals("Minuto")) {
+                    else if (seleccion.equals(getString(R.string.tiemp_minu))) {
 
 
                         double valor1 = Double.parseDouble(edNumeros.getText().toString());//km
@@ -318,7 +320,7 @@ public class Tiempo extends AppCompatActivity {
                         double op9 = valor1 * 60;//yarda
                         segundo.setText("" + op9);
                     }
-                    else if (seleccion.equals("Segundo")) {
+                    else if (seleccion.equals(getString(R.string.tiemp_seg))) {
 
 
                         double valor1 = Double.parseDouble(edNumeros.getText().toString());//km

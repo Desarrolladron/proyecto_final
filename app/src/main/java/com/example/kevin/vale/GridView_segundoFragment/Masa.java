@@ -71,7 +71,9 @@ public class Masa extends AppCompatActivity {
 
 
 
-        String[] opciones = {"Tonelada","Kilogramo","Gramo","Quilate","Miligramo","Stone","Libra","Onza"};
+        String[] opciones = {getString(R.string.masa_ton),getString(R.string.masa_kg),
+                getString(R.string.masa_gra),getString(R.string.masa_quila),
+                getString(R.string.masa_milig),getString(R.string.masa_stone),getString(R.string.masa_libra),getString(R.string.masa_onza)};
 
 
 
@@ -115,7 +117,7 @@ public class Masa extends AppCompatActivity {
                 if(!charSequence.toString().isEmpty()) {
 
 
-                    if (seleccion.equals("Tonelada")) {
+                    if (seleccion.equals(getString(R.string.masa_ton))) {
 
 
                         double valor1 = Double.parseDouble(edNumeros.getText().toString());//km
@@ -143,7 +145,7 @@ public class Masa extends AppCompatActivity {
                         onza.setText("" + op8);
 
 
-                    }     else if (seleccion.equals("Kilogramo")) {
+                    }     else if (seleccion.equals(getString(R.string.masa_kg))) {
 
 
                         double valor1 = Double.parseDouble(edNumeros.getText().toString());//km
@@ -171,7 +173,7 @@ public class Masa extends AppCompatActivity {
                         onza.setText("" + op8);
 
 
-                    } else if (seleccion.equals("Gramo")) {
+                    } else if (seleccion.equals(getString(R.string.masa_gra))) {
 
 
                         double valor1 = Double.parseDouble(edNumeros.getText().toString());//km
@@ -199,7 +201,7 @@ public class Masa extends AppCompatActivity {
                         onza.setText("" + op8);
 
 
-                    }else if (seleccion.equals("Quilate")) {
+                    }else if (seleccion.equals(getString(R.string.masa_quila))) {
 
 
                         double valor1 = Double.parseDouble(edNumeros.getText().toString());//km
@@ -227,7 +229,7 @@ public class Masa extends AppCompatActivity {
                         onza.setText("" + op8);
 
 
-                    }else if (seleccion.equals("Miligramo")) {
+                    }else if (seleccion.equals(getString(R.string.masa_milig))) {
 
 
                         double valor1 = Double.parseDouble(edNumeros.getText().toString());//km
@@ -255,7 +257,7 @@ public class Masa extends AppCompatActivity {
                         onza.setText("" + op8);
 
 
-                    }else if (seleccion.equals("Stone")) {
+                    }else if (seleccion.equals(getString(R.string.masa_stone))) {
 
 
                         double valor1 = Double.parseDouble(edNumeros.getText().toString());//km
@@ -284,7 +286,7 @@ public class Masa extends AppCompatActivity {
 
 
                     }
-                    else if (seleccion.equals("Onza")) {
+                    else if (seleccion.equals(getString(R.string.masa_onza))) {
 
 
                         double valor1 = Double.parseDouble(edNumeros.getText().toString());//km
@@ -312,7 +314,7 @@ public class Masa extends AppCompatActivity {
                         onza.setText("" + op8);
 
 
-                    }else if (seleccion.equals("Libra")) {
+                    }else if (seleccion.equals(getString(R.string.masa_libra))) {
 
 
                         double valor1 = Double.parseDouble(edNumeros.getText().toString());//km

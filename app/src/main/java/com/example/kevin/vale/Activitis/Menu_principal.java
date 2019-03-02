@@ -43,10 +43,11 @@ ImageView cerrar;
         final ViewPager viewPager = (ViewPager) findViewById(R.id.viewpager);
 
         TabLayout tabs = (TabLayout) findViewById(R.id.my_Tablayout);
-        tabs.addTab(tabs.newTab().setText("Menú"));
-        tabs.addTab(tabs.newTab().setText("Convertidor"));
-        tabs.addTab(tabs.newTab().setText("Herramienta"));
+        tabs.addTab(tabs.newTab().setText(getString(R.string.Menu)));
+        tabs.addTab(tabs.newTab().setText(getString(R.string.conve)));
+        tabs.addTab(tabs.newTab().setText(getString(R.string.herra)));
 
+        tabs.setSelectedTabIndicatorHeight(15);
 
         PagerAdapter adapter = new PageAdapter(getSupportFragmentManager(), 3);
         viewPager.setAdapter(adapter);

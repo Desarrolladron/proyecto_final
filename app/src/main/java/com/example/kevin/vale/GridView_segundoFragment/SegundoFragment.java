@@ -39,21 +39,21 @@ public class SegundoFragment extends Fragment {
         grid = (GridView) view.findViewById(R.id.item);
 
         final ArrayList<Spacecraft> listItems = new ArrayList<>();
-        listItems.add(new Spacecraft((R.drawable.longitud), "Longitud"));
-        listItems.add(new Spacecraft((R.drawable.volumen), "Volumen"));
-        listItems.add(new Spacecraft((R.drawable.balanza), "Masa"));
-        listItems.add(new Spacecraft((R.drawable.area), "Área"));
-        listItems.add(new Spacecraft((R.drawable.corredor_en_silueta_corriendo_rapido), "Velocidad"));
-        listItems.add(new Spacecraft((R.drawable.velocidad), "Presión"));
-        listItems.add(new Spacecraft((R.drawable.frec), "Frecuencia"));
-        listItems.add(new Spacecraft((R.drawable.termometro), "Temperatura"));
-        listItems.add(new Spacecraft((R.drawable.innovacion), "Energía"));
-        listItems.add(new Spacecraft((R.drawable.angulo), "Ángulo plano"));
+        listItems.add(new Spacecraft((R.drawable.longitud), getString(R.string.lon_titu)));
+        listItems.add(new Spacecraft((R.drawable.volumen), getString(R.string.vol_titu)));
+        listItems.add(new Spacecraft((R.drawable.balanza), getString(R.string.masa_titu)));
+        listItems.add(new Spacecraft((R.drawable.area), getString(R.string.area)));
+        listItems.add(new Spacecraft((R.drawable.corredor_en_silueta_corriendo_rapido), getString(R.string.velo_titu)));
+        listItems.add(new Spacecraft((R.drawable.velocidad), getString(R.string.pres_titu)));
+        listItems.add(new Spacecraft((R.drawable.frec), getString(R.string.fre_titu)));
+        listItems.add(new Spacecraft((R.drawable.termometro), getString(R.string.Tempera)));
+        listItems.add(new Spacecraft((R.drawable.innovacion), getString(R.string.ene_titu)));
+        listItems.add(new Spacecraft((R.drawable.angulo), getString(R.string.ang_titul)));
 
-        listItems.add(new Spacecraft((R.drawable.tiemp), "Tiempo"));
-        listItems.add(new Spacecraft((R.drawable.resistencia), "Resistencia"));
+        listItems.add(new Spacecraft((R.drawable.tiemp), getString(R.string.tiempo_titu)));
+        listItems.add(new Spacecraft((R.drawable.resistencia), getString(R.string.res_titu)));
 
-        listItems.add(new Spacecraft((R.drawable.gas), "Consumo de combustible"));
+        listItems.add(new Spacecraft((R.drawable.gas), getString(R.string.cons_titu)));
 
 
 

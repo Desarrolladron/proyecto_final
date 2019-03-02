@@ -69,8 +69,8 @@ public class Resistencia extends AppCompatActivity {
         spinner1 = (Spinner) findViewById(R.id.spinner1);
 
 
-
-        String[] opciones = {"Milohmios","Ohmios","Kiloohmnios","Megaohmios","Abohmios","Voltios por amperios"};
+        String[] opciones = {getString(R.string.res_milio),getString(R.string.res_ohmnio),
+                getString(R.string.res_kilo),getString(R.string.res_mega),getString(R.string.res_abo),getString(R.string.res_voltio)};
 
 
 
@@ -114,7 +114,7 @@ public class Resistencia extends AppCompatActivity {
                 if(!charSequence.toString().isEmpty()) {
 
 
-                    if (seleccion.equals("Milohmios")) {
+                    if (seleccion.equals(getString(R.string.res_milio))) {
 
 
                         double valor1 = Double.parseDouble(edNumeros.getText().toString());//km
@@ -138,7 +138,7 @@ public class Resistencia extends AppCompatActivity {
 
 
                     }
-                    if (seleccion.equals("Ohmios")) {
+                    if (seleccion.equals(getString(R.string.res_ohmnio))) {
 
 
                         double valor1 = Double.parseDouble(edNumeros.getText().toString());//km
@@ -162,7 +162,7 @@ public class Resistencia extends AppCompatActivity {
 
 
                     }
-                    if (seleccion.equals("Kiloohmnios")) {
+                    if (seleccion.equals(getString(R.string.res_kilo))) {
 
 
                         double valor1 = Double.parseDouble(edNumeros.getText().toString());//km
@@ -186,7 +186,7 @@ public class Resistencia extends AppCompatActivity {
 
 
                     }
-                    if (seleccion.equals("Megaohmios")) {
+                    if (seleccion.equals(getString(R.string.res_mega))) {
 
 
                         double valor1 = Double.parseDouble(edNumeros.getText().toString());//km
@@ -210,7 +210,7 @@ public class Resistencia extends AppCompatActivity {
 
 
                     }
-                    if (seleccion.equals("Abohmios")) {
+                    if (seleccion.equals(getString(R.string.res_abo))) {
 
 
                         double valor1 = Double.parseDouble(edNumeros.getText().toString());//km
@@ -234,7 +234,7 @@ public class Resistencia extends AppCompatActivity {
 
 
                     }
-                    if (seleccion.equals("Voltios por amperios")) {
+                    if (seleccion.equals(getString(R.string.res_voltio))) {
 
 
                         double valor1 = Double.parseDouble(edNumeros.getText().toString());//km

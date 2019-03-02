@@ -60,10 +60,15 @@ public class Electricidad_Mag extends AppCompatActivity {
 
     public class ExpandableListViewAdapter3 extends BaseExpandableListAdapter {
 
-        String[] gruponombres = {"Ley de Coulomb | Fuerza Electrica","Principio de Superposición","Campo Electrico","Movimiento de Cargas en el Interior de un Campo Eléctrico",
-        };
+        String[] gruponombres = {
+                "Ley de Coulomb | Fuerza Electrica","Principio de Superposición","Campo Electrico",
+                "Movimiento de Cargas en el Interior de un Campo Eléctrico","Capacitor en Serie","Capacitor en Paralelo",
+                "Energía del campo eléctrico","Ley de Ohm","Resistividad Eléctrica","Circuito en Serie","Circuito en Paralelo","Ley de Biot-Savart"};
 
-        int[][] childNames = {{R.drawable.fuerza_electrica},{R.drawable.principio_superposicion},{R.drawable.campo_electrico},{R.drawable.movimiento_cargas}
+        int[][] childNames = {{R.drawable.fuerza_electrica},{R.drawable.principio_superposicion},{R.drawable.campo_electrico},
+                {R.drawable.movimiento_cargas},{R.drawable.capacitores_en_serie},{R.drawable.capacitor_paralelo},
+                {R.drawable.energia_campo_electrico},{R.drawable.ley_ohm},{R.drawable.resistividad},{R.drawable.circuito_serie},{R.drawable.circuito_paralelo},
+                {R.drawable.biot_savart}
             };
         Context context;
 

@@ -13,7 +13,7 @@
         android:background="@color/colorPrimary"
         android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
         android:id="@+id/my_toolbar"
-        app:title="Frecuencia"
+        app:title="@string/fre_titu"
         app:titleTextColor="@android:color/white"
         android:layout_height="?actionBarSize">
 
@@ -124,7 +124,7 @@
                 android:enabled="false"
                 android:focusable="false"
                 android:inputType="none"
-                android:text="Hercios (Hz)"
+                android:text="@string/fre_herzio"
                 android:textColor="@android:color/black"
                 android:textSize="15dp" />
         </LinearLayout>
@@ -166,7 +166,7 @@
                 android:enabled="false"
                 android:focusable="false"
                 android:inputType="none"
-                android:text="Kilohertz (kHz)"
+                android:text="@string/fre_kilo"
                 android:textColor="@android:color/black"
                 android:textSize="15dp" />
         </LinearLayout>
@@ -208,7 +208,7 @@
                 android:enabled="false"
                 android:focusable="false"
                 android:inputType="none"
-                android:text="Megahercio (MHz)"
+                android:text="@string/fre_mega"
                 android:textColor="@android:color/black"
                 android:textSize="15dp" />
         </LinearLayout>
@@ -252,7 +252,7 @@
                 android:enabled="false"
                 android:focusable="false"
                 android:inputType="none"
-                android:text="Gigahercio (GHz)"
+                android:text="@string/fre_giga"
                 android:textColor="@android:color/black"
                 android:textSize="15dp" />
         </LinearLayout>

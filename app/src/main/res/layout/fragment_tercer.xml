@@ -2,7 +2,7 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:weightSum="5"
+     android:weightSum="5"
     android:layout_height="match_parent"
     tools:context=".Fragments.TercerFragment">
 
@@ -13,7 +13,7 @@
         android:layout_height="90dp">
 
 
-        <android.support.v7.widget.CardView
+        <androidx.cardview.widget.CardView
             android:layout_centerInParent="true"
             android:backgroundTint="#d7d7d7"
             android:layout_margin="10dp"
@@ -29,7 +29,7 @@
                 android:text="@string/encabezado"
                 android:layout_height="match_parent" />
 
-        </android.support.v7.widget.CardView>
+        </androidx.cardview.widget.CardView>
     </RelativeLayout>
 
 

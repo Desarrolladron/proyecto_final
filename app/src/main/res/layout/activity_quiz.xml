@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_quiz"
+     android:layout_width="match_parent"
+    android:layout_height="match_parent"
+     >
+    <com.scwang.wave.MultiWaveHeader
+        android:layout_width="match_parent"
+        android:layout_height="130dp"
+        android:id="@+id/wave_header"
+        >
+
+
+    </com.scwang.wave.MultiWaveHeader>
+
+    <TextView
+        android:text="@string/plus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/numText2"
+        android:layout_toStartOf="@+id/numText2"
+        android:layout_marginEnd="14dp"
+        android:id="@+id/operation"
+        android:textAppearance="@android:style/TextAppearance.Material.Large"
+        android:textSize="30dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/numText1"
+        android:layout_alignParentStart="true"
+        android:id="@+id/qNumber"
+        android:textAppearance="@android:style/TextAppearance.Material.Large"
+        android:textSize="20sp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_marginStart="10dp"
+        android:id="@+id/timer"
+        android:textSize="0dp"/>
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+       android:scaleType="centerCrop"
+android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_below="@id/timeText"
+        android:id="@+id/Animacion"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"
+        app:lottie_rawRes="@raw/oss"
+        ></com.airbnb.lottie.LottieAnimationView>
+    <TextView
+        android:text="@string/defaultNum"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/numText2"
+        android:textAppearance="@android:style/TextAppearance.Material.Large"
+         android:layout_below="@+id/numText1"
+        android:layout_centerHorizontal="true"
+        android:textSize="40dp"/>
+
+    <TextView
+        android:text="@string/defaultNum"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/numText1"
+        android:textAppearance="@android:style/TextAppearance.Material.Large"
+        android:layout_marginTop="40dp"
+        android:layout_alignParentTop="true"
+        android:layout_toEndOf="@+id/operation"
+        android:textSize="40dp"/>
+
+
+
+    <View
+        android:id="@+id/line"
+        android:layout_width="150dp"
+        android:layout_height="1dp"
+        android:layout_marginTop="20dp"
+        android:background="@android:color/black"
+        android:layout_below="@+id/operation"
+        android:layout_centerHorizontal="true"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/timeText"
+        android:text="@string/timeLeft"
+        android:layout_marginTop="18dp"
+        android:layout_below="@+id/answer"
+        android:layout_alignParentStart="true"
+        android:textSize="20sp"/>
+
+    <include
+
+        layout="@layout/layout_constante2">
+
+    </include>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/answer"
+        android:textSize="50dp"
+
+          android:layout_below="@id/line"
+        android:layout_centerHorizontal="true" />
+
+
+</RelativeLayout>

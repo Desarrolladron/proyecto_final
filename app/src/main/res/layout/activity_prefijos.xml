@@ -8,16 +8,16 @@
     tools:context=".TercerFragmento.Prefijos">
 
 
-    <android.support.v7.widget.Toolbar
+    <androidx.appcompat.widget.Toolbar
         android:layout_width="match_parent"
         android:background="@color/colorPrimary"
         android:id="@+id/my_toolbar"
-        app:title="Alfabeto Griego"
+        app:title="Prefijos Importantes"
 
         app:titleTextColor="@color/colorPrimary"
         android:layout_height="?actionBarSize">
 
-    </android.support.v7.widget.Toolbar>
+    </androidx.appcompat.widget.Toolbar>
         <LinearLayout
             android:layout_width="match_parent"
             android:orientation="vertical"

@@ -10,7 +10,6 @@
     android:foreground="?attr/selectableItemBackground"
     android:layout_height="75dp">
 
-
     <ImageView
         android:id="@+id/imagen2"
         android:layout_width="30dp"
@@ -21,7 +20,6 @@
         android:adjustViewBounds="true"
         android:scaleType="fitCenter"
         android:src="@drawable/gravity" />
-
 
     <TextView
         android:id="@+id/titulo2"

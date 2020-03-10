@@ -32,7 +32,7 @@
 
             <ImageView
 
-                android:id="@+id/matriz_zoom"
+                android:id="@+id/matriz_cuadrdada"
                 android:layout_width="match_parent"
                 android:layout_marginLeft="5dp"
                 android:layout_marginRight="5dp"

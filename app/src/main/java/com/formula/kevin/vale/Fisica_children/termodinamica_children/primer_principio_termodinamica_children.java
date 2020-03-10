@@ -32,6 +32,6 @@ public class primer_principio_termodinamica_children extends AppCompatActivity {
                 finish();
             }
         });
-        imagen =(ImageView)findViewById(R.id.enefoto);
+        imagen =(ImageView)findViewById(R.id.primeroo);
         photo = new PhotoViewAttacher(imagen); }
 }

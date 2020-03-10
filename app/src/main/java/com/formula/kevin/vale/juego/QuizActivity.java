@@ -16,6 +16,8 @@ import android.os.Handler;
 import androidx.fragment.app.FragmentManager;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.text.Html;
+import android.util.Log;
 import android.view.Gravity;
 import android.view.View;
 import android.view.Window;
@@ -28,6 +30,9 @@ import android.widget.Toast;
 
 import com.airbnb.lottie.LottieAnimationView;
 import com.formula.kevin.vale.R;
+import com.google.android.gms.ads.AdListener;
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.InterstitialAd;
 import com.mrntlu.toastie.Toastie;
 import com.scwang.wave.MultiWaveHeader;
 
@@ -54,7 +59,10 @@ public class QuizActivity extends AppCompatActivity {
      TextView resultado;
     long millisLeft;
     Button botonvamo;
+    TextView mensajeResultado;
       LottieAnimationView animationWithLottie;
+    private InterstitialAd mInterstitialAd;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -69,7 +77,7 @@ public class QuizActivity extends AppCompatActivity {
         submitButton = (Button) findViewById(R.id.enter);
         clearButton = (Button) findViewById(R.id.clear);
         animationWithLottie =(LottieAnimationView)findViewById(R.id.Animacion);
-        MultiWaveHeader waveHeader;
+         MultiWaveHeader waveHeader;
   /*
         Setting up toolbar with back button
          */
@@ -108,6 +116,23 @@ public class QuizActivity extends AppCompatActivity {
         waveHeader.setWaveHeight(70);
         waveHeader.setStartColor(Color.argb(100,61,126,254));
         waveHeader.setCloseColor(Color.argb(100,97,200,180));
+
+        mInterstitialAd = new InterstitialAd(this);
+        mInterstitialAd.setAdUnitId("ca-app-pub-8882667917768463/3391564183");
+        //original  ca-app-pub-8882667917768463/3391564183
+
+        mInterstitialAd.loadAd(new AdRequest.Builder().build());
+
+        mInterstitialAd.setAdListener(new AdListener() {
+            @Override
+            public void onAdClosed() {
+                // Load the next interstitial.
+                mInterstitialAd.loadAd(new AdRequest.Builder().build());
+            }
+
+        });
+
+
 
         //Get operation from launcher activity
         Bundle extras = getIntent().getExtras();
@@ -155,16 +180,26 @@ public class QuizActivity extends AppCompatActivity {
 
             Random randomNumberGenerator = new Random();
             //Generate Random Numbers
-            int num1 = randomNumberGenerator.nextInt((25) + 1) + 1;
-            QuizContext.getInstance().setNum1(num1);
+            int num1_mult = randomNumberGenerator.nextInt((28) + 1) + 1;
+
+           int num1 = randomNumberGenerator.nextInt((50) + 1) + 1;
+
+           QuizContext.getInstance().setNum1(num1);
+            QuizContext.getInstance().setNum1_multipli(num1_mult);
 
 
             if (operation.equals("sub")) {
                 //For subtraction generate number smaller than num1
-                int num2 = randomNumberGenerator.nextInt(num1) + 1;
+            int num2 = randomNumberGenerator.nextInt(num1) + 1;
+
+
                 QuizContext.getInstance().setNum2(num2);
             } else {
-                int num2 = randomNumberGenerator.nextInt((25) + 1) + 1;
+                int num2_mult = randomNumberGenerator.nextInt((19) + 1) + 1;
+                QuizContext.getInstance().setNum2_multipli(num2_mult);
+
+
+                int num2 = randomNumberGenerator.nextInt((50) + 1) + 1;
                 QuizContext.getInstance().setNum2(num2);
             }
 
@@ -199,7 +234,7 @@ public class QuizActivity extends AppCompatActivity {
                             solution = QuizContext.getInstance().getNum1() + QuizContext.getInstance().getNum2();
                             break;
                         case "mul":
-                            solution = QuizContext.getInstance().getNum1() * QuizContext.getInstance().getNum2();
+                            solution = QuizContext.getInstance().getNum1_multipli() * QuizContext.getInstance().getNum2_multipli();
                             break;
                         case "sub":
                             solution = QuizContext.getInstance().getNum1() - QuizContext.getInstance().getNum2();
@@ -240,13 +275,20 @@ public class QuizActivity extends AppCompatActivity {
 
 
         cdt.cancel();
-        AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(QuizActivity.this);
+        final AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(QuizActivity.this);
         alertDialogBuilder.setMessage("¿SALIR DEL JUEGO?");
 
 
-        alertDialogBuilder.setPositiveButton("Si", new DialogInterface.OnClickListener() {
+        alertDialogBuilder.setPositiveButton(Html.fromHtml("<font color='#FF7F27'>SI</font>"), new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
+
+                if (mInterstitialAd.isLoaded()) {
+                    mInterstitialAd.show();
+                } else {
+                    Log.d("TAG", "The interstitial wasn't loaded yet.");
+                }
+
                 QuizContext.getInstance().resetContext();
                 cdt.cancel();
 
@@ -255,7 +297,7 @@ public class QuizActivity extends AppCompatActivity {
                 finish();
             }
         });
-        alertDialogBuilder.setNegativeButton("No", new DialogInterface.OnClickListener() {
+        alertDialogBuilder.setNegativeButton(Html.fromHtml("<font color='#FF7F27'>No</font>"), new DialogInterface.OnClickListener() {
 
             @Override
             public void onClick(DialogInterface dialog, int which) {
@@ -307,7 +349,7 @@ public class QuizActivity extends AppCompatActivity {
                     solution = QuizContext.getInstance().getNum1() + QuizContext.getInstance().getNum2();
                     break;
                 case "mul":
-                    solution = QuizContext.getInstance().getNum1() * QuizContext.getInstance().getNum2();
+                    solution = QuizContext.getInstance().getNum1_multipli() * QuizContext.getInstance().getNum2_multipli();
                     break;
                 case "sub":
                     solution = QuizContext.getInstance().getNum1() - QuizContext.getInstance().getNum2();
@@ -323,9 +365,23 @@ public class QuizActivity extends AppCompatActivity {
             }
         }
         if (!questionNumber.getText().equals("#10"))
-            questionNumber.setText("#" + QuizContext.getInstance().getNumberOfQuestions());
+
+            questionNumber.setText(QuizContext.getInstance().getNumberOfQuestions() + "/10");
+
+
+
+
         num1Text.setText(String.valueOf(QuizContext.getInstance().getNum1()));
         num2Text.setText(String.valueOf(QuizContext.getInstance().getNum2()));
+
+        String operation = QuizContext.getInstance().getOperation();
+
+        switch (operation){
+            case "mul":
+                num1Text.setText(String.valueOf(QuizContext.getInstance().getNum1_multipli()));
+                num2Text.setText(String.valueOf(QuizContext.getInstance().getNum2_multipli()));
+
+        }
 
     }
 
@@ -350,6 +406,7 @@ public class QuizActivity extends AppCompatActivity {
             //Al questions finished, Go to Result Activity
             AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(QuizActivity.this);
             alertDialogBuilder.setMessage("Your Score: " + QuizContext.getInstance().getPoints() + "\n" + "Play Again?");
+
             alertDialogBuilder.setPositiveButton("Ok", new DialogInterface.OnClickListener() {
                 @Override
                 public void onClick(DialogInterface dialog, int which) {
@@ -363,6 +420,11 @@ public class QuizActivity extends AppCompatActivity {
             alertDialog.show();
 
              */
+            if (mInterstitialAd.isLoaded()) {
+                mInterstitialAd.show();
+            } else {
+                Log.d("TAG", "The interstitial wasn't loaded yet.");
+            }
             mostrarInfo();
         }
     }
@@ -403,6 +465,8 @@ public class QuizActivity extends AppCompatActivity {
         dataFragment.setData(QuizContext.getInstance());
     }
 
+
+
     @Override
     public void onConfigurationChanged(Configuration newConfig) {
         super.onConfigurationChanged(newConfig);
@@ -433,7 +497,7 @@ public class QuizActivity extends AppCompatActivity {
                             solution = QuizContext.getInstance().getNum1() + QuizContext.getInstance().getNum2();
                             break;
                         case "mul":
-                            solution = QuizContext.getInstance().getNum1() * QuizContext.getInstance().getNum2();
+                            solution = QuizContext.getInstance().getNum1_multipli() * QuizContext.getInstance().getNum2_multipli();
                             break;
                         case "sub":
                             solution = QuizContext.getInstance().getNum1() - QuizContext.getInstance().getNum2();
@@ -449,9 +513,21 @@ public class QuizActivity extends AppCompatActivity {
                     }
                 }
                 if (!questionNumber.getText().equals("#10"))
-                    questionNumber.setText("#" + QuizContext.getInstance().getNumberOfQuestions());
-                num1Text.setText(String.valueOf(QuizContext.getInstance().getNum1()));
-                num2Text.setText(String.valueOf(QuizContext.getInstance().getNum2()));
+                    questionNumber.setText(QuizContext.getInstance().getNumberOfQuestions() + "/10");
+
+
+             num1Text.setText(String.valueOf(QuizContext.getInstance().getNum1()));
+             num2Text.setText(String.valueOf(QuizContext.getInstance().getNum2()));
+
+
+                String operation = QuizContext.getInstance().getOperation();
+
+                switch (operation){
+                    case "mul":
+                        num1Text.setText(String.valueOf(QuizContext.getInstance().getNum1_multipli()));
+                        num2Text.setText(String.valueOf(QuizContext.getInstance().getNum2_multipli()));
+
+                }
             }
 
             @Override
@@ -496,7 +572,26 @@ public class QuizActivity extends AppCompatActivity {
         epicDialog.setContentView(R.layout.custom_resultado);
         cerrar = (ImageView)epicDialog.findViewById(R.id.cerrarVentana);
          resultado =(TextView)epicDialog.findViewById(R.id.txtResultado);
-        resultado.setText("Puntaje Obtenido: " + QuizContext.getInstance().getPoints() );
+        mensajeResultado =(TextView)epicDialog.findViewById(R.id.msjResultado);
+
+        if(QuizContext.getInstance().getPoints() <= 5){
+            mensajeResultado.setText("Sigue intentandolo, no todo se logra a la primera ;) ");
+        }
+
+        else if(QuizContext.getInstance().getPoints() <= 7){
+            mensajeResultado.setText("¡Animo, la paciencia y esfuerzo son las mejores virtudes!");
+        }
+        else if(QuizContext.getInstance().getPoints()== 8){
+            mensajeResultado.setText("8 aciertos, casi le das... Como a tu crush.");
+        }
+        else if(QuizContext.getInstance().getPoints() == 9){
+            mensajeResultado.setText("9 aciertos chaval ostiass que mola (imitando acento español).");
+        }
+        else if(QuizContext.getInstance().getPoints() == 10){
+            mensajeResultado.setText("Me asombra tu intelecto, ¿Acaso eres humano? :o");
+        }
+
+        resultado.setText(QuizContext.getInstance().getPoints()+"/10" );
         botonvamo =(Button)epicDialog.findViewById(R.id.botonvamo);
         cerrar.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -504,7 +599,13 @@ public class QuizActivity extends AppCompatActivity {
                 QuizContext.getInstance().resetContext();
                 Intent intent = new Intent(QuizActivity.this, LauncherActivity2.class);
                 startActivity(intent);
+
                 epicDialog.dismiss();
+                if (mInterstitialAd.isLoaded()) {
+                    mInterstitialAd.show();
+                } else {
+                    Log.d("TAG", "The interstitial wasn't loaded yet.");
+                }
             }
         });
 
@@ -516,9 +617,16 @@ public class QuizActivity extends AppCompatActivity {
         botonvamo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
                 QuizContext.getInstance().resetContext();
                 Intent intent = new Intent(QuizActivity.this, LauncherActivity2.class);
                 startActivity(intent);
+                if (mInterstitialAd.isLoaded()) {
+                    mInterstitialAd.show();
+                } else {
+                    Log.d("TAG", "The interstitial wasn't loaded yet.");
+                }
+
             }
         });
     }

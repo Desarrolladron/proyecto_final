@@ -12,10 +12,14 @@ import com.formula.kevin.vale.Matematicas_children.Trigonometria_children.senoCo
 import com.formula.kevin.vale.Matematicas_children.Trigonometria_children.teoremaPitagoras_children;
 import com.formula.kevin.vale.listview_children.CustomAdapter3;
 import com.formula.kevin.vale.listview_children.lista2;
+import com.google.android.gms.ads.AdListener;
+import com.google.android.gms.ads.InterstitialAd;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import androidx.appcompat.widget.Toolbar;
+
+import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ExpandableListView;
@@ -31,16 +35,36 @@ import com.google.android.gms.ads.AdView;
 import java.util.ArrayList;
 
 public class Trigonometria extends AppCompatActivity {
-    ExpandableListView expandableListView;
     private AdView mAdView;
     private ListView list;
     private CustomAdapter3 adaptador;
+    private InterstitialAd mInterstitialAd;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_trigonometria);
 
 
+
+        mInterstitialAd = new InterstitialAd(this);
+        mInterstitialAd.setAdUnitId("ca-app-pub-8882667917768463/3391564183");
+        //original  ca-app-pub-8882667917768463/3391564183
+
+        mInterstitialAd.loadAd(new AdRequest.Builder().build());
+
+        mInterstitialAd.setAdListener(new AdListener() {
+            @Override
+            public void onAdClosed() {
+                // Load the next interstitial.
+                mInterstitialAd.loadAd(new AdRequest.Builder().build());
+            }
+
+        });
+
+        mAdView = findViewById(R.id.adView);
+        AdRequest adRequest = new AdRequest.Builder().build();
+        mAdView.loadAd(adRequest);
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.my_toolbar);
         toolbar.setBackgroundDrawable(getResources().getDrawable(R.drawable.gradiente));
@@ -56,14 +80,9 @@ public class Trigonometria extends AppCompatActivity {
                 finish();
             }
         });
-        mAdView = findViewById(R.id.adView);
-        AdRequest adRequest = new AdRequest.Builder().build();
-        mAdView.loadAd(adRequest);
 
         MainActivity main = new MainActivity();
-        if  (main.bandera == true){
-            mAdView.setVisibility(View.GONE);
-        }
+
         list = (ListView) findViewById(R.id.item2_2);
 
         final ArrayList<lista2> listItems = new ArrayList<>();
@@ -92,6 +111,13 @@ public class Trigonometria extends AppCompatActivity {
                 }
                else if (i == 2) {
                     Intent intent = new Intent(Trigonometria.this, teoremaPitagoras_children.class);
+                    if (mInterstitialAd.isLoaded()) {
+                        mInterstitialAd.show();
+                    }
+                    else   {
+                        Log.d("TAG", "The interstitial wasn't loaded yet.");
+
+                    }
                     startActivity(intent);
 
                 }
@@ -102,6 +128,13 @@ public class Trigonometria extends AppCompatActivity {
                 }
                 else if (i == 4) {
                     Intent intent = new Intent(Trigonometria.this, relacionTrigonometria_children.class);
+                    if (mInterstitialAd.isLoaded()) {
+                        mInterstitialAd.show();
+                    }
+                    else   {
+                        Log.d("TAG", "The interstitial wasn't loaded yet.");
+
+                    }
                     startActivity(intent);
                 }
                 else if (i == 5) {
@@ -115,6 +148,13 @@ public class Trigonometria extends AppCompatActivity {
                 }
                 else if (i == 7) {
                     Intent intent = new Intent(Trigonometria.this, senoCosenoTan_children.class);
+                    if (mInterstitialAd.isLoaded()) {
+                        mInterstitialAd.show();
+                    }
+                    else   {
+                        Log.d("TAG", "The interstitial wasn't loaded yet.");
+
+                    }
                     startActivity(intent);
                 }
             }

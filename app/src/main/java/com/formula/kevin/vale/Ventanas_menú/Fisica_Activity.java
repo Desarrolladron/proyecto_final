@@ -99,30 +99,21 @@ public class Fisica_Activity extends AppCompatActivity {
                else if(i == 2){
                     Intent intent = new Intent(Fisica_Activity.this, Mecanica_fluidos.class);
 
-                    if  (main.bandera == false) {
-                        if (mInterstitialAd.isLoaded()) {
+                         if (mInterstitialAd.isLoaded()) {
                             mInterstitialAd.show();
                         }
-                    }
-                    else if  (main.bandera == true){
 
-
-                    } else {
+                     else {
                         Log.d("TAG", "The interstitial wasn't loaded yet.");
-                    }                    startActivity(intent);
+                    }
+               startActivity(intent);
 
                 }
                 else if(i == 1){
                     Intent intent = new Intent(Fisica_Activity.this, Mecanicaa.class);
-                    if  (main.bandera == false) {
-                        if (mInterstitialAd.isLoaded()) {
+                         if (mInterstitialAd.isLoaded()) {
                             mInterstitialAd.show();
-                        }
-                    }
-                    else if  (main.bandera == true){
-
-
-                    }else   {
+                        } else   {
                         Log.d("TAG", "The interstitial wasn't loaded yet.");
 
                     }
@@ -136,19 +127,19 @@ public class Fisica_Activity extends AppCompatActivity {
                 }
                 else if(i == 5){
                     Intent intent = new Intent(Fisica_Activity.this, Optica.class);
+                    if (mInterstitialAd.isLoaded()) {
+                        mInterstitialAd.show();
+                    } else   {
+                        Log.d("TAG", "The interstitial wasn't loaded yet.");
+
+                    }
                     startActivity(intent);
                 }
                 else if(i == 3){
                     Intent intent = new Intent(Fisica_Activity.this, Termodinamica_fisi.class);
-                    if  (main.bandera == false) {
-                        if (mInterstitialAd.isLoaded()) {
-                            mInterstitialAd.show();
-                        }
-                    }
-                    else if  (main.bandera == true){
-
-
-                    }else   {
+                    if (mInterstitialAd.isLoaded()) {
+                        mInterstitialAd.show();
+                    } else   {
                         Log.d("TAG", "The interstitial wasn't loaded yet.");
 
                     }

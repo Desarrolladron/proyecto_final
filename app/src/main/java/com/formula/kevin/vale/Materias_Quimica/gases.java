@@ -67,12 +67,6 @@ public class gases extends AppCompatActivity {
 
 
 
-        if (main.bandera ==true) {
-
-            mAdView.setVisibility(View.GONE);
-
-        }
-
 
 
         list = (ListView) findViewById(R.id.item2_2);
@@ -104,16 +98,12 @@ public class gases extends AppCompatActivity {
                 Intent intent = new Intent(gases.this, gases_ejer.class);
                 MainActivity main = new MainActivity();
 
-                if  (main.bandera == false) {
-                    if (mInterstitialAd.isLoaded()) {
-                        mInterstitialAd.show();
-                    }
+                if (mInterstitialAd.isLoaded()) {
+                    mInterstitialAd.show();
                 }
-                else if  (main.bandera == true){
-                } else {
+
+                else {
                     Log.d("TAG", "The interstitial wasn't loaded yet.");
-
-
                 }
                 startActivity(intent);
 

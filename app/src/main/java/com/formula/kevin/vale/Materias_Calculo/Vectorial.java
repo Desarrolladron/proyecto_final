@@ -61,9 +61,7 @@ public class Vectorial extends AppCompatActivity {
         mAdView.loadAd(adRequest);
 
         MainActivity main = new MainActivity();
-        if (main.bandera == true) {
-            mAdView.setVisibility(View.GONE);
-        }
+
 
         list = (ListView) findViewById(R.id.item2_2);
 

@@ -12,7 +12,6 @@ import android.widget.AdapterView;
 import android.widget.ListView;
 
 import com.formula.kevin.vale.Activitis.MainActivity;
-import com.formula.kevin.vale.Activitis.integral_indefinida_web;
 import com.formula.kevin.vale.AreayVolumen.Principales;
 import com.formula.kevin.vale.ListView_primerFragment.CustomAdapter2;
 import com.formula.kevin.vale.ListView_primerFragment.lista;
@@ -83,48 +82,34 @@ public class TercerFragment extends Fragment {
 
     else if(i == 1){
             Intent k = new Intent(getActivity(),toxicidad.class);
-            if  (main.bandera == false) {
-                if (mInterstitialAd.isLoaded()) {
-                    mInterstitialAd.show();
-                }
+            if (mInterstitialAd.isLoaded()) {
+                mInterstitialAd.show();
             }
 
-            else if  (main.bandera == true){
-            } else {
+            else {
                 Log.d("TAG", "The interstitial wasn't loaded yet.");
-
-
-            }
-            startActivity(k);
+            }            startActivity(k);
 
         }
         else if(i == 6) {
             Intent k = new Intent(getActivity(), tabla_equivalencia.class);
-            if  (main.bandera == false) {
-                if (mInterstitialAd.isLoaded()) {
-                    mInterstitialAd.show();
-                }
+            if (mInterstitialAd.isLoaded()) {
+                mInterstitialAd.show();
             }
-            else if  (main.bandera == true){
-            } else {
+
+            else {
                 Log.d("TAG", "The interstitial wasn't loaded yet.");
-
-
             }
             startActivity(k);
         }
         else if(i == 4) {
             Intent k = new Intent(getActivity(), Principales.class);
-            if  (main.bandera == false) {
-                if (mInterstitialAd.isLoaded()) {
-                    mInterstitialAd.show();
-                }
+            if (mInterstitialAd.isLoaded()) {
+                mInterstitialAd.show();
             }
-            else if  (main.bandera == true){
-            } else {
+
+            else {
                 Log.d("TAG", "The interstitial wasn't loaded yet.");
-
-
             }
             startActivity(k);
         }
@@ -142,16 +127,12 @@ public class TercerFragment extends Fragment {
         else if(i == 2){
 
             Intent k = new Intent(getActivity(), Prefijos.class);
-            if  (main.bandera == false) {
-                if (mInterstitialAd.isLoaded()) {
-                    mInterstitialAd.show();
-                }
+            if (mInterstitialAd.isLoaded()) {
+                mInterstitialAd.show();
             }
-            else if  (main.bandera == true){
-            } else {
+
+            else {
                 Log.d("TAG", "The interstitial wasn't loaded yet.");
-
-
             }
             startActivity(k);
 

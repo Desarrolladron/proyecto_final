@@ -24,22 +24,23 @@
              app:cardBackgroundColor="#F4F5F4"
             android:layout_height="match_parent">
 
-
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:scaleType="center"
-                android:layout_gravity="center"
+<ImageView
+    android:id="@+id/vp"
+                android:layout_width="match_parent"
+                android:layout_height="430dp"
                 android:adjustViewBounds="true"
-                android:background="@drawable/mate"
-                ></ImageView>
+    android:src="@drawable/mate"
+                android:layout_gravity="center"
+                android:scaleType="centerCrop"
+>
 
+</ImageView>
             <TextView
 
                 android:id="@+id/titulo"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="#D4B0B4A6"
+                android:background="#D4676864"
                 android:gravity="center_vertical|center_horizontal"
                 android:layout_gravity="center_vertical"
                 android:padding="13dp"
@@ -47,21 +48,7 @@
                 android:textColor="@android:color/white"
                 android:textSize="25dp"
                 android:textStyle="bold" />
-            <com.google.android.material.floatingactionbutton.FloatingActionButton
-                android:id="@+id/fab"
-                android:layout_width="match_parent"
-                app:backgroundTint="#00B8D4"
-                android:layout_height="wrap_content"
-                android:layout_marginRight="20dp"
-                android:layout_gravity="bottom|right"
-                android:layout_marginBottom="5dp"
-                android:elevation="10dp"
-                app:fabSize="auto"
-                app:rippleColor="@color/md_teal_600"
 
-                android:layout_marginLeft="40dp"
-                android:src="@drawable/ic_play_circle_outline_black_24dp"
-                />
             <com.google.android.material.floatingactionbutton.FloatingActionButton
                 android:id="@+id/fabEstrella"
                 android:layout_width="match_parent"
@@ -109,7 +96,7 @@
             android:onClick="loadSlides"
             android:padding="28dp"
             android:textAlignment="center"
-
+        android:id="@+id/BtnJuegos"
 
             android:text="@string/como_funciona"
             android:textColor="#ffff"
@@ -118,23 +105,21 @@
         <Button
 
 
-            android:layout_width="match_parent"
-            android:padding="28dp"
-            android:textSize="13dp"
-            android:clickable="true"
-
-            android:onClick="cargarInicio"
-            android:foreground="?selectableItemBackground"
-            android:textColor="@android:color/white"
-            android:layout_weight="1"
-            android:background="@color/colorPrimary"
             android:id="@+id/btnMenuPrincipal"
-            android:textAlignment="center"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="bottom"
-            android:text="@string/iniciar"
-            ></Button>
 
+            android:layout_weight="1"
+            android:background="#F0268B5B"
+            android:clickable="true"
+            android:foreground="?selectableItemBackground"
+            android:onClick="cargarInicio"
+            android:padding="28dp"
+            android:text="@string/iniciar"
+            android:textAlignment="center"
+            android:textColor="@android:color/white"
+            android:textSize="13dp"></Button>
 
 
     </LinearLayout>

@@ -3,6 +3,8 @@ package com.formula.kevin.vale.Materias_Calculo;
 import android.content.Context;
 import android.content.Intent;
 
+import com.formula.kevin.vale.calculo_children.calculo_vectorial_children.integracion_partes;
+import com.formula.kevin.vale.calculo_children.cambio_variable;
 import com.formula.kevin.vale.calculo_children.derivada_children;
 import com.formula.kevin.vale.calculo_children.derivada_funciones_childrne;
 import com.formula.kevin.vale.calculo_children.derivada_hiperbolica_children;
@@ -12,7 +14,10 @@ import com.formula.kevin.vale.calculo_children.integrales_children;
 import com.formula.kevin.vale.calculo_children.integrales_fracciones_children;
 import com.formula.kevin.vale.calculo_children.limite_producto_children;
 import com.formula.kevin.vale.calculo_children.logaritmo_children;
+import com.formula.kevin.vale.calculo_children.regla_basica_derivar;
+import com.formula.kevin.vale.calculo_children.regla_basica_integrar;
 import com.formula.kevin.vale.calculo_children.suma_producto_children;
+import com.formula.kevin.vale.calculo_children.teorema_fundamental_children;
 import com.formula.kevin.vale.listview_children.CustomAdapter3;
 import com.formula.kevin.vale.listview_children.lista2;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
@@ -20,6 +25,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import androidx.appcompat.widget.Toolbar;
 
+import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
@@ -77,24 +83,32 @@ public class Diferencial_Integral extends AppCompatActivity  {
         AdRequest adRequest = new AdRequest.Builder().build();
 
         mAdView.loadAd(adRequest);
-        MainActivity main = new MainActivity();
 
 
 
-        if (main.bandera ==true) {
-                mAdView.setVisibility(View.GONE);
-        }
 
         list = (ListView) findViewById(R.id.item2_2);
 
         final ArrayList<lista2> listItems = new ArrayList<>();
         listItems.add(new lista2((R.drawable.diferencialicon),getString(R.string.logaritmo)));
         listItems.add(new lista2((R.drawable.diferencialicon),getString(R.string.suma_producto)));
+        listItems.add(new lista2((R.drawable.diferencialicon),getString(R.string.regla_basica_derivar)));
+        listItems.add(new lista2((R.drawable.diferencialicon),getString(R.string.regla_basica_integrar)));
+
+
+        listItems.add(new lista2((R.drawable.diferencialicon),getString(R.string.teorema_fundamental)));
+        listItems.add(new lista2((R.drawable.diferencialicon),getString(R.string.cambio_variable)));
+
+
+        listItems.add(new lista2((R.drawable.diferencialicon),getString(R.string.suma_producto)));
+
         listItems.add(new lista2((R.drawable.diferencialicon), getString(R.string.limites)));
         listItems.add(new lista2((R.drawable.diferencialicon), getString(R.string.derivadas)));
         listItems.add(new lista2((R.drawable.diferencialicon), getString(R.string.derivada_funciones_log)));
         listItems.add(new lista2((R.drawable.diferencialicon), getString(R.string.derivada_trigono)));
         listItems.add(new lista2((R.drawable.diferencialicon), getString(R.string.derivada_hiperbolica)));
+        listItems.add(new lista2((R.drawable.diferencialicon),"Integracion por partes"));
+
         listItems.add(new lista2((R.drawable.diferencialicon), getString(R.string.Integrales)));
         listItems.add(new lista2((R.drawable.diferencialicon), getString(R.string.integrales_funcionnes_log)));
         listItems.add(new lista2((R.drawable.diferencialicon), getString(R.string.integral_fracciones)));
@@ -115,33 +129,99 @@ public class Diferencial_Integral extends AppCompatActivity  {
                     startActivity(intent);
                 }
                 else if (i == 2) {
-                    Intent intent = new Intent(Diferencial_Integral.this, limite_producto_children.class);
+                    Intent intent = new Intent(Diferencial_Integral.this, regla_basica_derivar.class);
+                    if (mInterstitialAd.isLoaded()) {
+                        mInterstitialAd.show();
+                    }
+                    else   {
+                        Log.d("TAG", "The interstitial wasn't loaded yet.");
+
+                    }
                     startActivity(intent);
                 }
                 else if (i == 3) {
-                    Intent intent = new Intent(Diferencial_Integral.this, derivada_children.class);
+                    Intent intent = new Intent(Diferencial_Integral.this, regla_basica_integrar.class);
                     startActivity(intent);
                 }
                 else if (i == 4) {
-                    Intent intent = new Intent(Diferencial_Integral.this, derivada_funciones_childrne.class);
+                    Intent intent = new Intent(Diferencial_Integral.this, teorema_fundamental_children.class);
+                    if (mInterstitialAd.isLoaded()) {
+                        mInterstitialAd.show();
+                    }
+                    else   {
+                        Log.d("TAG", "The interstitial wasn't loaded yet.");
+
+                    }
                     startActivity(intent);
-                } else if (i == 5) {
-                    Intent intent = new Intent(Diferencial_Integral.this, derivada_trigo_children.class);
+                }
+                else if (i == 5) {
+                    Intent intent = new Intent(Diferencial_Integral.this, cambio_variable.class);
                     startActivity(intent);
-                } else if (i == 6) {
-                    Intent intent = new Intent(Diferencial_Integral.this, derivada_hiperbolica_children.class);
+                }
+
+
+                else if (i == 6) {
+                    Intent intent = new Intent(Diferencial_Integral.this, suma_producto_children.class);
                     startActivity(intent);
-                } else if (i == 7) {
-                    Intent intent = new Intent(Diferencial_Integral.this, integrales_children.class);
+                }
+
+                else if (i == 7) {
+                    Intent intent = new Intent(Diferencial_Integral.this, limite_producto_children.class);
                     startActivity(intent);
-                } else if (i == 8) {
-                    Intent intent = new Intent(Diferencial_Integral.this, integrales_Log_children.class);
+                }
+                else
+                 if (i == 8) {
+                    Intent intent = new Intent(Diferencial_Integral.this, derivada_children.class);
+                     if (mInterstitialAd.isLoaded()) {
+                         mInterstitialAd.show();
+                     }
+                     else   {
+                         Log.d("TAG", "The interstitial wasn't loaded yet.");
+
+                     }
                     startActivity(intent);
                 }
                 else if (i == 9) {
+                    Intent intent = new Intent(Diferencial_Integral.this, derivada_funciones_childrne.class);
+                    startActivity(intent);
+                } else if (i == 10) {
+                    Intent intent = new Intent(Diferencial_Integral.this, derivada_trigo_children.class);
+                    startActivity(intent);
+                } else if (i == 11) {
+                    Intent intent = new Intent(Diferencial_Integral.this, derivada_hiperbolica_children.class);
+                     if (mInterstitialAd.isLoaded()) {
+                         mInterstitialAd.show();
+                     }
+                     else   {
+                         Log.d("TAG", "The interstitial wasn't loaded yet.");
+
+                     }
+                    startActivity(intent);
+                }
+                else if (i == 12) {
+                    Intent intent = new Intent(Diferencial_Integral.this, integracion_partes.class);
+                     if (mInterstitialAd.isLoaded()) {
+                         mInterstitialAd.show();
+                     }
+                     else   {
+                         Log.d("TAG", "The interstitial wasn't loaded yet.");
+
+                     }
+                    startActivity(intent);
+                }
+                else if (i == 13) {
+
+                    Intent intent = new Intent(Diferencial_Integral.this, integrales_children.class);
+                    startActivity(intent);
+                } else if (i == 14) {
+                    Intent intent = new Intent(Diferencial_Integral.this, integrales_Log_children.class);
+                    startActivity(intent);
+                }
+                else if (i == 15) {
                     Intent intent = new Intent(Diferencial_Integral.this, integrales_fracciones_children.class);
                     startActivity(intent);
                 }
+
             }
         });
 

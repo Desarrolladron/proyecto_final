@@ -33,7 +33,7 @@ public class matrizCuadrada_children extends AppCompatActivity {
                 finish();
             }
         });
-        imagen =(ImageView)findViewById(R.id.simbo_zoom);
+        imagen =(ImageView)findViewById(R.id.matriz_cuadrdada);
         photo = new PhotoViewAttacher(imagen);
     }
 }

@@ -32,6 +32,6 @@ public class dilatacion_liquidos_children extends AppCompatActivity {
                 finish();
             }
         });
-        imagen =(ImageView)findViewById(R.id.enefoto);
+        imagen =(ImageView)findViewById(R.id.dilatacionliquid);
         photo = new PhotoViewAttacher(imagen);}
 }

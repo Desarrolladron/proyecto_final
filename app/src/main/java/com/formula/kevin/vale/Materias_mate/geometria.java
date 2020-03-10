@@ -2,6 +2,7 @@ package com.formula.kevin.vale.Materias_mate;
 
 import android.content.Intent;
 
+import com.formula.kevin.vale.AreayVolumen.Principales;
 import com.formula.kevin.vale.Matematicas_children.Geometria_children.circunferenciaCentroOrigen_children;
 import com.formula.kevin.vale.Matematicas_children.Geometria_children.circunferenciaFueraOrigen_children;
 import com.formula.kevin.vale.Matematicas_children.Geometria_children.distanciaDosPuntos_children;
@@ -13,12 +14,17 @@ import com.formula.kevin.vale.Matematicas_children.Geometria_children.modulo_vec
 import com.formula.kevin.vale.Matematicas_children.Geometria_children.parabolaFueraOrigen_children;
 import com.formula.kevin.vale.Matematicas_children.Geometria_children.parabolaOrigen_children;
 import com.formula.kevin.vale.Matematicas_children.Geometria_children.puntoMedio_children;
+import com.formula.kevin.vale.TercerFragmento.Prefijos;
 import com.formula.kevin.vale.listview_children.CustomAdapter3;
 import com.formula.kevin.vale.listview_children.lista2;
+import com.google.android.gms.ads.AdListener;
+import com.google.android.gms.ads.InterstitialAd;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import androidx.appcompat.widget.Toolbar;
+
+import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ExpandableListView;
@@ -38,12 +44,33 @@ public class geometria extends AppCompatActivity {
     private AdView mAdView;
     private ListView list;
     private CustomAdapter3 adaptador;
+    private InterstitialAd mInterstitialAd;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_geometria);
 
 
+
+        mInterstitialAd = new InterstitialAd(this);
+        mInterstitialAd.setAdUnitId("ca-app-pub-8882667917768463/3391564183");
+        //original  ca-app-pub-8882667917768463/3391564183
+
+        mInterstitialAd.loadAd(new AdRequest.Builder().build());
+
+        mInterstitialAd.setAdListener(new AdListener() {
+            @Override
+            public void onAdClosed() {
+                // Load the next interstitial.
+                mInterstitialAd.loadAd(new AdRequest.Builder().build());
+            }
+
+        });
+
+        mAdView = findViewById(R.id.adView);
+        AdRequest adRequest = new AdRequest.Builder().build();
+        mAdView.loadAd(adRequest);
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.my_toolbar);
         toolbar.setBackgroundDrawable(getResources().getDrawable(R.drawable.gradiente));
@@ -60,18 +87,13 @@ public class geometria extends AppCompatActivity {
             }
         });
 
-        mAdView = findViewById(R.id.adView);
-        AdRequest adRequest = new AdRequest.Builder().build();
-        mAdView.loadAd(adRequest);
-        MainActivity main = new MainActivity();
-        if  (main.bandera == true){
-            mAdView.setVisibility(View.GONE);
-        }
 
 
         list = (ListView) findViewById(R.id.item2_2);
 
         final ArrayList<lista2> listItems = new ArrayList<>();
+        listItems.add(new lista2((R.drawable.longitud),getString(R.string.calcular_area)));
+
         listItems.add(new lista2((R.drawable.cuboo),getString(R.string.distancia_entre_dos)));
         listItems.add(new lista2((R.drawable.cuboo),getString(R.string.punto_medio)));
         listItems.add(new lista2((R.drawable.cuboo), getString(R.string.punto_pendiente)));
@@ -92,46 +114,79 @@ public class geometria extends AppCompatActivity {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
                 if (i == 0) {
+                    Intent intent = new Intent(geometria.this, Principales.class);
+                    startActivity(intent);
+                }
+                if (i == 1) {
                     Intent intent = new Intent(geometria.this, distanciaDosPuntos_children.class);
                     startActivity(intent);
                 }
-                else if (i == 1) {
+                else if (i == 2) {
                     Intent intent = new Intent(geometria.this, puntoMedio_children.class);
+                    if (mInterstitialAd.isLoaded()) {
+                        mInterstitialAd.show();
+                    }
+                    else   {
+                        Log.d("TAG", "The interstitial wasn't loaded yet.");
+
+                    }
                   startActivity(intent);
                 }
-                else if (i == 2) {
+                else if (i == 3) {
                     Intent intent = new Intent(geometria.this, formaPuntoPendiente_children.class);
                     startActivity(intent);
                 }
-                else if (i == 3) {
+                else if (i == 4) {
                      Intent intent = new Intent(geometria.this, distanciaPuntorec_children.class);
                   startActivity(intent);
                 }
-                else if (i == 4) {
-                    Intent intent = new Intent(geometria.this, ecuacionGralConi_children.class);
-                    startActivity(intent);
-                }
                 else if (i == 5) {
-                    Intent intent = new Intent(geometria.this, circunferenciaCentroOrigen_children.class);
+                    Intent intent = new Intent(geometria.this, ecuacionGralConi_children.class);
+                    if (mInterstitialAd.isLoaded()) {
+                        mInterstitialAd.show();
+                    }
+                    else   {
+                        Log.d("TAG", "The interstitial wasn't loaded yet.");
+
+                    }
                     startActivity(intent);
                 }
                 else if (i == 6) {
-                     Intent intent = new Intent(geometria.this, circunferenciaFueraOrigen_children.class);
+                    Intent intent = new Intent(geometria.this, circunferenciaCentroOrigen_children.class);
                     startActivity(intent);
                 }
                 else if (i == 7) {
-                    Intent intent = new Intent(geometria.this, hiperbola_children.class);
+                     Intent intent = new Intent(geometria.this, circunferenciaFueraOrigen_children.class);
                     startActivity(intent);
                 }
                 else if (i == 8) {
+                    Intent intent = new Intent(geometria.this, hiperbola_children.class);
+                    if (mInterstitialAd.isLoaded()) {
+                        mInterstitialAd.show();
+
+                    }
+                    else   {
+                        Log.d("TAG", "The interstitial wasn't loaded yet.");
+
+                    }
+                    startActivity(intent);
+                }
+                else if (i == 9) {
                     Intent intent = new Intent(geometria.this, modulo_vector_children.class);
                     startActivity(intent);
-                }   else if (i == 9) {
+                }   else if (i == 10) {
                     Intent intent = new Intent(geometria.this, parabolaOrigen_children.class);
                     startActivity(intent);
                 }
-                else if (i == 10) {
+                else if (i == 11) {
                     Intent intent = new Intent(geometria.this, parabolaFueraOrigen_children.class);
+                    if (mInterstitialAd.isLoaded()) {
+                        mInterstitialAd.show();
+                    }
+                    else   {
+                        Log.d("TAG", "The interstitial wasn't loaded yet.");
+
+                    }
                     startActivity(intent);
                 }
 
@@ -164,87 +219,5 @@ public class geometria extends AppCompatActivity {
             }
         });
     }
-/*
-    public class ExpandableListViewAdapter4 extends BaseExpandableListAdapter {
-
-        String[] gruponombres = {getString(R.string.distancia_entre_dos),
-                getString(R.string.punto_medio),getString(R.string.punto_pendiente),getString(R.string.distancia_punto_recta),
-                getString(R.string.ecuacion_general_conica),getString(R.string.circunferencia_centro_origen)
-                ,getString(R.string.circunferencia_fuera_origen),getString(R.string.hiperbola)
-        ,getString(R.string.modulo_vector),getString(R.string.parabola_origen),getString(R.string.circunferencia_fuera_origen)};
-
-
-        int[][] childNames = {{R.drawable.distancia2},{R.drawable.punto_medio_def},{R.drawable.forma_punto_pendiente},{R.drawable.punto_recta},{R.drawable.conicas},
-                {R.drawable.centro_origen},{R.drawable.fuera_origen},{R.drawable.hiperbola},{R.drawable.modulo_vector},{R.drawable.parabola_vertice_origen},
-                {R.drawable.parabola_vertice_fueraorigen}};
-        Context context;
-
-        public ExpandableListViewAdapter4(Context context) { //aqui colocar el int [] imagenes
-            this.context = context;
-        }
-
-        @Override
-        public int getGroupCount() {
-            return gruponombres.length;
-        }
-
-        @Override
-        public int getChildrenCount(int i) {
-            return childNames[i].length;
-        }
-
-        @Override
-        public Object getGroup(int i) {
-            return gruponombres[i];
-        }
-
-        @Override
-        public Object getChild(int i, int i1) {
-            return childNames[i][i1];
-        }
-
-        @Override
-        public long getGroupId(int i) {
-            return i;
-        }
-
-        @Override
-        public long getChildId(int i, int i1) {
-            return i1;
-        }
-
-        @Override
-        public boolean hasStableIds() {
-            return false;
-        }
-
-        @Override
-        public View getGroupView(int i, boolean b, View view, ViewGroup viewGroup) {
-            TextView txtview = new TextView(context);
-            txtview.setText(gruponombres[i]);
-            txtview.setPadding(100, 25, 0, 25);
-            txtview.setTextSize(20);
-
-            return txtview;
-        }
-
-        @Override
-        public View getChildView(int i, int i1, boolean b, View view, ViewGroup viewGroup) {
-            ImageView imag = new ImageView(context);
-            imag.setImageResource(childNames[i][i1]);
-
-            imag.setScaleType(ImageView.ScaleType.FIT_START);
-            imag.setPadding(0, 75, 0, 75);
-
-            return imag;
-        }
-
-        @Override
-        public boolean isChildSelectable(int i, int i1) {
-            return false;
-        }
-    }
-
- */
 }
 

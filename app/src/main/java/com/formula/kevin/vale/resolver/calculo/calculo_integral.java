@@ -5,6 +5,8 @@ import android.net.Uri;
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import androidx.appcompat.widget.Toolbar;
+
+import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.GridView;
@@ -12,17 +14,26 @@ import android.widget.GridView;
 import com.formula.kevin.vale.AreayVolumen.Adapter2;
 import com.formula.kevin.vale.GridView_segundoFragment.Spacecraft;
 import com.formula.kevin.vale.R;
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.InterstitialAd;
 
 import java.util.ArrayList;
 
 public class calculo_integral extends AppCompatActivity {
     private Adapter2 adaptador;
     private GridView grid;
+    private InterstitialAd mInterstitialAd;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_calculo_integral);
+
+
+        mInterstitialAd = new InterstitialAd(this);
+        mInterstitialAd.setAdUnitId("ca-app-pub-8882667917768463/3391564183");
+        mInterstitialAd.loadAd(new AdRequest.Builder().build());
+
         Toolbar toolbar = (Toolbar) findViewById(R.id.my_toolbar);
         setSupportActionBar(toolbar);
 
@@ -48,6 +59,7 @@ public class calculo_integral extends AppCompatActivity {
         listItems.add(new Spacecraft((R.drawable.integraless),  getString(R.string.integral_relacional)));
         listItems.add(new Spacecraft((R.drawable.integraless),  getString(R.string.integral_trigonometrica)));
         listItems.add(new Spacecraft((R.drawable.derivadaaas),  getString(R.string.derivada_funciones_exponenciales)));
+        listItems.add(new Spacecraft((R.drawable.diferencialicon),  "Integración por Partes"));
 
 
         adaptador = new Adapter2(this, listItems);
@@ -60,11 +72,25 @@ public class calculo_integral extends AppCompatActivity {
                 if  (i == 0){
                     Uri uri = Uri.parse("https://drive.google.com/open?id=13Xub7cn_ve49v4EbNjvXQ58UfwMN3mZS");
                     Intent intent = new Intent(Intent.ACTION_VIEW, uri);
+                    if (mInterstitialAd.isLoaded()) {
+                        mInterstitialAd.show();
+                    }
+                    else   {
+                        Log.d("TAG", "The interstitial wasn't loaded yet.");
+
+                    }
                     startActivity(intent);
                 }
                 else if  (i == 1){
                     Uri uri = Uri.parse("https://drive.google.com/open?id=1YAdDf-rTxpKDq5LLMm4P9nCsMR5QlHlx");
                     Intent intent = new Intent(Intent.ACTION_VIEW, uri);
+                    if (mInterstitialAd.isLoaded()) {
+                        mInterstitialAd.show();
+                    }
+                    else   {
+                        Log.d("TAG", "The interstitial wasn't loaded yet.");
+
+                    }
                     startActivity(intent);
 
 
@@ -89,7 +115,20 @@ public class calculo_integral extends AppCompatActivity {
 
 
                 }
+                else if  (i == 5) {
+                    Uri uri = Uri.parse("https://drive.google.com/open?id=1xlKSdw9INUXrOKVNxGubvO2MZ6OfPrhd");
+                    Intent intent = new Intent(Intent.ACTION_VIEW, uri);
+                    if (mInterstitialAd.isLoaded()) {
+                        mInterstitialAd.show();
+                    }
+                    else   {
+                        Log.d("TAG", "The interstitial wasn't loaded yet.");
 
+                    }
+                    startActivity(intent);
+
+
+                }
             }
         });
 

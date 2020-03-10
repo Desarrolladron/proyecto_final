@@ -9,16 +9,22 @@ import com.formula.kevin.vale.Matematicas_children.AlgebraLineal_children.matriz
 import com.formula.kevin.vale.Matematicas_children.AlgebraLineal_children.matrizOrtogonal_children;
 import com.formula.kevin.vale.Matematicas_children.AlgebraLineal_children.matrizSimetrica_children;
 import com.formula.kevin.vale.Matematicas_children.AlgebraLineal_children.matrizTranspuesta_children;
+import com.formula.kevin.vale.Matematicas_children.AlgebraLineal_children.multiplicacion_matrices;
 import com.formula.kevin.vale.Matematicas_children.AlgebraLineal_children.reglaCramer_children;
 import com.formula.kevin.vale.Matematicas_children.AlgebraLineal_children.reglaSarrus_children;
+import com.formula.kevin.vale.Matematicas_children.AlgebraLineal_children.suma_matrices;
 import com.formula.kevin.vale.Matematicas_children.AlgebraLineal_children.traza_children;
 import com.formula.kevin.vale.Matematicas_children.Algebra_children.conjugadoComplejo_children;
 import com.formula.kevin.vale.listview_children.CustomAdapter3;
 import com.formula.kevin.vale.listview_children.lista2;
+import com.google.android.gms.ads.AdListener;
+import com.google.android.gms.ads.InterstitialAd;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import androidx.appcompat.widget.Toolbar;
+
+import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
@@ -40,11 +46,14 @@ public class algebra_lineal extends AppCompatActivity {
     private ListView list;
     private CustomAdapter3 adaptador;
     private AdView mAdView;
+    private InterstitialAd mInterstitialAd;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_algebra_lineal2);
+
+
 
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.my_toolbar);
@@ -61,13 +70,27 @@ public class algebra_lineal extends AppCompatActivity {
                 finish();
             }
         });
+        mInterstitialAd = new InterstitialAd(this);
+        mInterstitialAd.setAdUnitId("ca-app-pub-8882667917768463/3391564183");
+        //original  ca-app-pub-8882667917768463/3391564183
+
+        mInterstitialAd.loadAd(new AdRequest.Builder().build());
+
+        mInterstitialAd.setAdListener(new AdListener() {
+            @Override
+            public void onAdClosed() {
+                // Load the next interstitial.
+                mInterstitialAd.loadAd(new AdRequest.Builder().build());
+            }
+
+        });
+
         mAdView = findViewById(R.id.adView);
         AdRequest adRequest = new AdRequest.Builder().build();
         mAdView.loadAd(adRequest);
+
+
         MainActivity main = new MainActivity();
-        if  (main.bandera == true){
-            mAdView.setVisibility(View.GONE);
-        }
 
         list = (ListView) findViewById(R.id.item2_2);
 
@@ -81,6 +104,8 @@ public class algebra_lineal extends AppCompatActivity {
         listItems.add(new lista2((R.drawable.parabolic), getString(R.string.matriz_simetrica)));
         listItems.add(new lista2((R.drawable.parabolic), getString(R.string.traza)));
         listItems.add(new lista2((R.drawable.parabolic), getString(R.string.matriz_ortogonal)));
+        listItems.add(new lista2((R.drawable.parabolic), getString(R.string.suma_ma)));
+        listItems.add(new lista2((R.drawable.parabolic), getString(R.string.multipli_ma)));
 
 
 
@@ -107,10 +132,24 @@ public class algebra_lineal extends AppCompatActivity {
                  }
                 else if (i == 3) {
                     Intent intent = new Intent(algebra_lineal.this, reglaSarrus_children.class);
+                     if (mInterstitialAd.isLoaded()) {
+                         mInterstitialAd.show();
+                     }
+                     else   {
+                         Log.d("TAG", "The interstitial wasn't loaded yet.");
+
+                     }
                     startActivity(intent);
                 }
                  else if (i == 4) {
                      Intent intent = new Intent(algebra_lineal.this, matrizCuadrada_children.class);
+                     if (mInterstitialAd.isLoaded()) {
+                         mInterstitialAd.show();
+                     }
+                     else   {
+                         Log.d("TAG", "The interstitial wasn't loaded yet.");
+
+                     }
                      startActivity(intent);
                  }
                  else if (i == 5) {
@@ -128,6 +167,22 @@ public class algebra_lineal extends AppCompatActivity {
 
                  else if (i ==8) {
                      Intent intent = new Intent(algebra_lineal.this, matrizOrtogonal_children.class);
+                     startActivity(intent);
+                 }
+
+                 else if (i ==9) {
+                     Intent intent = new Intent(algebra_lineal.this, suma_matrices.class);
+                     if (mInterstitialAd.isLoaded()) {
+                         mInterstitialAd.show();
+                     }
+                     else   {
+                         Log.d("TAG", "The interstitial wasn't loaded yet.");
+
+                     }
+                     startActivity(intent);
+                 }
+                 else if (i ==10) {
+                     Intent intent = new Intent(algebra_lineal.this, multiplicacion_matrices.class);
                      startActivity(intent);
                  }
 

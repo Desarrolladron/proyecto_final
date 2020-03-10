@@ -11,7 +11,7 @@
     android:layout_marginRight="25dp"
      app:cardCornerRadius="30dp"
     android:layout_centerInParent="true"
-    android:layout_height="500dp"
+    android:layout_height="600dp"
     >
     <ImageView
         android:layout_gravity="right"
@@ -59,23 +59,64 @@
             app:lottie_rawRes="@raw/premio"
             ></com.airbnb.lottie.LottieAnimationView>
     </LinearLayout>
-
-       <TextView
-           android:textSize="25dp"
-           android:layout_width="match_parent"
-           android:text="fgasfshdfsadjfjsad"
-           android:layout_height="wrap_content"
-           android:layout_marginTop="260dp"
-
-           android:id="@+id/txtResultado"
-           android:layout_marginRight="5dp"
-           android:layout_marginLeft="5dp"
-           android:textColor="@android:color/black"
-           android:textAlignment="center"
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_marginTop="270dp"
+        android:gravity="center"
+        android:layout_gravity="center_horizontal"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
 
 
+    <TextView
+        android:textSize="25dp"
+        android:layout_width="match_parent"
+        android:text="@string/puntajess"
+        android:layout_height="wrap_content"
 
-           />
+        android:id="@+id/txtResultado3"
+        android:layout_marginRight="5dp"
+        android:layout_marginLeft="5dp"
+        android:textColor="@android:color/black"
+        android:textAlignment="center"
+
+
+
+        />
+    <TextView
+        android:textSize="25dp"
+
+        android:layout_width="match_parent"
+        android:text="fgasfshdfsadjfjsad"
+        android:layout_height="wrap_content"
+
+        android:id="@+id/txtResultado"
+        android:layout_marginRight="5dp"
+        android:layout_marginLeft="5dp"
+        android:textColor="@color/colorPrimary"
+        android:textAlignment="center"
+
+
+
+        />
+        <TextView
+            android:textSize="25dp"
+
+            android:layout_width="match_parent"
+            android:text="fgasfshdfsadjfjsad"
+            android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+            android:id="@+id/msjResultado"
+            android:layout_marginRight="5dp"
+            android:layout_marginLeft="5dp"
+            android:textColor="@color/holi"
+            android:textAlignment="center"
+
+
+
+            />
+        ></LinearLayout>
+
 
 
 
@@ -90,7 +131,7 @@
 
         android:textStyle="bold"
         android:background="@drawable/btn_redondo"
-        android:text="INTENTARLO DE NUEVO"
+        android:text="@string/intentarlo"
         android:textColor="@android:color/white" />
 
 </androidx.cardview.widget.CardView>

@@ -32,6 +32,6 @@ public class maquina_termica_children extends AppCompatActivity {
                 finish();
             }
         });
-        imagen =(ImageView)findViewById(R.id.enefoto);
+        imagen =(ImageView)findViewById(R.id.maquina_termina);
         photo = new PhotoViewAttacher(imagen);  }
 }

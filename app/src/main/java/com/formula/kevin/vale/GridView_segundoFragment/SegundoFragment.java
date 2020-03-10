@@ -97,39 +97,33 @@ public class SegundoFragment extends Fragment {
                 }
                 else if (position == 3){
                     Intent intent = new Intent(getActivity(), Area.class);
-                    if  (main.bandera == false) {
-                        if (mInterstitialAd2.isLoaded()) {
-                            mInterstitialAd2.show();
-                        }
+                    if (mInterstitialAd2.isLoaded()) {
+                        mInterstitialAd2.show();
                     }
-                    else if  (main.bandera == true){
-                    } else {
+
+                    else {
                         Log.d("TAG", "The interstitial wasn't loaded yet.");
-                    }     startActivity(intent);
+                    }    startActivity(intent);
                 }
                 else if (position == 4){
                     Intent intent = new Intent(getActivity(), Velocidad.class);
-                    if  (main.bandera == false) {
-                        if (mInterstitialAd2.isLoaded()) {
-                            mInterstitialAd2.show();
-                        }
+                    if (mInterstitialAd2.isLoaded()) {
+                        mInterstitialAd2.show();
                     }
-                    else if  (main.bandera == true){
-                    } else {
+
+                    else {
                         Log.d("TAG", "The interstitial wasn't loaded yet.");
                     }   startActivity(intent);
                 }
                 else if (position == 5){
                     Intent intent = new Intent(getActivity(), presion.class);
-                    if  (main.bandera == false) {
-                        if (mInterstitialAd2.isLoaded()) {
-                            mInterstitialAd2.show();
-                        }
+                    if (mInterstitialAd2.isLoaded()) {
+                        mInterstitialAd2.show();
                     }
-                    else if  (main.bandera == true){
-                    } else {
+
+                    else {
                         Log.d("TAG", "The interstitial wasn't loaded yet.");
-                    }   startActivity(intent);
+                    }    startActivity(intent);
                 }
                 else if (position == 6){
                     Intent intent = new Intent(getActivity(), Frecuencia.class);
@@ -142,15 +136,13 @@ public class SegundoFragment extends Fragment {
                 }
                 else if (position == 8){
                     Intent intent = new Intent(getActivity(), Energia.class);
-                    if  (main.bandera == false) {
-                        if (mInterstitialAd2.isLoaded()) {
-                            mInterstitialAd2.show();
-                        }
+                    if (mInterstitialAd2.isLoaded()) {
+                        mInterstitialAd2.show();
                     }
-                    else if  (main.bandera == true){
-                    } else {
+
+                    else {
                         Log.d("TAG", "The interstitial wasn't loaded yet.");
-                    }  startActivity(intent);
+                    }   startActivity(intent);
                 }
                 else if (position == 9){
                     Intent intent = new Intent(getActivity(), potencia.class);
@@ -163,15 +155,13 @@ public class SegundoFragment extends Fragment {
                 }
                 else if (position == 11){
                     Intent intent = new Intent(getActivity(), Resistencia.class);
-                    if  (main.bandera == false) {
-                        if (mInterstitialAd2.isLoaded()) {
-                            mInterstitialAd2.show();
-                        }
+                    if (mInterstitialAd2.isLoaded()) {
+                        mInterstitialAd2.show();
                     }
-                    else if  (main.bandera == true){
-                    } else {
+
+                    else {
                         Log.d("TAG", "The interstitial wasn't loaded yet.");
-                    }      startActivity(intent);
+                    }       startActivity(intent);
                 }
                 else if (position == 12){
                     Intent intent = new Intent(getActivity(), combustible.class);

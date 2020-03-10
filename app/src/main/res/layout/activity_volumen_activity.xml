@@ -17,6 +17,7 @@
 
     </androidx.appcompat.widget.Toolbar>
 
+
     <View
         android:id="@+id/linea"
         android:layout_width="match_parent"

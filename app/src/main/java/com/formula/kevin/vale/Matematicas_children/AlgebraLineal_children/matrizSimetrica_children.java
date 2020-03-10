@@ -12,8 +12,8 @@ import com.formula.kevin.vale.R;
 import uk.co.senab.photoview.PhotoViewAttacher;
 
 public class matrizSimetrica_children extends AppCompatActivity {
-    ImageView imagen;
-    PhotoViewAttacher photo;
+    ImageView imagen,ima2;
+    PhotoViewAttacher photo,poto2;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -32,7 +32,10 @@ public class matrizSimetrica_children extends AppCompatActivity {
                 finish();
             }
         });
-        imagen =(ImageView)findViewById(R.id.simbo_zoom);
+        imagen =(ImageView)findViewById(R.id.simetricaa);
         photo = new PhotoViewAttacher(imagen);
+
+        ima2 =(ImageView)findViewById(R.id.matrizs);
+        poto2 = new PhotoViewAttacher(ima2);
     }
 }

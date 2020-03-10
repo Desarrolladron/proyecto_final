@@ -32,6 +32,6 @@ public class procesos_termodinamicos_isotermico_children extends AppCompatActivi
                 finish();
             }
         });
-        imagen =(ImageView)findViewById(R.id.enefoto);
+        imagen =(ImageView)findViewById(R.id.processostermo);
         photo = new PhotoViewAttacher(imagen);}
 }

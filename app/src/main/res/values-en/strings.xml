@@ -195,7 +195,7 @@ that explain natural phenomena. </string>
 
     <string name ="desarrolada">- DEVELOPED BY: Kevin Hernandez
 </string>
-    <string name="valorar">Value Application in Play Store
+    <string name="valorar">SUPPORT MEXICAN TALENT WEY
 </string>
     <string name ="descripcion_app">
 iFormulas is one of the best in its category, from basic levels to university, all formulas in the palm of your hand and without internet connection.</string>
@@ -488,8 +488,8 @@ iFormulas is one of the best in its category, from basic levels to university, a
     <string name="stickerfly">StickerFly \n Stickers and Download WA States</string>
     <string name ="detalles">More details</string>
     <string name="suma">Sum</string>
-    <string name="resta">Resta</string>
-    <string name="mul">Multiplicación</string>
+    <string name="resta">Subtraction</string>
+    <string name="mul">Multiplication</string>
 
 
     <string name="Sbinomio">Newton\'s binomial is an algorithm that allows to calculate any power of a binomial, for this the binomial coefficients are used, which are nothing more than a succession of combinatorial numbers.</string>
@@ -525,5 +525,34 @@ Very easy to find the solution.</string>
     <string name="mix1">Mixed number or mixed fraction is formed by a natural number and a proper fraction.</string>
     <string name="mix2">To operate with mixed numbers, they are written in the form of improper fractions and fractions operations are performed. The result is rewritten as a mixed number.</string>
 
+    <string name="puntajess">Score obtained:</string>
+    <string name="intentarlo">TRY AGAIN</string>
+    <string name="salirr">press BACK again to exit</string>
+    <string name="teorema_fundamental">Fundamental Calculation Theorem
+</string>
+    <string name="cambio_variable">Variable Change
+</string>
+    <string name="regla_basica_derivar">Rule to Derive
+</string>
+    <string name="regla_basica_integrar">Rule to Integrate</string>
 
+    <string name="factorizacion">Factorization Formulas</string>
+    <string name="suma_ma">Addition and Subtraction of Matrices
+</string>
+    <string name="multipli_ma">Matrix Multiplication
+</string>
+
+
+    <string name="cadenaCarbo">Carbon chain</string>
+    <string name="tiposCarbono">Types of Carbon</string>
+    <string name="alcanos">Alkanes, Alkenes and Alkynes</string>
+    <string name="hidrocarburos_ciclico">Cyclic hydrocarbons</string>
+    <string name="hidrocarburos_aromantic">Aromantic hydrocarbons</string>
+    <string name="halogenos">Alkyl halides</string>
+
+
+    <string name="quimica_analitica">Analytic chemistry</string>
+    <string name="gase">Gas</string>
+    <string name="quimica_organica">Organic Chemistry
+</string>
 </resources>

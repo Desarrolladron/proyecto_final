@@ -32,6 +32,6 @@ public class dilatacion_volumetrica_children extends AppCompatActivity {
                 finish();
             }
         });
-        imagen =(ImageView)findViewById(R.id.enefoto);
+        imagen =(ImageView)findViewById(R.id.volumeesd);
         photo = new PhotoViewAttacher(imagen);  }
 }

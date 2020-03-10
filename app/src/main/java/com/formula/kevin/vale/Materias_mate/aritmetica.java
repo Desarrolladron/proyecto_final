@@ -69,9 +69,7 @@ public class aritmetica extends AppCompatActivity {
         AdRequest adRequest = new AdRequest.Builder().build();
         mAdView.loadAd(adRequest);
         MainActivity main = new MainActivity();
-        if  (main.bandera == true){
-            mAdView.setVisibility(View.GONE);
-        }
+
 
 
         list = (ListView) findViewById(R.id.item2_2);
@@ -116,8 +114,6 @@ public class aritmetica extends AppCompatActivity {
 
 
                 Intent intent = new Intent(aritmetica.this, Aritmetica_ejer.class);
-
-
                 startActivity(intent);
 
             }

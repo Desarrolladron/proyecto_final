@@ -18,6 +18,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import androidx.appcompat.widget.Toolbar;
 
+import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
@@ -68,9 +69,7 @@ public class Mecanica_fluidos extends AppCompatActivity {
         mAdView.loadAd(adRequest);
 
         MainActivity main = new MainActivity();
-        if  (main.bandera == true){
-            mAdView.setVisibility(View.GONE);
-        }
+
 
         list = (ListView) findViewById(R.id.item2_2);
 
@@ -110,7 +109,13 @@ public class Mecanica_fluidos extends AppCompatActivity {
                     startActivity(intent);
                 } else if (i == 5) {
                     Intent intent = new Intent(Mecanica_fluidos.this, principio_arquimedes_children.class);
-                    startActivity(intent);
+                    if (mInterstitialAd.isLoaded()) {
+                        mInterstitialAd.show();
+                    }
+                    else   {
+                        Log.d("TAG", "The interstitial wasn't loaded yet.");
+
+                    }    startActivity(intent);
                 } else if (i == 6) {
                     Intent intent = new Intent(Mecanica_fluidos.this, numero_mach_children.class);
                     startActivity(intent);

@@ -73,14 +73,7 @@ public class Calculo_Activity extends AppCompatActivity {
         adaptador = new CustomAdapter2(this, listItems);
         list.setAdapter(adaptador);
 
-        mInterstitialAd.setAdListener(new AdListener() {
-            @Override
-            public void onAdClosed() {
-                // Load the next interstitial.
-                mInterstitialAd.loadAd(new AdRequest.Builder().build());
-            }
 
-        });
         list.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
@@ -90,15 +83,10 @@ public class Calculo_Activity extends AppCompatActivity {
                     Intent intent = new Intent(Calculo_Activity.this, Diferencial_Integral.class);
                     startActivity(intent);
 
-                if  (main.bandera == false) {
                         if (mInterstitialAd.isLoaded()) {
                             mInterstitialAd.show();
                         }
-                    }
-                   else if  (main.bandera == true){
-
-
-                    }else   {
+                        else   {
                         Log.d("TAG", "The interstitial wasn't loaded yet.");
 
                     }
@@ -107,7 +95,13 @@ public class Calculo_Activity extends AppCompatActivity {
                 else if(i == 0) {
                     Intent intent = new Intent(Calculo_Activity.this, Vectorial.class);
                     startActivity(intent);
+                    if (mInterstitialAd.isLoaded()) {
+                        mInterstitialAd.show();
+                    }
+                    else   {
+                        Log.d("TAG", "The interstitial wasn't loaded yet.");
 
+                    }
                 }
             }
         });

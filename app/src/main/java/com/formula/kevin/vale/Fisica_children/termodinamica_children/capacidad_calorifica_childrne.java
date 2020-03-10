@@ -32,6 +32,6 @@ public class capacidad_calorifica_childrne extends AppCompatActivity {
                 finish();
             }
         });
-        imagen =(ImageView)findViewById(R.id.enefoto);
+        imagen =(ImageView)findViewById(R.id.capacidadcalor);
         photo = new PhotoViewAttacher(imagen); }
 }

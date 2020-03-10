@@ -495,5 +495,32 @@ muy fácil encontrar la solución.</string>
     <string name="mix1">Número mixto o fracción mixta está formado por un número natural y una fracción propia.</string>
     <string name="mix2">Para operar con números mixtos, se escriben en forma de fracciones impropias y se realizan las operaciones fracciones. El resultado se escribe de nuevo en forma de número mixto.</string>
 
+
+    <string name="puntajess">Puntaje Obtenido:</string>
+    <string name="intentarlo">INTENTARLO NUEVAMENTE</string>
+    <string name="salirr">Presiona ATRÁS de nuevo para salir</string>
+
+    <string name="teorema_fundamental">Teorema Fundamental del Cálculo</string>
+    <string name="cambio_variable">Cambio de Variable</string>
+    <string name="regla_basica_derivar">Regla para Derivar</string>
+    <string name="regla_basica_integrar">Regla para Integrar</string>
+    <string name="factorizacion">Fórmulas de Factorización</string>
+
+    <string name="suma_ma">Suma y Resta de Matrices</string>
+    <string name="multipli_ma">Multiplicación de Matrices</string>
+
+
+    <string name="cadenaCarbo">Cadena Carbonada</string>
+    <string name="tiposCarbono">Tipos de Carbono</string>
+    <string name="alcanos">Alcanos, Alquenos y Alquinos</string>
+    <string name="hidrocarburos_ciclico">Hidrocarburos Cíclicos</string>
+    <string name="hidrocarburos_aromantic">Hidrocarburos Aromáticos</string>
+    <string name="halogenos">Halogenuros de Alquilo</string>
+
+    <string name="quimica_analitica">Química Analítica</string>
+    <string name="gase">Gases</string>
+    <string name="quimica_organica">Química Orgánica</string>
+
+
 </resources>
 

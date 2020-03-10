@@ -86,13 +86,11 @@ public class Principales extends AppCompatActivity {
                 MainActivity main = new MainActivity();
                 if (position == 0) {
                     Intent intent = new Intent(Principales.this, Triangulo.class);
-                    if  (main.bandera == false) {
-                        if (mInterstitialAd.isLoaded()) {
+                         if (mInterstitialAd.isLoaded()) {
                             mInterstitialAd.show();
                         }
-                    }
-                    else if  (main.bandera == true){
-                    } else {
+
+                 else {
                         Log.d("TAG", "The interstitial wasn't loaded yet.");
                     }
                     startActivity(intent);
@@ -109,15 +107,13 @@ public class Principales extends AppCompatActivity {
                 }
                 else if (position == 3) {
                     Intent intent = new Intent(Principales.this, Paralelogramo.class);
-                    if  (main.bandera == false) {
-                        if (mInterstitialAd.isLoaded()) {
-                            mInterstitialAd.show();
-                        }
+                    if (mInterstitialAd.isLoaded()) {
+                        mInterstitialAd.show();
                     }
-                    else if  (main.bandera == true){
-                    } else {
+
+                    else {
                         Log.d("TAG", "The interstitial wasn't loaded yet.");
-                    }                    startActivity(intent);
+                    }                startActivity(intent);
 
                 }
                 else if (position == 4) {
@@ -126,15 +122,13 @@ public class Principales extends AppCompatActivity {
                 }
                 else if (position == 5) {
                     Intent intent = new Intent(Principales.this, Rombo.class);
-                    if  (main.bandera == false) {
-                        if (mInterstitialAd.isLoaded()) {
-                            mInterstitialAd.show();
-                        }
+                    if (mInterstitialAd.isLoaded()) {
+                        mInterstitialAd.show();
                     }
-                    else if  (main.bandera == true){
-                    } else {
+
+                    else {
                         Log.d("TAG", "The interstitial wasn't loaded yet.");
-                    }                    startActivity(intent);
+                    }               startActivity(intent);
 
                 }
                 else if (position == 6) {
@@ -148,13 +142,11 @@ public class Principales extends AppCompatActivity {
                 else if (position == 8) {
                     Intent intent = new Intent(Principales.this, Elipse.class);
                     startActivity(intent);
-                    if  (main.bandera == false) {
-                        if (mInterstitialAd.isLoaded()) {
-                            mInterstitialAd.show();
-                        }
+                    if (mInterstitialAd.isLoaded()) {
+                        mInterstitialAd.show();
                     }
-                    else if  (main.bandera == true){
-                    } else {
+
+                    else {
                         Log.d("TAG", "The interstitial wasn't loaded yet.");
                     }
                 }
@@ -164,13 +156,11 @@ public class Principales extends AppCompatActivity {
                 }
                 else if (position == 10) {
                     Intent intent = new Intent(Principales.this, Cubo.class);
-                    if  (main.bandera == false) {
-                        if (mInterstitialAd.isLoaded()) {
-                            mInterstitialAd.show();
-                        }
+                    if (mInterstitialAd.isLoaded()) {
+                        mInterstitialAd.show();
                     }
-                    else if  (main.bandera == true){
-                    } else {
+
+                    else {
                         Log.d("TAG", "The interstitial wasn't loaded yet.");
                     }
                     startActivity(intent);
@@ -186,15 +176,13 @@ public class Principales extends AppCompatActivity {
                 }
                 else if (position == 13) {
                     Intent intent = new Intent(Principales.this, Cono.class);
-                    if  (main.bandera == false) {
-                        if (mInterstitialAd.isLoaded()) {
-                            mInterstitialAd.show();
-                        }
+                    if (mInterstitialAd.isLoaded()) {
+                        mInterstitialAd.show();
                     }
-                    else if  (main.bandera == true){
-                    } else {
+
+                    else {
                         Log.d("TAG", "The interstitial wasn't loaded yet.");
-                    }                    startActivity(intent);
+                    }                startActivity(intent);
 
                 }
                 else if (position == 14) {

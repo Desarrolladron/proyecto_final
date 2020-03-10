@@ -5,6 +5,7 @@ import android.content.Intent;
 import com.formula.kevin.vale.ListView_primerFragment.lista;
 import com.formula.kevin.vale.Matematicas_children.Algebra_children.binomioNewton_children;
 import com.formula.kevin.vale.Matematicas_children.Algebra_children.conjugadoComplejo_children;
+import com.formula.kevin.vale.Matematicas_children.Algebra_children.factorizacion_children;
 import com.formula.kevin.vale.Matematicas_children.Algebra_children.formulaGeneral_children;
 import com.formula.kevin.vale.Matematicas_children.Algebra_children.leyExponentes_children;
 import com.formula.kevin.vale.Matematicas_children.Algebra_children.leySignos_children;
@@ -17,11 +18,13 @@ import com.formula.kevin.vale.Matematicas_children.Algebra_children.sumatoria_ch
 import com.formula.kevin.vale.Matematicas_children.Algebra_children.valorAbsoluto_children;
 import com.formula.kevin.vale.listview_children.CustomAdapter3;
 import com.formula.kevin.vale.listview_children.lista2;
+import com.google.android.gms.ads.AdListener;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import androidx.appcompat.widget.Toolbar;
 
+import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
  import android.widget.ExpandableListView;
@@ -42,10 +45,12 @@ public class algebra extends AppCompatActivity {
     private InterstitialAd mInterstitialAd;
     private ListView list;
     private CustomAdapter3 adaptador;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_algebra);
+
 
 
 
@@ -65,32 +70,41 @@ public class algebra extends AppCompatActivity {
 
         mInterstitialAd = new InterstitialAd(this);
         mInterstitialAd.setAdUnitId("ca-app-pub-8882667917768463/3391564183");
+        //original  ca-app-pub-8882667917768463/3391564183
+
         mInterstitialAd.loadAd(new AdRequest.Builder().build());
+
+        mInterstitialAd.setAdListener(new AdListener() {
+            @Override
+            public void onAdClosed() {
+                // Load the next interstitial.
+                mInterstitialAd.loadAd(new AdRequest.Builder().build());
+            }
+
+        });
 
         mAdView = findViewById(R.id.adView);
         AdRequest adRequest = new AdRequest.Builder().build();
         mAdView.loadAd(adRequest);
 
-        MainActivity main = new MainActivity();
-        if  (main.bandera == true){
-            mAdView.setVisibility(View.GONE);
-        }
+
 
         list = (ListView) findViewById(R.id.item2_2);
 
         final ArrayList<lista2> listItems = new ArrayList<>();
-        listItems.add(new lista2((R.drawable.parabolic),"Ley de los Exponentes"));
-        listItems.add(new lista2((R.drawable.parabolic),"Productos Notables"));
-        listItems.add(new lista2((R.drawable.parabolic), "Valor Absoluto"));
-        listItems.add(new lista2((R.drawable.parabolic), "Binomio de Newton"));
-        listItems.add(new lista2((R.drawable.parabolic), "Números Reales"));
-        listItems.add(new lista2((R.drawable.parabolic), "Números Complejos"));
-        listItems.add(new lista2((R.drawable.parabolic), "Ley de Signos"));
-        listItems.add(new lista2((R.drawable.parabolic), "Formula General"));
-        listItems.add(new lista2((R.drawable.parabolic), "Formulas de Sumatoria"));
-        listItems.add(new lista2((R.drawable.parabolic), "Operaciones con Números Complejos"));
-        listItems.add(new lista2((R.drawable.parabolic), "Conjugado de un Número Complejo"));
-        listItems.add(new lista2((R.drawable.parabolic), "Representacion de un Número Complejo"));
+
+        listItems.add(new lista2((R.drawable.parabolic),getString(R.string.ley_exponentes)));
+        listItems.add(new lista2((R.drawable.parabolic),getString(R.string.producto_notable)));
+        listItems.add(new lista2((R.drawable.parabolic), getString(R.string.valor_absoluto)));
+        listItems.add(new lista2((R.drawable.parabolic), getString(R.string.binomio_newton)));
+        listItems.add(new lista2((R.drawable.parabolic), getString(R.string.numeros_reales)));
+        listItems.add(new lista2((R.drawable.parabolic), getString(R.string.numeros_complejos)));
+        listItems.add(new lista2((R.drawable.parabolic), getString(R.string.ley_signos)));
+        listItems.add(new lista2((R.drawable.parabolic), getString(R.string.formula_general)));
+        listItems.add(new lista2((R.drawable.parabolic), getString(R.string.formula_sumatoria)));
+        listItems.add(new lista2((R.drawable.parabolic), getString(R.string.operaciones_numeros)));
+        listItems.add(new lista2((R.drawable.parabolic), getString(R.string.conjugado_numero_complejos)));
+        listItems.add(new lista2((R.drawable.parabolic), getString(R.string.factorizacion)));
 
 
 
@@ -102,6 +116,13 @@ public class algebra extends AppCompatActivity {
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
                    if (i == 0) {
                     Intent intent = new Intent(algebra.this, leyExponentes_children.class);
+                       if (mInterstitialAd.isLoaded()) {
+                           mInterstitialAd.show();
+                       }
+                       else   {
+                           Log.d("TAG", "The interstitial wasn't loaded yet.");
+
+                       }
                     startActivity(intent);
                 }
                     else if (i == 1) {
@@ -126,10 +147,24 @@ public class algebra extends AppCompatActivity {
                    }
                    else if (i == 6) {
                        Intent intent = new Intent(algebra.this, leySignos_children.class);
+                       if (mInterstitialAd.isLoaded()) {
+                           mInterstitialAd.show();
+                       }
+                       else   {
+                           Log.d("TAG", "The interstitial wasn't loaded yet.");
+
+                       }
                        startActivity(intent);
                    }
                    else if (i == 7) {
                        Intent intent = new Intent(algebra.this, formulaGeneral_children.class);
+                       if (mInterstitialAd.isLoaded()) {
+                           mInterstitialAd.show();
+                       }
+                       else   {
+                           Log.d("TAG", "The interstitial wasn't loaded yet.");
+
+                       }
                        startActivity(intent);
                    }
                    else if (i == 8) {
@@ -138,10 +173,29 @@ public class algebra extends AppCompatActivity {
                    }
                    else if (i == 9) {
                        Intent intent = new Intent(algebra.this, operacionesComplejos_children.class);
-                       startActivity(intent);
+
+                       if (mInterstitialAd.isLoaded()) {
+                           mInterstitialAd.show();
+                       }
+                       else   {
+                           Log.d("TAG", "The interstitial wasn't loaded yet.");
+
+                       } startActivity(intent);
                    }
                    else if (i == 10) {
                        Intent intent = new Intent(algebra.this, conjugadoComplejo_children.class);
+                       startActivity(intent);
+                   }
+
+                   else if (i == 11) {
+                       Intent intent = new Intent(algebra.this, factorizacion_children.class);
+                       if (mInterstitialAd.isLoaded()) {
+                           mInterstitialAd.show();
+                       }
+                       else   {
+                           Log.d("TAG", "The interstitial wasn't loaded yet.");
+
+                       }
                        startActivity(intent);
                    }
             }

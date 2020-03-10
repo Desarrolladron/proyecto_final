@@ -32,6 +32,6 @@ public class ecuacion_estado_gases_ideales_children extends AppCompatActivity {
                 finish();
             }
         });
-        imagen =(ImageView)findViewById(R.id.enefoto);
+        imagen =(ImageView)findViewById(R.id.estadd);
         photo = new PhotoViewAttacher(imagen);  }
 }

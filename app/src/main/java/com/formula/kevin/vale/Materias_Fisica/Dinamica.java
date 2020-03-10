@@ -18,6 +18,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import androidx.appcompat.widget.Toolbar;
 
+import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
@@ -38,8 +39,7 @@ import com.google.android.gms.ads.InterstitialAd;
 import java.util.ArrayList;
 
 public class Dinamica extends AppCompatActivity {
-    ExpandableListView expandableListView;
-    private AdView mAdView;
+     private AdView mAdView;
     private InterstitialAd mInterstitialAd;
     private ListView list;
     private CustomAdapter3 adaptador;
@@ -72,9 +72,6 @@ public class Dinamica extends AppCompatActivity {
 
 
         MainActivity main = new MainActivity();
-        if  (main.bandera == true){
-            mAdView.setVisibility(View.GONE);
-        }
 
 
         list = (ListView) findViewById(R.id.item2_2);
@@ -103,7 +100,13 @@ public class Dinamica extends AppCompatActivity {
                     startActivity(intent);
                 } else if (i == 1) {
                     Intent intent = new Intent(Dinamica.this, ley_hooke_children.class);
-                    startActivity(intent);
+                    if (mInterstitialAd.isLoaded()) {
+                        mInterstitialAd.show();
+                    }
+                    else   {
+                        Log.d("TAG", "The interstitial wasn't loaded yet.");
+
+                    }  startActivity(intent);
                 } else if (i == 2) {
                     Intent intent = new Intent(Dinamica.this, principio_bernoulli_children.class);
                     startActivity(intent);
@@ -118,11 +121,23 @@ public class Dinamica extends AppCompatActivity {
                     startActivity(intent);
                 } else if (i == 6) {
                     Intent intent = new Intent(Dinamica.this, centro_gravedad_children.class);
-                    startActivity(intent);
+                    if (mInterstitialAd.isLoaded()) {
+                        mInterstitialAd.show();
+                    }
+                    else   {
+                        Log.d("TAG", "The interstitial wasn't loaded yet.");
+
+                    }  startActivity(intent);
                 }
                 else if (i == 7) {
                     Intent intent = new Intent(Dinamica.this, teorema_lamy_children.class);
-                    startActivity(intent);
+                    if (mInterstitialAd.isLoaded()) {
+                        mInterstitialAd.show();
+                    }
+                    else   {
+                        Log.d("TAG", "The interstitial wasn't loaded yet.");
+
+                    }   startActivity(intent);
                 }
             }
         });

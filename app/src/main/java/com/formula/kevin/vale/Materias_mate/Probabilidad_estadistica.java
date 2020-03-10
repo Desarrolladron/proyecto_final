@@ -76,27 +76,25 @@ public class Probabilidad_estadistica extends AppCompatActivity {
         mAdView.loadAd(adRequest);
 
         MainActivity main = new MainActivity();
-        if (main.bandera == true) {
-            mAdView.setVisibility(View.GONE);
-        }
+
 
 
 
         list = (ListView) findViewById(R.id.item2_2);
 
         final ArrayList<lista2> listItems = new ArrayList<>();
-        listItems.add(new lista2((R.drawable.cuboo),"Moda"));
-        listItems.add(new lista2((R.drawable.cuboo),getString(R.string.media_aritmetica)));
-        listItems.add(new lista2((R.drawable.cuboo), getString(R.string.desviacion_estandar)));
-        listItems.add(new lista2((R.drawable.cuboo), getString(R.string.varianza)));
-        listItems.add(new lista2((R.drawable.cuboo), "Distribucion Binomial"));
+        listItems.add(new lista2((R.drawable.bar_chart),"Moda"));
+        listItems.add(new lista2((R.drawable.bar_chart),getString(R.string.media_aritmetica)));
+        listItems.add(new lista2((R.drawable.bar_chart), getString(R.string.desviacion_estandar)));
+        listItems.add(new lista2((R.drawable.bar_chart), getString(R.string.varianza)));
+        listItems.add(new lista2((R.drawable.bar_chart), "Distribucion Binomial"));
 
-        listItems.add(new lista2((R.drawable.cuboo), getString(R.string.operaciones_conjuntos)));
-        listItems.add(new lista2((R.drawable.cuboo), getString(R.string.probabilidad_condicional)));
-        listItems.add(new lista2((R.drawable.cuboo), getString(R.string.esperanza_matematica)));
-        listItems.add(new lista2((R.drawable.cuboo), getString(R.string.permutaciones)));
-        listItems.add(new lista2((R.drawable.cuboo), getString(R.string.ordenaciones_combinaciones)));
-        listItems.add(new lista2((R.drawable.cuboo), "Mediana"));
+        listItems.add(new lista2((R.drawable.bar_chart), getString(R.string.operaciones_conjuntos)));
+        listItems.add(new lista2((R.drawable.bar_chart), getString(R.string.probabilidad_condicional)));
+        listItems.add(new lista2((R.drawable.bar_chart), getString(R.string.esperanza_matematica)));
+        listItems.add(new lista2((R.drawable.bar_chart), getString(R.string.permutaciones)));
+        listItems.add(new lista2((R.drawable.bar_chart), getString(R.string.ordenaciones_combinaciones)));
+        listItems.add(new lista2((R.drawable.bar_chart), "Mediana"));
 
 
 
@@ -119,6 +117,13 @@ public class Probabilidad_estadistica extends AppCompatActivity {
                 }
                 else if (i == 3) {
                     Intent intent = new Intent(Probabilidad_estadistica.this, varianza_children.class);
+                    if (mInterstitialAd.isLoaded()) {
+                        mInterstitialAd.show();
+                    }
+                    else   {
+                        Log.d("TAG", "The interstitial wasn't loaded yet.");
+
+                    }
                     startActivity(intent);
                 }
                 else if (i == 4) {
@@ -131,6 +136,13 @@ public class Probabilidad_estadistica extends AppCompatActivity {
                 }
                 else if (i == 6) {
                     Intent intent = new Intent(Probabilidad_estadistica.this, probabilidadCondicional_children.class);
+                    if (mInterstitialAd.isLoaded()) {
+                        mInterstitialAd.show();
+                    }
+                    else   {
+                        Log.d("TAG", "The interstitial wasn't loaded yet.");
+
+                    }
                     startActivity(intent);
                 }
                 else if (i == 7) {
@@ -147,6 +159,13 @@ public class Probabilidad_estadistica extends AppCompatActivity {
                 }
                 else if (i == 10) {
                     Intent intent = new Intent(Probabilidad_estadistica.this, Mediana.class);
+                    if (mInterstitialAd.isLoaded()) {
+                        mInterstitialAd.show();
+                    }
+                    else   {
+                        Log.d("TAG", "The interstitial wasn't loaded yet.");
+
+                    }
                     startActivity(intent);
                 }
                 else if (i == 11) {
@@ -169,15 +188,12 @@ public class Probabilidad_estadistica extends AppCompatActivity {
                 Intent intent = new Intent(Probabilidad_estadistica.this, probabilidad_ejer.class);
                 MainActivity main = new MainActivity();
 
-                if (main.bandera == false) {
-                    if (mInterstitialAd.isLoaded()) {
-                        mInterstitialAd.show();
-                    }
-                } else if (main.bandera == true) {
-                } else {
+                if (mInterstitialAd.isLoaded()) {
+                    mInterstitialAd.show();
+                }
+
+                else {
                     Log.d("TAG", "The interstitial wasn't loaded yet.");
-
-
                 }
                 startActivity(intent);
 

@@ -32,6 +32,6 @@ public class calor_children extends AppCompatActivity {
                 finish();
             }
         });
-        imagen =(ImageView)findViewById(R.id.enefoto);
+        imagen =(ImageView)findViewById(R.id.calorcito);
         photo = new PhotoViewAttacher(imagen); }
 }

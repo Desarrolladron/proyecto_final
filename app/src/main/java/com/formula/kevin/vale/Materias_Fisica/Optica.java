@@ -16,7 +16,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import androidx.appcompat.widget.Toolbar;
 
-import android.view.View;
+ import android.util.Log;
+ import android.view.View;
  import android.widget.AdapterView;
  import android.widget.ExpandableListView;
  import android.widget.ListView;
@@ -65,9 +66,6 @@ public class Optica extends AppCompatActivity {
         AdRequest adRequest = new AdRequest.Builder().build();
         mAdView.loadAd(adRequest);
         MainActivity main = new MainActivity();
-        if  (main.bandera == true){
-            mAdView.setVisibility(View.GONE);
-        }
 
 
 
@@ -95,7 +93,13 @@ public class Optica extends AppCompatActivity {
                     startActivity(intent);
                 } else if (i == 1) {
                     Intent intent = new Intent(Optica.this, ley_snell_children.class);
-                    startActivity(intent);
+                    if (mInterstitialAd.isLoaded()) {
+                        mInterstitialAd.show();
+                    }
+                    else   {
+                        Log.d("TAG", "The interstitial wasn't loaded yet.");
+
+                    }     startActivity(intent);
                 } else if (i == 2) {
                     Intent intent = new Intent(Optica.this, indice_refraccion_children.class);
                     startActivity(intent);
@@ -104,7 +108,13 @@ public class Optica extends AppCompatActivity {
                     startActivity(intent);
                 } else if (i == 4) {
                     Intent intent = new Intent(Optica.this, ley_reflexion_children.class);
-                    startActivity(intent);
+                    if (mInterstitialAd.isLoaded()) {
+                        mInterstitialAd.show();
+                    }
+                    else   {
+                        Log.d("TAG", "The interstitial wasn't loaded yet.");
+
+                    }        startActivity(intent);
                 } else if (i == 5) {
                     Intent intent = new Intent(Optica.this, factor_magnificacion_children.class);
                     startActivity(intent);

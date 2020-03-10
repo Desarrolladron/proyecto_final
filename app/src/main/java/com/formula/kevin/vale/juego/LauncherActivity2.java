@@ -97,8 +97,9 @@ public class LauncherActivity2 extends AppCompatActivity {
 
 
 
-        final Toast toast = Toast.makeText(LauncherActivity2.this, "Presiona ATRAS de nuevo para salir", Toast.LENGTH_SHORT);
+        final Toast toast = Toast.makeText(LauncherActivity2.this, getString(R.string.salirr), Toast.LENGTH_SHORT);
         toast.show();
+
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
@@ -107,7 +108,11 @@ public class LauncherActivity2 extends AppCompatActivity {
             }
         }, 2000);
 
+
+
     }
+
+
 
 
     public static boolean isTablet(Context context) {

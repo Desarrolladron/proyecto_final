@@ -32,6 +32,6 @@ public class dilatacion_lineal_children extends AppCompatActivity {
                 finish();
             }
         });
-        imagen =(ImageView)findViewById(R.id.enefoto);
+        imagen =(ImageView)findViewById(R.id.dlineal);
         photo = new PhotoViewAttacher(imagen);}
 }
